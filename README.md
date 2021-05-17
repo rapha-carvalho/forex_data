@@ -73,3 +73,22 @@ Folder name | Description
 **logs** | Airflow's logs
 **plugins** | Airflow's custom operators
 **scripts** | ETL python scripts
+
+
+
+## Scenarios
+
+
+**What if the data volume was increased by 100x?**
+
+The pipeline was designed to fetch data through parallel processing. So, in case the data would increase by 100x, we can easily scale the pipeline through addition of more threads and more computing power through spark cluster.
+
+The bottleneck would be the spark cluster, which is running locally on the current configuration. The alternative would be to use Amazon EMR instead of local mode.
+
+**What if the pipelines were run on a daily basis by 7am?**
+
+The pipeline is already configured to run on a daily basis, but could be easily configure to run on different schedules based on your need. You just need to change the dag schedule.
+
+**What if the database needed to be accessed by 100+ people?**
+
+All the final data is stored in Amazon Redshift, so it could be easily accessible to 100+ people.
