@@ -37,7 +37,7 @@ In order to run this pipeline, you need to set up an IAM role with read/write pe
 
 Besides that, you'll need to install Docker, as we'll use it to run transformations in Spark.
 
-All the packages used in this project are listed in [**requirements.txt**](https://gitlab.com/projetos-di/valor-do-evento/blob/master/csv_handler/README.md). Just run `pip install requirements` and you'll be all set!
+All the packages used in this project are listed in [**requirements.txt**](https://github.com/rapha-carvalho/forex_data/blob/main/requirements.txt). Just run `pip install requirements` and you'll be all set!
 
 You’ll also need to download the following jar files and place them into /jars folder:
 
