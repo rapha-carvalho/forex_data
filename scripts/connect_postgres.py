@@ -7,7 +7,7 @@ from io import StringIO
 
 class PostgresConnect():
     """
-    Data warehouse
+    This class contains methods to execute queries on a PostgreSQL database.
     """
     def __init__(self):
         self.conn_info = {
@@ -36,19 +36,26 @@ class PostgresConnect():
         self.commit = self.conn.set_session(autocommit=True)
 
     def exec_query(self, *sql_query):
-        """Execute query"""
+        """
+        This function executes a query without returning data.
+        """
         cursor = self.cursor
         cursor.execute(*sql_query)
         self.commit
         return print("Query executed")
 
     def fetch_all(self, *sql_query):
-        """fetch all data"""
+        """
+        This functions fetches all data.
+        """
         cursor = self.cursor
         cursor.execute(*sql_query)
         return cursor.fetchall()
 
     def insert_data_postgres(self, df, schema, table):
+        """
+        This function inserts data into a specific table stored on a Postgres db.
+        """
         data = df
         sio = StringIO()
         sio.write(data.to_csv(index=None, header=None))  # Write the Pandas DataFrame as a csv to the buffer
@@ -61,11 +68,17 @@ class PostgresConnect():
         return print("Data inserted")
 
     def insert_data_redshift(self, df, schema, table):
+        """
+        This function inserts data into a specific table stored on Redshift.
+        """
         data = df
         data.to_sql(name=table, schema=schema, con=self.alch_conn, index=False, if_exists='append')
         return print("Data inserted")
 
     def close(self):
+        """
+        This function closes the connection to the database
+        """
         self.conn.close()
 
 if __name__=="__main__":

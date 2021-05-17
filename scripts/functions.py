@@ -13,6 +13,7 @@ import time
 AWS_ACCESS_KEY_ID = ""
 AWS_SECRET_ACCESS_KEY = ""
 
+#Establishing connection to S3 through boto3.
 s3 = boto3.resource('s3',
                   region_name='us-east-1',
                   aws_access_key_id=AWS_ACCESS_KEY_ID,
@@ -23,7 +24,7 @@ s3 = boto3.resource('s3',
 def get_interval(min_ts: int, end_ts: int, active_id:int, step:int):
 
     """
-    This function builds an array of intervals.
+    This function builds a list of api calls to be made.
 
     params:
         min_ts: minimum integer timestamp
@@ -122,6 +123,12 @@ def get_data(api_call:list , date:str):
 
 def process_data(api_calls:list, date:str, n_threads:int = 1):
     """
+    This function uses parallel processing to fetch data through api calls.
+
+    params:
+        api_calls: url params to make an api call
+        date: date of the extraction
+        n_threads: number of threads to execute the job. Default set to 1.
     """
     futures = []
     print("df initialized")
@@ -141,6 +148,14 @@ def process_data(api_calls:list, date:str, n_threads:int = 1):
 
 def run_etl(min_ts:int, end_ts:int, step:int, active_id:list, date:str):
     """
+    Runs the extract process, from building the api calls to loading data into S3.
+
+    params:
+        min_ts: minimum integer timestamp
+        end_ts: maximum integer timestamp
+        active_id: currency pair code
+        step: the interval's distance
+        date: date of the extraction
     """
     print("Fetching interval list")
     api_calls = get_interval(min_ts=min_ts, end_ts=end_ts, active_id=active_id, step=step)
@@ -148,13 +163,3 @@ def run_etl(min_ts:int, end_ts:int, step:int, active_id:list, date:str):
     #Processing data
     print("Processing data")
     processed_data = process_data(api_calls, date, n_threads=8)
-
-
-def insert_data(df, destfile:str, mode:str):
-    """
-    """
-    data = df
-    current_dir = os.path.dirname(__file__)
-    print("Inserting rows into file")
-    data.to_csv(os.path.join(current_dir, destfile), sep = ";", mode=mode, header=False, index=False)
-    return print("Rows inserted: {}".format(df.shape[0]))

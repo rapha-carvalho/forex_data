@@ -3,6 +3,7 @@ import boto3
 
 def remove_s3_files():
     """
+    This function remove S3 intermediate files. 
     """
     AWS_ACCESS_KEY_ID = ""
     AWS_SECRET_ACCESS_KEY = ""

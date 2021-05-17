@@ -8,6 +8,9 @@ from connect_postgres import PostgresConnect
 
 
 def load_data_to_s3():
+    """
+    This function is used to fetch data through api calls and store it in S3. 
+    """
     #Setting up connection to redshift
     conn = PostgresConnect()
     #Getting active_ids

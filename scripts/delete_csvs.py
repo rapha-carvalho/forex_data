@@ -1,6 +1,9 @@
 import os, shutil
 
 def delete_csvs():
+    """
+    This function delete all intermediate local csv files. 
+    """
     folder = './csvs'
     for filename in os.listdir(folder):
         file_path = os.path.join(folder, filename)
