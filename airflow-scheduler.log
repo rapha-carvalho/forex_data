@@ -1,0 +1,948 @@
+2021-05-11 15:47:25,834 INFO - Starting the scheduler
+2021-05-11 15:47:25,835 INFO - Processing each file at most -1 times
+2021-05-11 15:47:25,841 INFO - Launched DagFileProcessorManager with pid: 98024
+2021-05-11 15:47:25,844 INFO - Resetting orphaned tasks for active dag runs
+2021-05-11 15:47:25,849 INFO - Configured default timezone Timezone('America/New_York')
+2021-05-11 15:51:49,025 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-10 04:00:00+00:00 [scheduled]>
+2021-05-11 15:51:49,027 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:51:49,027 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:51:49,028 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-10 04:00:00+00:00 [scheduled]>
+2021-05-11 15:51:49,030 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 10, 4, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:51:49,030 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T04:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:51:49,033 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T04:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:51:50,935 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-10 04:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:51:51,022 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-10 05:00:00+00:00 [scheduled]>
+2021-05-11 15:51:51,024 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:51:51,025 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:51:51,026 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-10 05:00:00+00:00 [scheduled]>
+2021-05-11 15:51:51,029 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 10, 5, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:51:51,030 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T05:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:51:51,032 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T05:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:51:52,388 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-10 05:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:51:52,451 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-10 06:00:00+00:00 [scheduled]>
+2021-05-11 15:51:52,453 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:51:52,454 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:51:52,455 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-10 06:00:00+00:00 [scheduled]>
+2021-05-11 15:51:52,456 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 10, 6, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:51:52,457 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T06:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:51:52,459 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T06:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:51:53,687 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-10 06:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:51:53,760 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-10 07:00:00+00:00 [scheduled]>
+2021-05-11 15:51:53,761 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:51:53,762 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:51:53,762 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-10 07:00:00+00:00 [scheduled]>
+2021-05-11 15:51:53,763 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 10, 7, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:51:53,764 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T07:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:51:53,765 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T07:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:51:55,159 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-10 07:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:51:55,250 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-10 08:00:00+00:00 [scheduled]>
+2021-05-11 15:51:55,252 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:51:55,252 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:51:55,253 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-10 08:00:00+00:00 [scheduled]>
+2021-05-11 15:51:55,255 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 10, 8, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:51:55,255 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T08:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:51:55,257 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T08:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:51:56,604 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-10 08:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:51:56,726 ERROR - Marking run <DagRun etl @ 2021-05-10 04:00:00+00:00: scheduled__2021-05-10T04:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:51:56,737 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-10 09:00:00+00:00 [scheduled]>
+2021-05-11 15:51:56,739 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:51:56,740 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:51:56,741 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-10 09:00:00+00:00 [scheduled]>
+2021-05-11 15:51:56,743 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 10, 9, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:51:56,744 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T09:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:51:56,749 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T09:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:51:58,058 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-10 09:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:51:58,133 ERROR - Marking run <DagRun etl @ 2021-05-10 05:00:00+00:00: scheduled__2021-05-10T05:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:51:58,143 INFO - 2 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 18:51:56.441871+00:00 [scheduled]>
+	<TaskInstance: etl.create_main_table 2021-05-10 10:00:00+00:00 [scheduled]>
+2021-05-11 15:51:58,145 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 2 task instances ready to be queued
+2021-05-11 15:51:58,146 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:51:58,147 INFO - DAG etl has 1/16 running and queued tasks
+2021-05-11 15:51:58,147 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-10 10:00:00+00:00 [scheduled]>
+	<TaskInstance: etl.create_main_table 2021-05-11 18:51:56.441871+00:00 [scheduled]>
+2021-05-11 15:51:58,150 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 10, 10, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:51:58,150 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T10:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:51:58,151 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 18, 51, 56, 441871, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:51:58,151 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T18:51:56.441871+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:51:58,153 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T10:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:51:59,408 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T18:51:56.441871+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:00,540 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-10 10:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:00,541 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 18:51:56.441871+00:00 exited with status success for try_number 1
+2021-05-11 15:52:00,637 ERROR - Marking run <DagRun etl @ 2021-05-10 06:00:00+00:00: scheduled__2021-05-10T06:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:00,650 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-10 11:00:00+00:00 [scheduled]>
+2021-05-11 15:52:00,652 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:00,653 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:00,654 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-10 11:00:00+00:00 [scheduled]>
+2021-05-11 15:52:00,656 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 10, 11, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:00,657 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T11:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:00,660 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T11:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:01,829 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-10 11:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:02,118 ERROR - Marking run <DagRun etl @ 2021-05-10 07:00:00+00:00: scheduled__2021-05-10T07:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:02,130 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-10 12:00:00+00:00 [scheduled]>
+2021-05-11 15:52:02,132 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:02,132 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:02,133 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-10 12:00:00+00:00 [scheduled]>
+2021-05-11 15:52:02,135 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 10, 12, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:02,136 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T12:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:02,138 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T12:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:03,356 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-10 12:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:03,438 ERROR - Marking run <DagRun etl @ 2021-05-10 08:00:00+00:00: scheduled__2021-05-10T08:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:03,450 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-10 13:00:00+00:00 [scheduled]>
+2021-05-11 15:52:03,451 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:03,452 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:03,452 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-10 13:00:00+00:00 [scheduled]>
+2021-05-11 15:52:03,454 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 10, 13, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:03,455 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T13:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:03,456 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T13:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:04,645 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-10 13:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:04,727 ERROR - Marking run <DagRun etl @ 2021-05-10 09:00:00+00:00: scheduled__2021-05-10T09:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:04,739 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-10 14:00:00+00:00 [scheduled]>
+2021-05-11 15:52:04,741 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:04,742 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:04,742 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-10 14:00:00+00:00 [scheduled]>
+2021-05-11 15:52:04,744 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 10, 14, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:04,745 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T14:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:04,746 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T14:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:05,969 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-10 14:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:06,054 ERROR - Marking run <DagRun etl @ 2021-05-10 10:00:00+00:00: scheduled__2021-05-10T10:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:06,059 ERROR - Marking run <DagRun etl @ 2021-05-11 18:51:56.441871+00:00: manual__2021-05-11T18:51:56.441871+00:00, externally triggered: True> failed
+2021-05-11 15:52:06,068 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-10 15:00:00+00:00 [scheduled]>
+2021-05-11 15:52:06,070 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:06,070 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:06,071 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-10 15:00:00+00:00 [scheduled]>
+2021-05-11 15:52:06,072 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 10, 15, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:06,073 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T15:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:06,075 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T15:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:07,341 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-10 15:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:07,411 ERROR - Marking run <DagRun etl @ 2021-05-10 11:00:00+00:00: scheduled__2021-05-10T11:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:07,420 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-10 16:00:00+00:00 [scheduled]>
+2021-05-11 15:52:07,421 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:07,422 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:07,422 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-10 16:00:00+00:00 [scheduled]>
+2021-05-11 15:52:07,423 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 10, 16, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:07,424 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T16:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:07,426 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T16:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:08,571 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-10 16:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:08,647 ERROR - Marking run <DagRun etl @ 2021-05-10 12:00:00+00:00: scheduled__2021-05-10T12:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:08,656 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-10 17:00:00+00:00 [scheduled]>
+2021-05-11 15:52:08,657 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:08,658 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:08,658 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-10 17:00:00+00:00 [scheduled]>
+2021-05-11 15:52:08,660 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 10, 17, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:08,660 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T17:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:08,661 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T17:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:09,847 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-10 17:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:09,934 ERROR - Marking run <DagRun etl @ 2021-05-10 13:00:00+00:00: scheduled__2021-05-10T13:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:09,949 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-10 18:00:00+00:00 [scheduled]>
+2021-05-11 15:52:09,951 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:09,952 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:09,953 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-10 18:00:00+00:00 [scheduled]>
+2021-05-11 15:52:09,955 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 10, 18, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:09,958 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T18:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:09,960 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T18:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:11,175 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-10 18:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:11,258 ERROR - Marking run <DagRun etl @ 2021-05-10 14:00:00+00:00: scheduled__2021-05-10T14:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:11,267 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-10 19:00:00+00:00 [scheduled]>
+2021-05-11 15:52:11,269 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:11,270 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:11,270 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-10 19:00:00+00:00 [scheduled]>
+2021-05-11 15:52:11,272 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 10, 19, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:11,273 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T19:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:11,274 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T19:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:12,522 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-10 19:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:12,601 ERROR - Marking run <DagRun etl @ 2021-05-10 15:00:00+00:00: scheduled__2021-05-10T15:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:12,612 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-10 20:00:00+00:00 [scheduled]>
+2021-05-11 15:52:12,614 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:12,614 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:12,615 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-10 20:00:00+00:00 [scheduled]>
+2021-05-11 15:52:12,616 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 10, 20, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:12,617 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T20:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:12,619 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T20:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:13,854 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-10 20:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:13,926 ERROR - Marking run <DagRun etl @ 2021-05-10 16:00:00+00:00: scheduled__2021-05-10T16:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:13,936 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-10 21:00:00+00:00 [scheduled]>
+2021-05-11 15:52:13,937 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:13,937 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:13,938 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-10 21:00:00+00:00 [scheduled]>
+2021-05-11 15:52:13,940 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 10, 21, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:13,940 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T21:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:13,942 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T21:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:15,208 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-10 21:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:15,283 ERROR - Marking run <DagRun etl @ 2021-05-10 17:00:00+00:00: scheduled__2021-05-10T17:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:15,296 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-10 22:00:00+00:00 [scheduled]>
+2021-05-11 15:52:15,297 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:15,298 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:15,299 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-10 22:00:00+00:00 [scheduled]>
+2021-05-11 15:52:15,301 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 10, 22, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:15,302 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T22:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:15,303 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T22:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:16,531 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-10 22:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:16,613 ERROR - Marking run <DagRun etl @ 2021-05-10 18:00:00+00:00: scheduled__2021-05-10T18:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:16,623 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-10 23:00:00+00:00 [scheduled]>
+2021-05-11 15:52:16,625 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:16,625 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:16,626 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-10 23:00:00+00:00 [scheduled]>
+2021-05-11 15:52:16,628 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 10, 23, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:16,628 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T23:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:16,630 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T23:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:17,946 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-10 23:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:18,019 ERROR - Marking run <DagRun etl @ 2021-05-10 19:00:00+00:00: scheduled__2021-05-10T19:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:18,029 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 00:00:00+00:00 [scheduled]>
+2021-05-11 15:52:18,031 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:18,032 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:18,032 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 00:00:00+00:00 [scheduled]>
+2021-05-11 15:52:18,035 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 0, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:18,036 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T00:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:18,037 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T00:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:19,233 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 00:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:19,307 ERROR - Marking run <DagRun etl @ 2021-05-10 20:00:00+00:00: scheduled__2021-05-10T20:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:19,319 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 01:00:00+00:00 [scheduled]>
+2021-05-11 15:52:19,321 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:19,321 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:19,322 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 01:00:00+00:00 [scheduled]>
+2021-05-11 15:52:19,324 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 1, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:19,325 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T01:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:19,327 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T01:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:20,495 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 01:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:20,561 ERROR - Marking run <DagRun etl @ 2021-05-10 21:00:00+00:00: scheduled__2021-05-10T21:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:20,572 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 02:00:00+00:00 [scheduled]>
+2021-05-11 15:52:20,574 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:20,574 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:20,575 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 02:00:00+00:00 [scheduled]>
+2021-05-11 15:52:20,577 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 2, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:20,578 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T02:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:20,580 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T02:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:21,727 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 02:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:21,809 ERROR - Marking run <DagRun etl @ 2021-05-10 22:00:00+00:00: scheduled__2021-05-10T22:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:21,819 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 03:00:00+00:00 [scheduled]>
+2021-05-11 15:52:21,821 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:21,822 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:21,822 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 03:00:00+00:00 [scheduled]>
+2021-05-11 15:52:21,824 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 3, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:21,824 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T03:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:21,825 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T03:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:22,996 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 03:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:23,071 ERROR - Marking run <DagRun etl @ 2021-05-10 23:00:00+00:00: scheduled__2021-05-10T23:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:23,082 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 04:00:00+00:00 [scheduled]>
+2021-05-11 15:52:23,084 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:23,085 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:23,085 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 04:00:00+00:00 [scheduled]>
+2021-05-11 15:52:23,088 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 4, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:23,088 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T04:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:23,090 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T04:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:24,329 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 04:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:24,403 ERROR - Marking run <DagRun etl @ 2021-05-11 00:00:00+00:00: scheduled__2021-05-11T00:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:24,413 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 05:00:00+00:00 [scheduled]>
+2021-05-11 15:52:24,415 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:24,416 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:24,417 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 05:00:00+00:00 [scheduled]>
+2021-05-11 15:52:24,419 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 5, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:24,420 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T05:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:24,421 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T05:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:25,580 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 05:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:25,647 ERROR - Marking run <DagRun etl @ 2021-05-11 01:00:00+00:00: scheduled__2021-05-11T01:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:25,657 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 06:00:00+00:00 [scheduled]>
+2021-05-11 15:52:25,659 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:25,660 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:25,660 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 06:00:00+00:00 [scheduled]>
+2021-05-11 15:52:25,662 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 6, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:25,663 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T06:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:25,665 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T06:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:26,828 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 06:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:26,855 INFO - Resetting orphaned tasks for active dag runs
+2021-05-11 15:52:26,939 ERROR - Marking run <DagRun etl @ 2021-05-11 02:00:00+00:00: scheduled__2021-05-11T02:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:26,950 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 07:00:00+00:00 [scheduled]>
+2021-05-11 15:52:26,952 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:26,953 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:26,954 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 07:00:00+00:00 [scheduled]>
+2021-05-11 15:52:26,956 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 7, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:26,956 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T07:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:26,958 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T07:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:28,106 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 07:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:28,182 ERROR - Marking run <DagRun etl @ 2021-05-11 03:00:00+00:00: scheduled__2021-05-11T03:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:28,192 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 08:00:00+00:00 [scheduled]>
+2021-05-11 15:52:28,193 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:28,194 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:28,194 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 08:00:00+00:00 [scheduled]>
+2021-05-11 15:52:28,197 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 8, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:28,198 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T08:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:28,200 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T08:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:29,336 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 08:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:29,405 ERROR - Marking run <DagRun etl @ 2021-05-11 04:00:00+00:00: scheduled__2021-05-11T04:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:29,415 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 09:00:00+00:00 [scheduled]>
+2021-05-11 15:52:29,417 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:29,418 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:29,418 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 09:00:00+00:00 [scheduled]>
+2021-05-11 15:52:29,421 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 9, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:29,422 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T09:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:29,424 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T09:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:30,582 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 09:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:30,657 ERROR - Marking run <DagRun etl @ 2021-05-11 05:00:00+00:00: scheduled__2021-05-11T05:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:30,670 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 10:00:00+00:00 [scheduled]>
+2021-05-11 15:52:30,673 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:30,674 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:30,674 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 10:00:00+00:00 [scheduled]>
+2021-05-11 15:52:30,677 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 10, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:30,677 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T10:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:30,679 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T10:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:31,841 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 10:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:31,929 ERROR - Marking run <DagRun etl @ 2021-05-11 06:00:00+00:00: scheduled__2021-05-11T06:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:31,943 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 11:00:00+00:00 [scheduled]>
+2021-05-11 15:52:31,945 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:31,945 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:31,946 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 11:00:00+00:00 [scheduled]>
+2021-05-11 15:52:31,947 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 11, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:31,948 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T11:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:31,951 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T11:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:33,156 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 11:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:33,436 ERROR - Marking run <DagRun etl @ 2021-05-11 07:00:00+00:00: scheduled__2021-05-11T07:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:33,446 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 12:00:00+00:00 [scheduled]>
+2021-05-11 15:52:33,448 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:33,448 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:33,449 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 12:00:00+00:00 [scheduled]>
+2021-05-11 15:52:33,451 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 12, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:33,452 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T12:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:33,454 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T12:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:34,630 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 12:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:34,702 ERROR - Marking run <DagRun etl @ 2021-05-11 08:00:00+00:00: scheduled__2021-05-11T08:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:34,713 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 13:00:00+00:00 [scheduled]>
+2021-05-11 15:52:34,715 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:34,715 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:34,716 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 13:00:00+00:00 [scheduled]>
+2021-05-11 15:52:34,718 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 13, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:34,718 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T13:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:34,720 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T13:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:35,907 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 13:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:35,977 ERROR - Marking run <DagRun etl @ 2021-05-11 09:00:00+00:00: scheduled__2021-05-11T09:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:35,987 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 14:00:00+00:00 [scheduled]>
+2021-05-11 15:52:35,989 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:35,990 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:35,991 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 14:00:00+00:00 [scheduled]>
+2021-05-11 15:52:35,993 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 14, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:35,993 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T14:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:35,995 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T14:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:37,200 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 14:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:37,283 ERROR - Marking run <DagRun etl @ 2021-05-11 10:00:00+00:00: scheduled__2021-05-11T10:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:37,294 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 15:00:00+00:00 [scheduled]>
+2021-05-11 15:52:37,296 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:37,296 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:37,297 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 15:00:00+00:00 [scheduled]>
+2021-05-11 15:52:37,298 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 15, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:37,299 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T15:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:37,300 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T15:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:38,451 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 15:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:38,537 ERROR - Marking run <DagRun etl @ 2021-05-11 11:00:00+00:00: scheduled__2021-05-11T11:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:38,549 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 16:00:00+00:00 [scheduled]>
+2021-05-11 15:52:38,550 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:38,551 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:38,552 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 16:00:00+00:00 [scheduled]>
+2021-05-11 15:52:38,554 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 16, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:38,554 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T16:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:38,556 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T16:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:39,767 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 16:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:39,835 ERROR - Marking run <DagRun etl @ 2021-05-11 12:00:00+00:00: scheduled__2021-05-11T12:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:39,845 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 17:00:00+00:00 [scheduled]>
+2021-05-11 15:52:39,847 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:52:39,848 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:52:39,848 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 17:00:00+00:00 [scheduled]>
+2021-05-11 15:52:39,850 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 17, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:52:39,851 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T17:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:39,853 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T17:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:52:40,977 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 17:00:00+00:00 exited with status success for try_number 1
+2021-05-11 15:52:41,029 ERROR - Marking run <DagRun etl @ 2021-05-11 13:00:00+00:00: scheduled__2021-05-11T13:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:42,081 ERROR - Marking run <DagRun etl @ 2021-05-11 14:00:00+00:00: scheduled__2021-05-11T14:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:42,249 ERROR - Marking run <DagRun etl @ 2021-05-11 15:00:00+00:00: scheduled__2021-05-11T15:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:43,151 ERROR - Marking run <DagRun etl @ 2021-05-11 16:00:00+00:00: scheduled__2021-05-11T16:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:52:44,191 ERROR - Marking run <DagRun etl @ 2021-05-11 17:00:00+00:00: scheduled__2021-05-11T17:00:00+00:00, externally triggered: False> failed
+2021-05-11 15:54:53,356 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 18:54:52.177773+00:00 [scheduled]>
+2021-05-11 15:54:53,357 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:54:53,358 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:54:53,358 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 18:54:52.177773+00:00 [scheduled]>
+2021-05-11 15:54:53,360 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 18, 54, 52, 177773, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:54:53,361 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T18:54:52.177773+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:54:53,362 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T18:54:52.177773+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:54:56,096 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 18:54:52.177773+00:00 exited with status success for try_number 1
+2021-05-11 15:54:59,503 ERROR - Marking run <DagRun etl @ 2021-05-11 18:54:52.177773+00:00: manual__2021-05-11T18:54:52.177773+00:00, externally triggered: True> failed
+2021-05-11 15:56:23,891 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 18:56:22.569482+00:00 [scheduled]>
+2021-05-11 15:56:23,893 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 15:56:23,893 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 15:56:23,894 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 18:56:22.569482+00:00 [scheduled]>
+2021-05-11 15:56:23,896 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 18, 56, 22, 569482, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 15:56:23,896 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T18:56:22.569482+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:56:23,898 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T18:56:22.569482+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 15:56:27,242 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 18:56:22.569482+00:00 exited with status success for try_number 1
+2021-05-11 15:56:30,759 ERROR - Marking run <DagRun etl @ 2021-05-11 18:56:22.569482+00:00: manual__2021-05-11T18:56:22.569482+00:00, externally triggered: True> failed
+2021-05-11 15:57:26,874 INFO - Resetting orphaned tasks for active dag runs
+2021-05-11 16:00:01,697 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 18:00:00+00:00 [scheduled]>
+2021-05-11 16:00:01,700 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:00:01,700 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:00:01,701 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 18:00:00+00:00 [scheduled]>
+2021-05-11 16:00:01,702 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 18, 0, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 16:00:01,703 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T18:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:00:01,705 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T18:00:00+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:00:04,757 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 18:00:00+00:00 exited with status success for try_number 1
+2021-05-11 16:00:08,939 ERROR - Marking run <DagRun etl @ 2021-05-11 18:00:00+00:00: scheduled__2021-05-11T18:00:00+00:00, externally triggered: False> failed
+2021-05-11 16:01:30,570 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:01:29.771736+00:00 [scheduled]>
+2021-05-11 16:01:30,572 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:01:30,573 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:01:30,574 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:01:29.771736+00:00 [scheduled]>
+2021-05-11 16:01:30,576 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 19, 1, 29, 771736, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 5 and queue default
+2021-05-11 16:01:30,576 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:01:29.771736+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:01:30,578 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:01:29.771736+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:01:33,471 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 19:01:29.771736+00:00 exited with status success for try_number 1
+2021-05-11 16:01:33,580 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:01:29.771736+00:00 [scheduled]>
+2021-05-11 16:01:33,583 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:01:33,583 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:01:33,584 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:01:29.771736+00:00 [scheduled]>
+2021-05-11 16:01:33,587 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 1, 29, 771736, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 4 and queue default
+2021-05-11 16:01:33,588 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:01:29.771736+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:01:33,591 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:01:29.771736+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:01:36,547 INFO - Executor reports execution of etl.create_dim_table execution_date=2021-05-11 19:01:29.771736+00:00 exited with status success for try_number 1
+2021-05-11 16:01:36,587 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:01:29.771736+00:00 [scheduled]>
+2021-05-11 16:01:36,588 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:01:36,589 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:01:36,589 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:01:29.771736+00:00 [scheduled]>
+2021-05-11 16:01:36,591 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='load_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 1, 29, 771736, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 3 and queue default
+2021-05-11 16:01:36,592 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:01:29.771736+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:01:36,593 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:01:29.771736+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:01:39,415 INFO - Executor reports execution of etl.load_dim_table execution_date=2021-05-11 19:01:29.771736+00:00 exited with status success for try_number 1
+2021-05-11 16:01:39,465 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:01:29.771736+00:00 [scheduled]>
+2021-05-11 16:01:39,467 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:01:39,467 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:01:39,468 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:01:29.771736+00:00 [scheduled]>
+2021-05-11 16:01:39,469 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='loading_data_to_s3', execution_date=datetime.datetime(2021, 5, 11, 19, 1, 29, 771736, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 2 and queue default
+2021-05-11 16:01:39,470 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:01:29.771736+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:01:39,472 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:01:29.771736+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:01:40,817 INFO - Executor reports execution of etl.loading_data_to_s3 execution_date=2021-05-11 19:01:29.771736+00:00 exited with status success for try_number 1
+2021-05-11 16:01:41,897 ERROR - Marking run <DagRun etl @ 2021-05-11 19:01:29.771736+00:00: manual__2021-05-11T19:01:29.771736+00:00, externally triggered: True> failed
+2021-05-11 16:02:26,888 INFO - Resetting orphaned tasks for active dag runs
+2021-05-11 16:04:24,951 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:04:23.874789+00:00 [scheduled]>
+2021-05-11 16:04:24,953 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:04:24,954 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:04:24,954 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:04:23.874789+00:00 [scheduled]>
+2021-05-11 16:04:24,956 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 19, 4, 23, 874789, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 4 and queue default
+2021-05-11 16:04:24,956 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:04:23.874789+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:04:24,958 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:04:23.874789+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:04:28,325 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 19:04:23.874789+00:00 exited with status success for try_number 1
+2021-05-11 16:04:28,412 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:04:23.874789+00:00 [scheduled]>
+2021-05-11 16:04:28,414 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:04:28,415 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:04:28,415 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:04:23.874789+00:00 [scheduled]>
+2021-05-11 16:04:28,418 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 4, 23, 874789, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 3 and queue default
+2021-05-11 16:04:28,419 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:04:23.874789+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:04:28,420 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:04:23.874789+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:04:31,250 INFO - Executor reports execution of etl.create_dim_table execution_date=2021-05-11 19:04:23.874789+00:00 exited with status success for try_number 1
+2021-05-11 16:04:31,291 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:04:23.874789+00:00 [scheduled]>
+2021-05-11 16:04:31,292 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:04:31,293 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:04:31,293 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:04:23.874789+00:00 [scheduled]>
+2021-05-11 16:04:31,295 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='load_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 4, 23, 874789, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 2 and queue default
+2021-05-11 16:04:31,296 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:04:23.874789+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:04:31,298 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:04:23.874789+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:04:34,353 INFO - Executor reports execution of etl.load_dim_table execution_date=2021-05-11 19:04:23.874789+00:00 exited with status success for try_number 1
+2021-05-11 16:04:34,410 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:04:23.874789+00:00 [scheduled]>
+2021-05-11 16:04:34,412 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:04:34,413 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:04:34,413 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:04:23.874789+00:00 [scheduled]>
+2021-05-11 16:04:34,416 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='loading_data_to_s3', execution_date=datetime.datetime(2021, 5, 11, 19, 4, 23, 874789, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 1 and queue default
+2021-05-11 16:04:34,416 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:04:23.874789+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:04:34,418 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:04:23.874789+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:04:35,613 INFO - Executor reports execution of etl.loading_data_to_s3 execution_date=2021-05-11 19:04:23.874789+00:00 exited with status success for try_number 1
+2021-05-11 16:04:35,641 INFO - Marking run <DagRun etl @ 2021-05-11 19:04:23.874789+00:00: manual__2021-05-11T19:04:23.874789+00:00, externally triggered: True> successful
+2021-05-11 16:06:48,988 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:06:47.266215+00:00 [scheduled]>
+2021-05-11 16:06:48,991 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:06:48,991 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:06:48,992 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:06:47.266215+00:00 [scheduled]>
+2021-05-11 16:06:48,993 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 19, 6, 47, 266215, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 4 and queue default
+2021-05-11 16:06:48,994 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:06:47.266215+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:06:48,996 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:06:47.266215+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:06:52,756 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 19:06:47.266215+00:00 exited with status success for try_number 1
+2021-05-11 16:06:53,148 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:06:47.266215+00:00 [scheduled]>
+2021-05-11 16:06:53,150 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:06:53,150 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:06:53,151 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:06:47.266215+00:00 [scheduled]>
+2021-05-11 16:06:53,154 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 6, 47, 266215, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 3 and queue default
+2021-05-11 16:06:53,155 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:06:47.266215+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:06:53,157 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:06:47.266215+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:06:56,245 INFO - Executor reports execution of etl.create_dim_table execution_date=2021-05-11 19:06:47.266215+00:00 exited with status success for try_number 1
+2021-05-11 16:06:56,284 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:06:47.266215+00:00 [scheduled]>
+2021-05-11 16:06:56,286 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:06:56,286 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:06:56,287 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:06:47.266215+00:00 [scheduled]>
+2021-05-11 16:06:56,288 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='load_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 6, 47, 266215, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 2 and queue default
+2021-05-11 16:06:56,289 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:06:47.266215+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:06:56,290 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:06:47.266215+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:06:59,014 INFO - Executor reports execution of etl.load_dim_table execution_date=2021-05-11 19:06:47.266215+00:00 exited with status success for try_number 1
+2021-05-11 16:06:59,058 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:06:47.266215+00:00 [scheduled]>
+2021-05-11 16:06:59,059 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:06:59,060 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:06:59,060 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:06:47.266215+00:00 [scheduled]>
+2021-05-11 16:06:59,062 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='loading_data_to_s3', execution_date=datetime.datetime(2021, 5, 11, 19, 6, 47, 266215, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 1 and queue default
+2021-05-11 16:06:59,062 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:06:47.266215+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:06:59,064 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:06:47.266215+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:07:00,252 INFO - Executor reports execution of etl.loading_data_to_s3 execution_date=2021-05-11 19:06:47.266215+00:00 exited with status success for try_number 1
+2021-05-11 16:07:00,282 ERROR - Marking run <DagRun etl @ 2021-05-11 19:06:47.266215+00:00: manual__2021-05-11T19:06:47.266215+00:00, externally triggered: True> failed
+2021-05-11 16:07:26,879 INFO - Resetting orphaned tasks for active dag runs
+2021-05-11 16:09:19,917 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:09:18.754956+00:00 [scheduled]>
+2021-05-11 16:09:19,920 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:09:19,920 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:09:19,921 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:09:18.754956+00:00 [scheduled]>
+2021-05-11 16:09:19,922 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 19, 9, 18, 754956, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 4 and queue default
+2021-05-11 16:09:19,923 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:09:18.754956+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:09:19,924 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:09:18.754956+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:09:23,259 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 19:09:18.754956+00:00 exited with status success for try_number 1
+2021-05-11 16:09:23,316 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:09:18.754956+00:00 [scheduled]>
+2021-05-11 16:09:23,318 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:09:23,318 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:09:23,319 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:09:18.754956+00:00 [scheduled]>
+2021-05-11 16:09:23,321 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 9, 18, 754956, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 3 and queue default
+2021-05-11 16:09:23,322 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:09:18.754956+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:09:23,324 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:09:18.754956+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:09:26,286 INFO - Executor reports execution of etl.create_dim_table execution_date=2021-05-11 19:09:18.754956+00:00 exited with status success for try_number 1
+2021-05-11 16:09:26,650 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:09:18.754956+00:00 [scheduled]>
+2021-05-11 16:09:26,653 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:09:26,653 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:09:26,654 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:09:18.754956+00:00 [scheduled]>
+2021-05-11 16:09:26,658 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='load_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 9, 18, 754956, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 2 and queue default
+2021-05-11 16:09:26,659 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:09:18.754956+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:09:26,661 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:09:18.754956+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:09:29,790 INFO - Executor reports execution of etl.load_dim_table execution_date=2021-05-11 19:09:18.754956+00:00 exited with status success for try_number 1
+2021-05-11 16:09:29,842 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:09:18.754956+00:00 [scheduled]>
+2021-05-11 16:09:29,843 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:09:29,844 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:09:29,845 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:09:18.754956+00:00 [scheduled]>
+2021-05-11 16:09:29,847 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='loading_data_to_s3', execution_date=datetime.datetime(2021, 5, 11, 19, 9, 18, 754956, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 1 and queue default
+2021-05-11 16:09:29,848 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:09:18.754956+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:09:29,849 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:09:18.754956+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:09:31,063 INFO - Executor reports execution of etl.loading_data_to_s3 execution_date=2021-05-11 19:09:18.754956+00:00 exited with status success for try_number 1
+2021-05-11 16:09:31,099 ERROR - Marking run <DagRun etl @ 2021-05-11 19:09:18.754956+00:00: manual__2021-05-11T19:09:18.754956+00:00, externally triggered: True> failed
+2021-05-11 16:12:26,907 INFO - Resetting orphaned tasks for active dag runs
+2021-05-11 16:16:57,361 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:16:56.906856+00:00 [scheduled]>
+2021-05-11 16:16:57,364 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:16:57,364 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:16:57,365 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:16:56.906856+00:00 [scheduled]>
+2021-05-11 16:16:57,367 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 19, 16, 56, 906856, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 4 and queue default
+2021-05-11 16:16:57,367 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:16:56.906856+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:16:57,369 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:16:56.906856+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:17:01,366 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 19:16:56.906856+00:00 exited with status success for try_number 1
+2021-05-11 16:17:01,413 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:16:56.906856+00:00 [scheduled]>
+2021-05-11 16:17:01,414 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:17:01,415 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:17:01,415 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:16:56.906856+00:00 [scheduled]>
+2021-05-11 16:17:01,417 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 16, 56, 906856, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 3 and queue default
+2021-05-11 16:17:01,417 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:16:56.906856+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:17:01,419 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:16:56.906856+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:17:04,575 INFO - Executor reports execution of etl.create_dim_table execution_date=2021-05-11 19:16:56.906856+00:00 exited with status success for try_number 1
+2021-05-11 16:17:05,229 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:16:56.906856+00:00 [scheduled]>
+2021-05-11 16:17:05,231 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:17:05,232 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:17:05,232 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:16:56.906856+00:00 [scheduled]>
+2021-05-11 16:17:05,234 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='load_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 16, 56, 906856, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 2 and queue default
+2021-05-11 16:17:05,235 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:16:56.906856+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:17:05,236 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:16:56.906856+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:17:08,443 INFO - Executor reports execution of etl.load_dim_table execution_date=2021-05-11 19:16:56.906856+00:00 exited with status success for try_number 1
+2021-05-11 16:17:08,493 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:16:56.906856+00:00 [scheduled]>
+2021-05-11 16:17:08,494 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:17:08,495 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:17:08,496 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:16:56.906856+00:00 [scheduled]>
+2021-05-11 16:17:08,497 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='loading_data_to_s3', execution_date=datetime.datetime(2021, 5, 11, 19, 16, 56, 906856, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 1 and queue default
+2021-05-11 16:17:08,498 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:16:56.906856+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:17:08,499 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:16:56.906856+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:17:15,096 INFO - Executor reports execution of etl.loading_data_to_s3 execution_date=2021-05-11 19:16:56.906856+00:00 exited with status success for try_number 1
+2021-05-11 16:17:15,147 ERROR - Marking run <DagRun etl @ 2021-05-11 19:16:56.906856+00:00: manual__2021-05-11T19:16:56.906856+00:00, externally triggered: True> failed
+2021-05-11 16:17:26,939 INFO - Resetting orphaned tasks for active dag runs
+2021-05-11 16:19:49,643 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:19:48.849827+00:00 [scheduled]>
+2021-05-11 16:19:49,646 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:19:49,646 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:19:49,647 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:19:48.849827+00:00 [scheduled]>
+2021-05-11 16:19:49,649 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 19, 19, 48, 849827, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 4 and queue default
+2021-05-11 16:19:49,650 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:19:48.849827+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:19:49,652 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:19:48.849827+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:19:53,614 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 19:19:48.849827+00:00 exited with status success for try_number 1
+2021-05-11 16:19:53,670 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:19:48.849827+00:00 [scheduled]>
+2021-05-11 16:19:53,672 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:19:53,673 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:19:53,673 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:19:48.849827+00:00 [scheduled]>
+2021-05-11 16:19:53,675 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 19, 48, 849827, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 3 and queue default
+2021-05-11 16:19:53,676 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:19:48.849827+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:19:53,678 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:19:48.849827+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:19:57,018 INFO - Executor reports execution of etl.create_dim_table execution_date=2021-05-11 19:19:48.849827+00:00 exited with status success for try_number 1
+2021-05-11 16:19:57,066 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:19:48.849827+00:00 [scheduled]>
+2021-05-11 16:19:57,068 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:19:57,069 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:19:57,069 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:19:48.849827+00:00 [scheduled]>
+2021-05-11 16:19:57,071 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='load_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 19, 48, 849827, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 2 and queue default
+2021-05-11 16:19:57,072 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:19:48.849827+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:19:57,074 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:19:48.849827+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:20:00,682 INFO - Executor reports execution of etl.load_dim_table execution_date=2021-05-11 19:19:48.849827+00:00 exited with status success for try_number 1
+2021-05-11 16:20:00,732 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:19:48.849827+00:00 [scheduled]>
+2021-05-11 16:20:00,733 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:20:00,734 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:20:00,734 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:19:48.849827+00:00 [scheduled]>
+2021-05-11 16:20:00,736 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='loading_data_to_s3', execution_date=datetime.datetime(2021, 5, 11, 19, 19, 48, 849827, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 1 and queue default
+2021-05-11 16:20:00,736 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:19:48.849827+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:20:00,738 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:19:48.849827+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:20:03,511 INFO - Executor reports execution of etl.loading_data_to_s3 execution_date=2021-05-11 19:19:48.849827+00:00 exited with status success for try_number 1
+2021-05-11 16:20:03,547 ERROR - Marking run <DagRun etl @ 2021-05-11 19:19:48.849827+00:00: manual__2021-05-11T19:19:48.849827+00:00, externally triggered: True> failed
+2021-05-11 16:20:34,648 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:20:33.606802+00:00 [scheduled]>
+2021-05-11 16:20:34,649 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:20:34,650 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:20:34,650 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:20:33.606802+00:00 [scheduled]>
+2021-05-11 16:20:34,652 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 19, 20, 33, 606802, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 4 and queue default
+2021-05-11 16:20:34,652 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:20:33.606802+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:20:34,654 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:20:33.606802+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:20:38,107 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 19:20:33.606802+00:00 exited with status success for try_number 1
+2021-05-11 16:20:38,158 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:20:33.606802+00:00 [scheduled]>
+2021-05-11 16:20:38,160 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:20:38,160 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:20:38,161 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:20:33.606802+00:00 [scheduled]>
+2021-05-11 16:20:38,162 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 20, 33, 606802, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 3 and queue default
+2021-05-11 16:20:38,163 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:20:33.606802+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:20:38,165 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:20:33.606802+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:20:41,367 INFO - Executor reports execution of etl.create_dim_table execution_date=2021-05-11 19:20:33.606802+00:00 exited with status success for try_number 1
+2021-05-11 16:20:42,023 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:20:33.606802+00:00 [scheduled]>
+2021-05-11 16:20:42,024 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:20:42,025 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:20:42,025 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:20:33.606802+00:00 [scheduled]>
+2021-05-11 16:20:42,027 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='load_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 20, 33, 606802, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 2 and queue default
+2021-05-11 16:20:42,027 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:20:33.606802+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:20:42,029 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:20:33.606802+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:20:45,234 INFO - Executor reports execution of etl.load_dim_table execution_date=2021-05-11 19:20:33.606802+00:00 exited with status success for try_number 1
+2021-05-11 16:20:45,283 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:20:33.606802+00:00 [scheduled]>
+2021-05-11 16:20:45,284 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:20:45,285 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:20:45,285 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:20:33.606802+00:00 [scheduled]>
+2021-05-11 16:20:45,287 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='loading_data_to_s3', execution_date=datetime.datetime(2021, 5, 11, 19, 20, 33, 606802, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 1 and queue default
+2021-05-11 16:20:45,287 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:20:33.606802+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:20:45,289 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:20:33.606802+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:20:48,081 INFO - Executor reports execution of etl.loading_data_to_s3 execution_date=2021-05-11 19:20:33.606802+00:00 exited with status success for try_number 1
+2021-05-11 16:20:48,117 ERROR - Marking run <DagRun etl @ 2021-05-11 19:20:33.606802+00:00: manual__2021-05-11T19:20:33.606802+00:00, externally triggered: True> failed
+2021-05-11 16:22:26,933 INFO - Resetting orphaned tasks for active dag runs
+2021-05-11 16:22:51,485 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:22:50.763884+00:00 [scheduled]>
+2021-05-11 16:22:51,486 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:22:51,487 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:22:51,488 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:22:50.763884+00:00 [scheduled]>
+2021-05-11 16:22:51,491 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 19, 22, 50, 763884, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 4 and queue default
+2021-05-11 16:22:51,493 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:22:50.763884+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:22:51,494 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:22:50.763884+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:22:54,981 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 19:22:50.763884+00:00 exited with status success for try_number 1
+2021-05-11 16:22:55,033 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:22:50.763884+00:00 [scheduled]>
+2021-05-11 16:22:55,034 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:22:55,035 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:22:55,035 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:22:50.763884+00:00 [scheduled]>
+2021-05-11 16:22:55,037 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 22, 50, 763884, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 3 and queue default
+2021-05-11 16:22:55,038 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:22:50.763884+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:22:55,039 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:22:50.763884+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:22:58,591 INFO - Executor reports execution of etl.create_dim_table execution_date=2021-05-11 19:22:50.763884+00:00 exited with status success for try_number 1
+2021-05-11 16:22:58,630 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:22:50.763884+00:00 [scheduled]>
+2021-05-11 16:22:58,631 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:22:58,632 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:22:58,632 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:22:50.763884+00:00 [scheduled]>
+2021-05-11 16:22:58,634 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='load_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 22, 50, 763884, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 2 and queue default
+2021-05-11 16:22:58,635 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:22:50.763884+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:22:58,636 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:22:50.763884+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:23:02,067 INFO - Executor reports execution of etl.load_dim_table execution_date=2021-05-11 19:22:50.763884+00:00 exited with status success for try_number 1
+2021-05-11 16:23:02,113 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:22:50.763884+00:00 [scheduled]>
+2021-05-11 16:23:02,114 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:23:02,115 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:23:02,115 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:22:50.763884+00:00 [scheduled]>
+2021-05-11 16:23:02,116 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='loading_data_to_s3', execution_date=datetime.datetime(2021, 5, 11, 19, 22, 50, 763884, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 1 and queue default
+2021-05-11 16:23:02,117 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:22:50.763884+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:23:02,119 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:22:50.763884+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:23:04,963 INFO - Executor reports execution of etl.loading_data_to_s3 execution_date=2021-05-11 19:22:50.763884+00:00 exited with status success for try_number 1
+2021-05-11 16:23:04,998 ERROR - Marking run <DagRun etl @ 2021-05-11 19:22:50.763884+00:00: manual__2021-05-11T19:22:50.763884+00:00, externally triggered: True> failed
+2021-05-11 16:25:05,738 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:25:04.592260+00:00 [scheduled]>
+2021-05-11 16:25:05,740 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:25:05,741 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:25:05,741 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:25:04.592260+00:00 [scheduled]>
+2021-05-11 16:25:05,743 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 19, 25, 4, 592260, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 4 and queue default
+2021-05-11 16:25:05,744 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:25:04.592260+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:25:05,745 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:25:04.592260+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:25:09,943 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 19:25:04.592260+00:00 exited with status success for try_number 1
+2021-05-11 16:25:10,000 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:25:04.592260+00:00 [scheduled]>
+2021-05-11 16:25:10,002 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:25:10,002 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:25:10,003 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:25:04.592260+00:00 [scheduled]>
+2021-05-11 16:25:10,004 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 25, 4, 592260, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 3 and queue default
+2021-05-11 16:25:10,005 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:25:04.592260+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:25:10,007 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:25:04.592260+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:25:13,314 INFO - Executor reports execution of etl.create_dim_table execution_date=2021-05-11 19:25:04.592260+00:00 exited with status success for try_number 1
+2021-05-11 16:25:13,364 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:25:04.592260+00:00 [scheduled]>
+2021-05-11 16:25:13,365 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:25:13,366 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:25:13,366 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:25:04.592260+00:00 [scheduled]>
+2021-05-11 16:25:13,368 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='load_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 25, 4, 592260, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 2 and queue default
+2021-05-11 16:25:13,368 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:25:04.592260+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:25:13,370 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:25:04.592260+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:25:16,664 INFO - Executor reports execution of etl.load_dim_table execution_date=2021-05-11 19:25:04.592260+00:00 exited with status success for try_number 1
+2021-05-11 16:25:16,716 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:25:04.592260+00:00 [scheduled]>
+2021-05-11 16:25:16,717 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:25:16,718 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:25:16,718 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:25:04.592260+00:00 [scheduled]>
+2021-05-11 16:25:16,719 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='loading_data_to_s3', execution_date=datetime.datetime(2021, 5, 11, 19, 25, 4, 592260, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 1 and queue default
+2021-05-11 16:25:16,720 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:25:04.592260+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:25:16,721 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:25:04.592260+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:25:19,517 INFO - Executor reports execution of etl.loading_data_to_s3 execution_date=2021-05-11 19:25:04.592260+00:00 exited with status success for try_number 1
+2021-05-11 16:25:19,547 ERROR - Marking run <DagRun etl @ 2021-05-11 19:25:04.592260+00:00: manual__2021-05-11T19:25:04.592260+00:00, externally triggered: True> failed
+2021-05-11 16:27:14,345 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:27:13.992387+00:00 [scheduled]>
+2021-05-11 16:27:14,347 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:27:14,347 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:27:14,347 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:27:13.992387+00:00 [scheduled]>
+2021-05-11 16:27:14,349 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 19, 27, 13, 992387, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 4 and queue default
+2021-05-11 16:27:14,350 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:27:13.992387+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:27:14,352 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:27:13.992387+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:27:18,005 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 19:27:13.992387+00:00 exited with status success for try_number 1
+2021-05-11 16:27:18,054 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:27:13.992387+00:00 [scheduled]>
+2021-05-11 16:27:18,056 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:27:18,057 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:27:18,058 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:27:13.992387+00:00 [scheduled]>
+2021-05-11 16:27:18,060 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 27, 13, 992387, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 3 and queue default
+2021-05-11 16:27:18,061 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:27:13.992387+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:27:18,062 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:27:13.992387+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:27:21,292 INFO - Executor reports execution of etl.create_dim_table execution_date=2021-05-11 19:27:13.992387+00:00 exited with status success for try_number 1
+2021-05-11 16:27:21,330 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:27:13.992387+00:00 [scheduled]>
+2021-05-11 16:27:21,331 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:27:21,332 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:27:21,332 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:27:13.992387+00:00 [scheduled]>
+2021-05-11 16:27:21,334 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='load_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 27, 13, 992387, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 2 and queue default
+2021-05-11 16:27:21,334 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:27:13.992387+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:27:21,336 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:27:13.992387+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:27:24,562 INFO - Executor reports execution of etl.load_dim_table execution_date=2021-05-11 19:27:13.992387+00:00 exited with status success for try_number 1
+2021-05-11 16:27:24,607 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:27:13.992387+00:00 [scheduled]>
+2021-05-11 16:27:24,609 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:27:24,609 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:27:24,610 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:27:13.992387+00:00 [scheduled]>
+2021-05-11 16:27:24,612 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='loading_data_to_s3', execution_date=datetime.datetime(2021, 5, 11, 19, 27, 13, 992387, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 1 and queue default
+2021-05-11 16:27:24,612 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:27:13.992387+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:27:24,614 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:27:13.992387+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:27:27,414 INFO - Executor reports execution of etl.loading_data_to_s3 execution_date=2021-05-11 19:27:13.992387+00:00 exited with status success for try_number 1
+2021-05-11 16:27:27,435 INFO - Resetting orphaned tasks for active dag runs
+2021-05-11 16:27:28,068 ERROR - Marking run <DagRun etl @ 2021-05-11 19:27:13.992387+00:00: manual__2021-05-11T19:27:13.992387+00:00, externally triggered: True> failed
+2021-05-11 16:30:39,348 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:30:38.316512+00:00 [scheduled]>
+2021-05-11 16:30:39,350 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:30:39,350 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:30:39,351 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:30:38.316512+00:00 [scheduled]>
+2021-05-11 16:30:39,353 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 19, 30, 38, 316512, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 4 and queue default
+2021-05-11 16:30:39,353 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:30:38.316512+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:30:39,355 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:30:38.316512+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:30:42,761 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 19:30:38.316512+00:00 exited with status success for try_number 1
+2021-05-11 16:30:42,814 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:30:38.316512+00:00 [scheduled]>
+2021-05-11 16:30:42,816 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:30:42,816 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:30:42,817 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_dim_table 2021-05-11 19:30:38.316512+00:00 [scheduled]>
+2021-05-11 16:30:42,819 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 30, 38, 316512, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 3 and queue default
+2021-05-11 16:30:42,819 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:30:38.316512+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:30:42,821 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-11T19:30:38.316512+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:30:46,307 INFO - Executor reports execution of etl.create_dim_table execution_date=2021-05-11 19:30:38.316512+00:00 exited with status success for try_number 1
+2021-05-11 16:30:46,361 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:30:38.316512+00:00 [scheduled]>
+2021-05-11 16:30:46,362 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:30:46,363 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:30:46,363 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.load_dim_table 2021-05-11 19:30:38.316512+00:00 [scheduled]>
+2021-05-11 16:30:46,365 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='load_dim_table', execution_date=datetime.datetime(2021, 5, 11, 19, 30, 38, 316512, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 2 and queue default
+2021-05-11 16:30:46,366 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:30:38.316512+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:30:46,368 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'load_dim_table', '2021-05-11T19:30:38.316512+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:30:49,555 INFO - Executor reports execution of etl.load_dim_table execution_date=2021-05-11 19:30:38.316512+00:00 exited with status success for try_number 1
+2021-05-11 16:30:49,600 INFO - 1 tasks up for execution:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:30:38.316512+00:00 [scheduled]>
+2021-05-11 16:30:49,601 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2021-05-11 16:30:49,602 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:30:49,602 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:30:38.316512+00:00 [scheduled]>
+2021-05-11 16:30:49,604 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='loading_data_to_s3', execution_date=datetime.datetime(2021, 5, 11, 19, 30, 38, 316512, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 1 and queue default
+2021-05-11 16:30:49,604 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:30:38.316512+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:30:49,606 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:30:38.316512+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:30:52,467 INFO - Executor reports execution of etl.loading_data_to_s3 execution_date=2021-05-11 19:30:38.316512+00:00 exited with status success for try_number 1
+2021-05-11 16:30:52,500 ERROR - Marking run <DagRun etl @ 2021-05-11 19:30:38.316512+00:00: manual__2021-05-11T19:30:38.316512+00:00, externally triggered: True> failed
+2021-05-11 16:32:27,459 INFO - Resetting orphaned tasks for active dag runs
+2021-05-11 16:37:27,509 INFO - Resetting orphaned tasks for active dag runs
+2021-05-11 16:42:27,550 INFO - Resetting orphaned tasks for active dag runs
+2021-05-11 16:43:19,497 INFO - 2 tasks up for execution:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:43:17.991395+00:00 [scheduled]>
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:43:17.991395+00:00 [scheduled]>
+2021-05-11 16:43:19,499 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 2 task instances ready to be queued
+2021-05-11 16:43:19,499 INFO - DAG etl has 0/16 running and queued tasks
+2021-05-11 16:43:19,500 INFO - DAG etl has 1/16 running and queued tasks
+2021-05-11 16:43:19,500 INFO - Setting the following tasks to queued state:
+	<TaskInstance: etl.create_main_table 2021-05-11 19:43:17.991395+00:00 [scheduled]>
+	<TaskInstance: etl.loading_data_to_s3 2021-05-11 19:43:17.991395+00:00 [scheduled]>
+2021-05-11 16:43:19,503 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='create_main_table', execution_date=datetime.datetime(2021, 5, 11, 19, 43, 17, 991395, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 4 and queue default
+2021-05-11 16:43:19,504 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:43:17.991395+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:43:19,504 INFO - Sending TaskInstanceKey(dag_id='etl', task_id='loading_data_to_s3', execution_date=datetime.datetime(2021, 5, 11, 19, 43, 17, 991395, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 1 and queue default
+2021-05-11 16:43:19,505 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:43:17.991395+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:43:19,506 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-11T19:43:17.991395+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:43:22,699 INFO - Executing command: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:43:17.991395+00:00', '--local', '--pool', 'default_pool', '--subdir', '/Users/raphaelcarvalho/Documents/forex/dags/etl.py']
+2021-05-11 16:44:14,705 INFO - Executor reports execution of etl.create_main_table execution_date=2021-05-11 19:43:17.991395+00:00 exited with status success for try_number 1
+2021-05-11 16:44:14,706 INFO - Executor reports execution of etl.loading_data_to_s3 execution_date=2021-05-11 19:43:17.991395+00:00 exited with status success for try_number 1
+2021-05-11 16:44:14,726 ERROR - DagFileProcessorManager (PID=98024) last sent a heartbeat 55.29 seconds ago! Restarting it
+2021-05-11 16:44:14,745 INFO - Sending Signals.SIGTERM to GPID 98024
+2021-05-11 16:44:14,961 INFO - Process psutil.Process(pid=98024, status='terminated', exitcode=0, started='15:47:25') (98024) terminated with exit code 0
+2021-05-11 16:44:14,969 INFO - Launched DagFileProcessorManager with pid: 99194
+2021-05-11 16:44:14,979 INFO - Configured default timezone Timezone('America/New_York')

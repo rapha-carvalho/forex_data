@@ -1,0 +1,55 @@
+[2021-05-15 13:04:53,399] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.loading_data_to_s3 2021-05-15T15:00:00+00:00 [queued]>
+[2021-05-15 13:04:53,405] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.loading_data_to_s3 2021-05-15T15:00:00+00:00 [queued]>
+[2021-05-15 13:04:53,405] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-15 13:04:53,405] {taskinstance.py:1069} INFO - Starting attempt 1 of 1
+[2021-05-15 13:04:53,405] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-15 13:04:53,412] {taskinstance.py:1089} INFO - Executing <Task(PythonOperator): loading_data_to_s3> on 2021-05-15T15:00:00+00:00
+[2021-05-15 13:04:53,416] {standard_task_runner.py:52} INFO - Started process 28924 to run task
+[2021-05-15 13:04:53,424] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-15T15:00:00+00:00', '--job-id', '721', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmp2ubw4z_u', '--error-file', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmp6f_zlr_0']
+[2021-05-15 13:04:53,426] {standard_task_runner.py:77} INFO - Job 721: Subtask loading_data_to_s3
+[2021-05-15 13:04:53,464] {logging_mixin.py:104} INFO - Running <TaskInstance: etl.loading_data_to_s3 2021-05-15T15:00:00+00:00 [running]> on host 27.2.168.192.in-addr.arpa
+[2021-05-15 13:04:53,490] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=udacity
+AIRFLOW_CTX_DAG_ID=etl
+AIRFLOW_CTX_TASK_ID=loading_data_to_s3
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-15T15:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-05-15T15:00:00+00:00
+[2021-05-15 13:04:55,263] {logging_mixin.py:104} INFO - Fetching interval list
+[2021-05-15 13:04:55,264] {logging_mixin.py:104} INFO - Inverval list built
+[2021-05-15 13:04:55,265] {logging_mixin.py:104} INFO - Processing data
+[2021-05-15 13:04:55,265] {logging_mixin.py:104} INFO - df initialized
+[2021-05-15 13:04:55,266] {logging_mixin.py:104} INFO - (array([1621091095000, 1621092895000]), 1)
+[2021-05-15 13:04:55,267] {logging_mixin.py:104} INFO - (array([1621091095000, 1621092895000]), 2)
+[2021-05-15 13:04:55,267] {logging_mixin.py:104} INFO - (array([1621091095000, 1621092895000]), 3)
+[2021-05-15 13:04:55,267] {logging_mixin.py:104} INFO - (array([1621089295000, 1621091095000]), 1)
+[2021-05-15 13:04:55,268] {logging_mixin.py:104} INFO - (array([1621089295000, 1621091095000]), 2)
+[2021-05-15 13:04:55,268] {logging_mixin.py:104} INFO - (array([1621089295000, 1621091095000]), 3)
+[2021-05-15 13:04:55,269] {logging_mixin.py:104} INFO - ThreadPoolExecutor initialized
+[2021-05-15 13:04:55,269] {logging_mixin.py:104} INFO - running function for: (array([1621091095000, 1621092895000]), 1)
+[2021-05-15 13:04:55,270] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621092895000&from=1621091095000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-15 13:04:55,270] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621092895000&from=1621091095000&active_id=1&only_round=true&_key=1614903660000
+submitted
+[2021-05-15 13:04:55,272] {logging_mixin.py:104} INFO - running function for: (array([1621091095000, 1621092895000]), 2)
+[2021-05-15 13:04:55,272] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621092895000&from=1621091095000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-15 13:04:55,272] {logging_mixin.py:104} INFO - submitted
+[2021-05-15 13:04:55,273] {logging_mixin.py:104} INFO - running function for: (array([1621091095000, 1621092895000]), 3)
+[2021-05-15 13:04:55,273] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621092895000&from=1621091095000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-15 13:04:55,274] {logging_mixin.py:104} INFO - submitted
+[2021-05-15 13:04:55,274] {logging_mixin.py:104} INFO - running function for: (array([1621089295000, 1621091095000]), 1)
+[2021-05-15 13:04:55,275] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621091095000&from=1621089295000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-15 13:04:55,275] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621091095000&from=1621089295000&active_id=1&only_round=true&_key=1614903660000
+submitted
+[2021-05-15 13:04:55,277] {logging_mixin.py:104} INFO - running function for: (array([1621089295000, 1621091095000]), 2)
+[2021-05-15 13:04:55,277] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621091095000&from=1621089295000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-15 13:04:55,279] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621091095000&from=1621089295000&active_id=2&only_round=true&_key=1614903660000
+submitted
+[2021-05-15 13:04:55,281] {logging_mixin.py:104} INFO - running function for: (array([1621089295000, 1621091095000]), 3)
+[2021-05-15 13:04:55,282] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621091095000&from=1621089295000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-15 13:04:55,282] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621091095000&from=1621089295000&active_id=3&only_round=true&_key=1614903660000
+submitted
+[2021-05-15 13:05:00,652] {python.py:118} INFO - Done. Returned value was: None
+[2021-05-15 13:05:00,658] {taskinstance.py:1192} INFO - Marking task as SUCCESS. dag_id=etl, task_id=loading_data_to_s3, execution_date=20210515T150000, start_date=20210515T160453, end_date=20210515T160500
+[2021-05-15 13:05:00,719] {taskinstance.py:1246} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-05-15 13:05:00,761] {local_task_job.py:146} INFO - Task exited with return code 0

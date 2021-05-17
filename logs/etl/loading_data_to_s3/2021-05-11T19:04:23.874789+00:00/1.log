@@ -1,0 +1,27 @@
+[2021-05-11 16:04:35,334] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.loading_data_to_s3 2021-05-11T19:04:23.874789+00:00 [queued]>
+[2021-05-11 16:04:35,340] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.loading_data_to_s3 2021-05-11T19:04:23.874789+00:00 [queued]>
+[2021-05-11 16:04:35,340] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-11 16:04:35,340] {taskinstance.py:1069} INFO - Starting attempt 1 of 1
+[2021-05-11 16:04:35,340] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-11 16:04:35,345] {taskinstance.py:1089} INFO - Executing <Task(BashOperator): loading_data_to_s3> on 2021-05-11T19:04:23.874789+00:00
+[2021-05-11 16:04:35,347] {standard_task_runner.py:52} INFO - Started process 98489 to run task
+[2021-05-11 16:04:35,355] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:04:23.874789+00:00', '--job-id', '51', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmpejnu4imy', '--error-file', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmpietovut3']
+[2021-05-11 16:04:35,356] {standard_task_runner.py:77} INFO - Job 51: Subtask loading_data_to_s3
+[2021-05-11 16:04:35,388] {logging_mixin.py:104} INFO - Running <TaskInstance: etl.loading_data_to_s3 2021-05-11T19:04:23.874789+00:00 [running]> on host 27.2.168.192.in-addr.arpa
+[2021-05-11 16:04:35,410] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=etl
+AIRFLOW_CTX_TASK_ID=loading_data_to_s3
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-11T19:04:23.874789+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-05-11T19:04:23.874789+00:00
+[2021-05-11 16:04:35,411] {bash.py:135} INFO - Tmp dir root location: 
+ /var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T
+[2021-05-11 16:04:35,412] {bash.py:158} INFO - Running command: pwd
+[2021-05-11 16:04:35,418] {bash.py:169} INFO - Output:
+[2021-05-11 16:04:35,419] {bash.py:173} INFO - /private/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/airflowtmpoobq63sf
+[2021-05-11 16:04:35,419] {bash.py:177} INFO - Command exited with return code 0
+[2021-05-11 16:04:35,431] {taskinstance.py:1192} INFO - Marking task as SUCCESS. dag_id=etl, task_id=loading_data_to_s3, execution_date=20210511T190423, start_date=20210511T190435, end_date=20210511T190435
+[2021-05-11 16:04:35,471] {taskinstance.py:1246} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-05-11 16:04:35,498] {local_task_job.py:146} INFO - Task exited with return code 0

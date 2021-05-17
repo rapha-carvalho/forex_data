@@ -1,0 +1,37 @@
+[2021-05-12 11:28:59,702] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.removing_local_files 2021-05-12T14:28:46.432866+00:00 [queued]>
+[2021-05-12 11:28:59,710] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.removing_local_files 2021-05-12T14:28:46.432866+00:00 [queued]>
+[2021-05-12 11:28:59,710] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-12 11:28:59,710] {taskinstance.py:1069} INFO - Starting attempt 1 of 1
+[2021-05-12 11:28:59,710] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-12 11:28:59,717] {taskinstance.py:1089} INFO - Executing <Task(BashOperator): removing_local_files> on 2021-05-12T14:28:46.432866+00:00
+[2021-05-12 11:28:59,720] {standard_task_runner.py:52} INFO - Started process 1465 to run task
+[2021-05-12 11:28:59,727] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'etl', 'removing_local_files', '2021-05-12T14:28:46.432866+00:00', '--job-id', '163', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmpggp_sa1t', '--error-file', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmphsgxqjdw']
+[2021-05-12 11:28:59,729] {standard_task_runner.py:77} INFO - Job 163: Subtask removing_local_files
+[2021-05-12 11:28:59,765] {logging_mixin.py:104} INFO - Running <TaskInstance: etl.removing_local_files 2021-05-12T14:28:46.432866+00:00 [running]> on host 27.2.168.192.in-addr.arpa
+[2021-05-12 11:28:59,792] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=etl
+AIRFLOW_CTX_TASK_ID=removing_local_files
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-12T14:28:46.432866+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-05-12T14:28:46.432866+00:00
+[2021-05-12 11:28:59,792] {bash.py:135} INFO - Tmp dir root location: 
+ /var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T
+[2021-05-12 11:28:59,793] {bash.py:158} INFO - Running command: ./delete_csvs.sh 
+[2021-05-12 11:28:59,798] {bash.py:169} INFO - Output:
+[2021-05-12 11:28:59,801] {bash.py:173} INFO - bash: ./delete_csvs.sh: No such file or directory
+[2021-05-12 11:28:59,802] {bash.py:177} INFO - Command exited with return code 127
+[2021-05-12 11:28:59,807] {taskinstance.py:1482} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1138, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/operators/bash.py", line 180, in execute
+    raise AirflowException('Bash command failed. The command returned a non-zero exit code.')
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code.
+[2021-05-12 11:28:59,810] {taskinstance.py:1532} INFO - Marking task as FAILED. dag_id=etl, task_id=removing_local_files, execution_date=20210512T142846, start_date=20210512T142859, end_date=20210512T142859
+[2021-05-12 11:28:59,827] {local_task_job.py:146} INFO - Task exited with return code 1

@@ -1,0 +1,22 @@
+[2021-05-12 14:16:48,851] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.removing_local_files 2021-05-12T16:00:00+00:00 [queued]>
+[2021-05-12 14:16:48,861] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.removing_local_files 2021-05-12T16:00:00+00:00 [queued]>
+[2021-05-12 14:16:48,861] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-12 14:16:48,861] {taskinstance.py:1069} INFO - Starting attempt 1 of 1
+[2021-05-12 14:16:48,861] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-12 14:16:48,871] {taskinstance.py:1089} INFO - Executing <Task(PythonOperator): removing_local_files> on 2021-05-12T16:00:00+00:00
+[2021-05-12 14:16:48,876] {standard_task_runner.py:52} INFO - Started process 1957 to run task
+[2021-05-12 14:16:48,885] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'etl', 'removing_local_files', '2021-05-12T16:00:00+00:00', '--job-id', '179', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmp7honh2zc', '--error-file', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmpd9sbmg3k']
+[2021-05-12 14:16:48,887] {standard_task_runner.py:77} INFO - Job 179: Subtask removing_local_files
+[2021-05-12 14:16:48,939] {logging_mixin.py:104} INFO - Running <TaskInstance: etl.removing_local_files 2021-05-12T16:00:00+00:00 [running]> on host 27.2.168.192.in-addr.arpa
+[2021-05-12 14:16:48,981] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=udacity
+AIRFLOW_CTX_DAG_ID=etl
+AIRFLOW_CTX_TASK_ID=removing_local_files
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-12T16:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-05-12T16:00:00+00:00
+[2021-05-12 14:16:48,983] {python.py:118} INFO - Done. Returned value was: None
+[2021-05-12 14:16:48,993] {taskinstance.py:1192} INFO - Marking task as SUCCESS. dag_id=etl, task_id=removing_local_files, execution_date=20210512T160000, start_date=20210512T171648, end_date=20210512T171648
+[2021-05-12 14:16:49,089] {taskinstance.py:1246} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-05-12 14:16:49,104] {local_task_job.py:146} INFO - Task exited with return code 0

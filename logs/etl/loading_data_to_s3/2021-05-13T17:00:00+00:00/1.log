@@ -1,0 +1,83 @@
+[2021-05-13 15:10:04,059] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.loading_data_to_s3 2021-05-13T17:00:00+00:00 [queued]>
+[2021-05-13 15:10:04,064] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.loading_data_to_s3 2021-05-13T17:00:00+00:00 [queued]>
+[2021-05-13 15:10:04,064] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-13 15:10:04,064] {taskinstance.py:1069} INFO - Starting attempt 1 of 1
+[2021-05-13 15:10:04,064] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-13 15:10:04,070] {taskinstance.py:1089} INFO - Executing <Task(PythonOperator): loading_data_to_s3> on 2021-05-13T17:00:00+00:00
+[2021-05-13 15:10:04,073] {standard_task_runner.py:52} INFO - Started process 14297 to run task
+[2021-05-13 15:10:04,079] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-13T17:00:00+00:00', '--job-id', '311', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmp_5fh5_l8', '--error-file', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmpqhxjlynv']
+[2021-05-13 15:10:04,081] {standard_task_runner.py:77} INFO - Job 311: Subtask loading_data_to_s3
+[2021-05-13 15:10:04,113] {logging_mixin.py:104} INFO - Running <TaskInstance: etl.loading_data_to_s3 2021-05-13T17:00:00+00:00 [running]> on host 27.2.168.192.in-addr.arpa
+[2021-05-13 15:10:04,138] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=udacity
+AIRFLOW_CTX_DAG_ID=etl
+AIRFLOW_CTX_TASK_ID=loading_data_to_s3
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-13T17:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-05-13T17:00:00+00:00
+[2021-05-13 15:10:05,817] {logging_mixin.py:104} INFO - Fetching interval list
+[2021-05-13 15:10:05,818] {logging_mixin.py:104} INFO - Inverval list built
+[2021-05-13 15:10:05,819] {logging_mixin.py:104} INFO - Processing data
+[2021-05-13 15:10:05,820] {logging_mixin.py:104} INFO - df initialized
+[2021-05-13 15:10:05,820] {logging_mixin.py:104} INFO - ThreadPoolExecutor initialized
+[2021-05-13 15:10:05,822] {logging_mixin.py:104} INFO - running function for: (array([1620925805000, 1620927605000]), 1)
+[2021-05-13 15:10:05,823] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1620927605000&from=1620925805000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-13 15:10:05,825] {logging_mixin.py:104} INFO - submitted
+[2021-05-13 15:10:05,826] {logging_mixin.py:104} INFO - running function for: (array([1620925805000, 1620927605000]), 2)
+[2021-05-13 15:10:05,827] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1620927605000&from=1620925805000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-13 15:10:05,827] {logging_mixin.py:104} INFO - submitted
+[2021-05-13 15:10:05,828] {logging_mixin.py:104} INFO - running function for: (array([1620925805000, 1620927605000]), 3)
+[2021-05-13 15:10:05,828] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1620927605000&from=1620925805000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-13 15:10:05,829] {logging_mixin.py:104} INFO - submitted
+[2021-05-13 15:10:05,829] {logging_mixin.py:104} INFO - running function for: (array([1620924005000, 1620925805000]), 1)
+[2021-05-13 15:10:05,830] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1620925805000&from=1620924005000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-13 15:10:05,830] {logging_mixin.py:104} INFO - submitted
+[2021-05-13 15:10:05,831] {logging_mixin.py:104} INFO - running function for: (array([1620924005000, 1620925805000]), 2)
+[2021-05-13 15:10:05,831] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1620925805000&from=1620924005000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-13 15:10:05,832] {logging_mixin.py:104} INFO - submitted
+[2021-05-13 15:10:05,832] {logging_mixin.py:104} INFO - running function for: (array([1620924005000, 1620925805000]), 3)
+[2021-05-13 15:10:05,833] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1620925805000&from=1620924005000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-13 15:10:05,834] {logging_mixin.py:104} INFO - submitted
+[2021-05-13 15:10:05,835] {logging_mixin.py:104} INFO - running function for: (array([1620922205000, 1620924005000]), 1)
+[2021-05-13 15:10:05,835] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1620924005000&from=1620922205000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-13 15:10:05,836] {logging_mixin.py:104} INFO - submitted
+[2021-05-13 15:10:05,836] {logging_mixin.py:104} INFO - running function for: (array([1620922205000, 1620924005000]), 2)
+[2021-05-13 15:10:05,837] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1620924005000&from=1620922205000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-13 15:10:05,837] {logging_mixin.py:104} INFO - submitted
+[2021-05-13 15:10:05,838] {logging_mixin.py:104} INFO - running function for: (array([1620922205000, 1620924005000]), 3)
+[2021-05-13 15:10:05,838] {logging_mixin.py:104} INFO - submitted
+[2021-05-13 15:10:07,232] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1620924005000&from=1620922205000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-13 15:10:11,147] {taskinstance.py:1482} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1138, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/operators/python.py", line 117, in execute
+    return_value = self.execute_callable()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/operators/python.py", line 128, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/Users/raphaelcarvalho/Documents/forex/load_data_to_s3.py", line 32, in load_data_to_s3
+    f.run_etl(min_ts=date_from, end_ts=date_to, step=step, active_id=active_ids, date=today)
+  File "/Users/raphaelcarvalho/Documents/forex/functions.py", line 138, in run_etl
+    processed_data = process_data(api_calls, date, n_threads=8)
+  File "/Users/raphaelcarvalho/Documents/forex/functions.py", line 125, in process_data
+    results = [f.result() for f in futures]
+  File "/Users/raphaelcarvalho/Documents/forex/functions.py", line 125, in <listcomp>
+    results = [f.result() for f in futures]
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/concurrent/futures/_base.py", line 425, in result
+    return self.__get_result()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/raphaelcarvalho/Documents/forex/functions.py", line 84, in get_data
+    os.makedirs(active_id_dir)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/os.py", line 221, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: '/Users/raphaelcarvalho/Documents/forex/csvs/1'
+[2021-05-13 15:10:11,163] {taskinstance.py:1532} INFO - Marking task as FAILED. dag_id=etl, task_id=loading_data_to_s3, execution_date=20210513T170000, start_date=20210513T181004, end_date=20210513T181011
+[2021-05-13 15:10:11,187] {local_task_job.py:146} INFO - Task exited with return code 1

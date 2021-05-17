@@ -1,0 +1,41 @@
+[2021-05-13 17:13:17,449] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.create_container_image 2021-05-13T19:00:00+00:00 [queued]>
+[2021-05-13 17:13:17,455] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.create_container_image 2021-05-13T19:00:00+00:00 [queued]>
+[2021-05-13 17:13:17,455] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-13 17:13:17,455] {taskinstance.py:1069} INFO - Starting attempt 1 of 1
+[2021-05-13 17:13:17,455] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-13 17:13:17,460] {taskinstance.py:1089} INFO - Executing <Task(BashOperator): create_container_image> on 2021-05-13T19:00:00+00:00
+[2021-05-13 17:13:17,463] {standard_task_runner.py:52} INFO - Started process 15648 to run task
+[2021-05-13 17:13:17,469] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'etl', 'create_container_image', '2021-05-13T19:00:00+00:00', '--job-id', '327', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmpfjmbj_ag', '--error-file', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmpfdyn55kl']
+[2021-05-13 17:13:17,471] {standard_task_runner.py:77} INFO - Job 327: Subtask create_container_image
+[2021-05-13 17:13:17,504] {logging_mixin.py:104} INFO - Running <TaskInstance: etl.create_container_image 2021-05-13T19:00:00+00:00 [running]> on host 27.2.168.192.in-addr.arpa
+[2021-05-13 17:13:17,530] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=udacity
+AIRFLOW_CTX_DAG_ID=etl
+AIRFLOW_CTX_TASK_ID=create_container_image
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-13T19:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-05-13T19:00:00+00:00
+[2021-05-13 17:13:17,531] {bash.py:135} INFO - Tmp dir root location: 
+ /var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T
+[2021-05-13 17:13:17,532] {bash.py:158} INFO - Running command: docker build -t spark .
+[2021-05-13 17:13:17,538] {bash.py:169} INFO - Output:
+[2021-05-13 17:13:18,055] {bash.py:173} INFO - #1 [internal] load build definition from Dockerfile
+[2021-05-13 17:13:18,056] {bash.py:173} INFO - #1 sha256:d935304519537c0fb608b2f87157363406a3206b521e62de332ee79352c292d0
+[2021-05-13 17:13:18,056] {bash.py:173} INFO - #1 transferring dockerfile: 2B done
+[2021-05-13 17:13:18,057] {bash.py:173} INFO - #1 DONE 0.0s
+[2021-05-13 17:13:18,057] {bash.py:173} INFO - failed to solve with frontend dockerfile.v0: failed to read dockerfile: open /var/lib/docker/tmp/buildkit-mount048871549/Dockerfile: no such file or directory
+[2021-05-13 17:13:18,066] {bash.py:177} INFO - Command exited with return code 1
+[2021-05-13 17:13:18,071] {taskinstance.py:1482} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1138, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/operators/bash.py", line 180, in execute
+    raise AirflowException('Bash command failed. The command returned a non-zero exit code.')
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code.
+[2021-05-13 17:13:18,075] {taskinstance.py:1532} INFO - Marking task as FAILED. dag_id=etl, task_id=create_container_image, execution_date=20210513T190000, start_date=20210513T201317, end_date=20210513T201318
+[2021-05-13 17:13:18,108] {local_task_job.py:146} INFO - Task exited with return code 1

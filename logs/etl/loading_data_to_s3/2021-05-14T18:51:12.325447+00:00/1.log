@@ -1,0 +1,65 @@
+[2021-05-14 15:51:24,368] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.loading_data_to_s3 2021-05-14T18:51:12.325447+00:00 [queued]>
+[2021-05-14 15:51:24,375] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.loading_data_to_s3 2021-05-14T18:51:12.325447+00:00 [queued]>
+[2021-05-14 15:51:24,375] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-14 15:51:24,375] {taskinstance.py:1069} INFO - Starting attempt 1 of 1
+[2021-05-14 15:51:24,375] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-14 15:51:24,381] {taskinstance.py:1089} INFO - Executing <Task(PythonOperator): loading_data_to_s3> on 2021-05-14T18:51:12.325447+00:00
+[2021-05-14 15:51:24,383] {standard_task_runner.py:52} INFO - Started process 22426 to run task
+[2021-05-14 15:51:24,391] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-14T18:51:12.325447+00:00', '--job-id', '452', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmpa0gv8rlq', '--error-file', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmpki45kkmt']
+[2021-05-14 15:51:24,393] {standard_task_runner.py:77} INFO - Job 452: Subtask loading_data_to_s3
+[2021-05-14 15:51:24,422] {logging_mixin.py:104} INFO - Running <TaskInstance: etl.loading_data_to_s3 2021-05-14T18:51:12.325447+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2021-05-14 15:51:24,445] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=udacity
+AIRFLOW_CTX_DAG_ID=etl
+AIRFLOW_CTX_TASK_ID=loading_data_to_s3
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-14T18:51:12.325447+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-05-14T18:51:12.325447+00:00
+[2021-05-14 15:51:25,567] {logging_mixin.py:104} INFO - Fetching interval list
+[2021-05-14 15:51:25,569] {logging_mixin.py:104} INFO - Inverval list built
+[2021-05-14 15:51:25,570] {logging_mixin.py:104} INFO - Processing data
+[2021-05-14 15:51:25,570] {logging_mixin.py:104} INFO - df initialized
+[2021-05-14 15:51:25,571] {logging_mixin.py:104} INFO - ThreadPoolExecutor initialized
+[2021-05-14 15:51:25,573] {logging_mixin.py:104} INFO - running function for: (array([1621014685000, 1621016485000]), 1)
+[2021-05-14 15:51:25,574] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621016485000&from=1621014685000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-14 15:51:25,576] {logging_mixin.py:104} INFO - submitted
+[2021-05-14 15:51:25,576] {logging_mixin.py:104} INFO - running function for: (array([1621014685000, 1621016485000]), 2)
+[2021-05-14 15:51:25,577] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621016485000&from=1621014685000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-14 15:51:25,577] {logging_mixin.py:104} INFO - submitted
+[2021-05-14 15:51:25,578] {logging_mixin.py:104} INFO - running function for: (array([1621014685000, 1621016485000]), 3)
+[2021-05-14 15:51:25,578] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621016485000&from=1621014685000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-14 15:51:25,579] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621016485000&from=1621014685000&active_id=3&only_round=true&_key=1614903660000
+submitted
+[2021-05-14 15:51:25,580] {logging_mixin.py:104} INFO - running function for: (array([1621012885000, 1621014685000]), 1)
+[2021-05-14 15:51:25,580] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621014685000&from=1621012885000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-14 15:51:25,582] {logging_mixin.py:104} INFO - submitted
+[2021-05-14 15:51:25,582] {logging_mixin.py:104} INFO - running function for: (array([1621012885000, 1621014685000]), 2)
+[2021-05-14 15:51:25,583] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621014685000&from=1621012885000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-14 15:51:25,584] {logging_mixin.py:104} INFO - submitted
+[2021-05-14 15:51:25,584] {logging_mixin.py:104} INFO - running function for: (array([1621012885000, 1621014685000]), 3)
+[2021-05-14 15:51:25,584] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621014685000&from=1621012885000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-14 15:51:25,585] {logging_mixin.py:104} INFO - submitted
+[2021-05-14 15:51:25,585] {logging_mixin.py:104} INFO - running function for: (array([1621011085000, 1621012885000]), 1)
+[2021-05-14 15:51:25,586] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621012885000&from=1621011085000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-14 15:51:25,588] {logging_mixin.py:104} INFO - submitted
+[2021-05-14 15:51:25,588] {logging_mixin.py:104} INFO - running function for: (array([1621011085000, 1621012885000]), 2)
+[2021-05-14 15:51:25,589] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621012885000&from=1621011085000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-14 15:51:25,590] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621012885000&from=1621011085000&active_id=2&only_round=true&_key=1614903660000
+submitted
+[2021-05-14 15:51:25,591] {logging_mixin.py:104} INFO - running function for: (array([1621011085000, 1621012885000]), 3)
+[2021-05-14 15:51:25,592] {logging_mixin.py:104} INFO - submitted
+[2021-05-14 15:51:25,595] {logging_mixin.py:104} INFO - running function for: (array([1621009285000, 1621011085000]), 1)
+[2021-05-14 15:51:25,596] {logging_mixin.py:104} INFO - submitted
+[2021-05-14 15:51:25,598] {logging_mixin.py:104} INFO - running function for: (array([1621009285000, 1621011085000]), 2)
+[2021-05-14 15:51:25,599] {logging_mixin.py:104} INFO - submitted
+[2021-05-14 15:51:25,600] {logging_mixin.py:104} INFO - running function for: (array([1621009285000, 1621011085000]), 3)
+[2021-05-14 15:51:25,600] {logging_mixin.py:104} INFO - submitted
+[2021-05-14 15:51:29,233] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621012885000&from=1621011085000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-14 15:51:29,237] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621011085000&from=1621009285000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-14 15:51:29,242] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621011085000&from=1621009285000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-14 15:51:29,255] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621011085000&from=1621009285000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-14 15:51:31,580] {python.py:118} INFO - Done. Returned value was: None
+[2021-05-14 15:51:31,586] {taskinstance.py:1192} INFO - Marking task as SUCCESS. dag_id=etl, task_id=loading_data_to_s3, execution_date=20210514T185112, start_date=20210514T185124, end_date=20210514T185131
+[2021-05-14 15:51:31,632] {taskinstance.py:1246} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-05-14 15:51:31,666] {local_task_job.py:146} INFO - Task exited with return code 0

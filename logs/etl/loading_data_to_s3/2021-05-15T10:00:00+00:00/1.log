@@ -1,0 +1,39 @@
+[2021-05-15 10:13:25,486] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.loading_data_to_s3 2021-05-15T10:00:00+00:00 [queued]>
+[2021-05-15 10:13:25,492] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.loading_data_to_s3 2021-05-15T10:00:00+00:00 [queued]>
+[2021-05-15 10:13:25,492] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-15 10:13:25,492] {taskinstance.py:1069} INFO - Starting attempt 1 of 1
+[2021-05-15 10:13:25,492] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-15 10:13:25,498] {taskinstance.py:1089} INFO - Executing <Task(PythonOperator): loading_data_to_s3> on 2021-05-15T10:00:00+00:00
+[2021-05-15 10:13:25,500] {standard_task_runner.py:52} INFO - Started process 27259 to run task
+[2021-05-15 10:13:25,508] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-15T10:00:00+00:00', '--job-id', '669', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmps8m4ufrp', '--error-file', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmpjyd6sl3o']
+[2021-05-15 10:13:25,510] {standard_task_runner.py:77} INFO - Job 669: Subtask loading_data_to_s3
+[2021-05-15 10:13:25,548] {logging_mixin.py:104} INFO - Running <TaskInstance: etl.loading_data_to_s3 2021-05-15T10:00:00+00:00 [running]> on host 27.2.168.192.in-addr.arpa
+[2021-05-15 10:13:25,576] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=udacity
+AIRFLOW_CTX_DAG_ID=etl
+AIRFLOW_CTX_TASK_ID=loading_data_to_s3
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-15T10:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-05-15T10:00:00+00:00
+[2021-05-15 10:13:26,845] {logging_mixin.py:104} INFO - Fetching interval list
+[2021-05-15 10:13:26,846] {logging_mixin.py:104} INFO - Inverval list built
+[2021-05-15 10:13:26,847] {logging_mixin.py:104} INFO - Processing data
+[2021-05-15 10:13:26,847] {logging_mixin.py:104} INFO - df initialized
+[2021-05-15 10:13:26,849] {logging_mixin.py:104} INFO - (array([1621080806000, 1621082606000]), 1)
+[2021-05-15 10:13:26,850] {logging_mixin.py:104} INFO - (array([1621080806000, 1621082606000]), 2)
+[2021-05-15 10:13:26,850] {logging_mixin.py:104} INFO - (array([1621080806000, 1621082606000]), 3)
+[2021-05-15 10:13:26,851] {logging_mixin.py:104} INFO - ThreadPoolExecutor initialized
+[2021-05-15 10:13:26,851] {logging_mixin.py:104} INFO - running function for: (array([1621080806000, 1621082606000]), 1)
+[2021-05-15 10:13:26,852] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621082606000&from=1621080806000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-15 10:13:26,854] {logging_mixin.py:104} INFO - submitted
+[2021-05-15 10:13:26,855] {logging_mixin.py:104} INFO - running function for: (array([1621080806000, 1621082606000]), 2)
+[2021-05-15 10:13:26,855] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621082606000&from=1621080806000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-15 10:13:26,856] {logging_mixin.py:104} INFO - submitted
+[2021-05-15 10:13:26,856] {logging_mixin.py:104} INFO - running function for: (array([1621080806000, 1621082606000]), 3)
+[2021-05-15 10:13:26,856] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621082606000&from=1621080806000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-15 10:13:26,857] {logging_mixin.py:104} INFO - submitted
+[2021-05-15 10:13:30,700] {python.py:118} INFO - Done. Returned value was: None
+[2021-05-15 10:13:30,706] {taskinstance.py:1192} INFO - Marking task as SUCCESS. dag_id=etl, task_id=loading_data_to_s3, execution_date=20210515T100000, start_date=20210515T131325, end_date=20210515T131330
+[2021-05-15 10:13:30,747] {taskinstance.py:1246} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-05-15 10:13:30,779] {local_task_job.py:146} INFO - Task exited with return code 0

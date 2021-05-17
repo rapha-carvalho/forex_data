@@ -1,0 +1,1157 @@
+[2021-05-11 15:47:25,929] {scheduler_job.py:182} INFO - Started process (PID=98025) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:47:25,930] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:47:25,931] {logging_mixin.py:104} INFO - [2021-05-11 15:47:25,931] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:47:26,113] {logging_mixin.py:104} INFO - [2021-05-11 15:47:26,108] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 72, in <module>
+    load_dim_table >> loading_data_to_s3
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 64, in __rshift__
+    self.set_downstream(other)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1267, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1253, in _set_relatives
+    task.dag = dag
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 626, in __setattr__
+    super().__setattr__(key, value)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 677, in dag
+    dag.add_task(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dag.py", line 1595, in add_task
+    raise AirflowException("Task is missing the start_date parameter")
+airflow.exceptions.AirflowException: Task is missing the start_date parameter
+[2021-05-11 15:47:26,114] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:47:26,121] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.196 seconds
+[2021-05-11 15:47:57,158] {scheduler_job.py:182} INFO - Started process (PID=98037) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:47:57,159] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:47:57,160] {logging_mixin.py:104} INFO - [2021-05-11 15:47:57,160] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:47:57,364] {logging_mixin.py:104} INFO - [2021-05-11 15:47:57,360] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 72, in <module>
+    load_dim_table >> loading_data_to_s3
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 64, in __rshift__
+    self.set_downstream(other)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1267, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1253, in _set_relatives
+    task.dag = dag
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 626, in __setattr__
+    super().__setattr__(key, value)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 677, in dag
+    dag.add_task(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dag.py", line 1595, in add_task
+    raise AirflowException("Task is missing the start_date parameter")
+airflow.exceptions.AirflowException: Task is missing the start_date parameter
+[2021-05-11 15:47:57,365] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:47:57,372] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.218 seconds
+[2021-05-11 15:48:28,404] {scheduler_job.py:182} INFO - Started process (PID=98039) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:48:28,407] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:48:28,408] {logging_mixin.py:104} INFO - [2021-05-11 15:48:28,407] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:48:28,578] {logging_mixin.py:104} INFO - [2021-05-11 15:48:28,575] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 72, in <module>
+    load_dim_table >> loading_data_to_s3
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 64, in __rshift__
+    self.set_downstream(other)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1267, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1253, in _set_relatives
+    task.dag = dag
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 626, in __setattr__
+    super().__setattr__(key, value)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 677, in dag
+    dag.add_task(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dag.py", line 1595, in add_task
+    raise AirflowException("Task is missing the start_date parameter")
+airflow.exceptions.AirflowException: Task is missing the start_date parameter
+[2021-05-11 15:48:28,579] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:48:28,585] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.184 seconds
+[2021-05-11 15:48:58,635] {scheduler_job.py:182} INFO - Started process (PID=98044) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:48:58,638] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:48:58,639] {logging_mixin.py:104} INFO - [2021-05-11 15:48:58,639] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:48:58,806] {logging_mixin.py:104} INFO - [2021-05-11 15:48:58,803] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 72, in <module>
+    load_dim_table >> loading_data_to_s3
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 64, in __rshift__
+    self.set_downstream(other)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1267, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1253, in _set_relatives
+    task.dag = dag
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 626, in __setattr__
+    super().__setattr__(key, value)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 677, in dag
+    dag.add_task(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dag.py", line 1595, in add_task
+    raise AirflowException("Task is missing the start_date parameter")
+airflow.exceptions.AirflowException: Task is missing the start_date parameter
+[2021-05-11 15:48:58,807] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:48:58,814] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.182 seconds
+[2021-05-11 15:49:28,868] {scheduler_job.py:182} INFO - Started process (PID=98047) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:49:28,870] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:49:28,872] {logging_mixin.py:104} INFO - [2021-05-11 15:49:28,871] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:49:29,040] {logging_mixin.py:104} INFO - [2021-05-11 15:49:29,036] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 72, in <module>
+    load_dim_table >> loading_data_to_s3
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 64, in __rshift__
+    self.set_downstream(other)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1267, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1253, in _set_relatives
+    task.dag = dag
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 626, in __setattr__
+    super().__setattr__(key, value)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 677, in dag
+    dag.add_task(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dag.py", line 1595, in add_task
+    raise AirflowException("Task is missing the start_date parameter")
+airflow.exceptions.AirflowException: Task is missing the start_date parameter
+[2021-05-11 15:49:29,041] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:49:29,047] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.183 seconds
+[2021-05-11 15:49:59,108] {scheduler_job.py:182} INFO - Started process (PID=98052) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:49:59,110] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:49:59,111] {logging_mixin.py:104} INFO - [2021-05-11 15:49:59,111] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:49:59,285] {logging_mixin.py:104} INFO - [2021-05-11 15:49:59,282] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 72, in <module>
+    load_dim_table >> loading_data_to_s3
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 64, in __rshift__
+    self.set_downstream(other)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1267, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1253, in _set_relatives
+    task.dag = dag
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 626, in __setattr__
+    super().__setattr__(key, value)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 677, in dag
+    dag.add_task(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dag.py", line 1595, in add_task
+    raise AirflowException("Task is missing the start_date parameter")
+airflow.exceptions.AirflowException: Task is missing the start_date parameter
+[2021-05-11 15:49:59,286] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:49:59,292] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.189 seconds
+[2021-05-11 15:50:29,345] {scheduler_job.py:182} INFO - Started process (PID=98055) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:50:29,347] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:50:29,348] {logging_mixin.py:104} INFO - [2021-05-11 15:50:29,348] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:50:29,471] {logging_mixin.py:104} INFO - [2021-05-11 15:50:29,470] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 72, in <module>
+    load_dim_table >> loading_data_to_s3
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 64, in __rshift__
+    self.set_downstream(other)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1267, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1253, in _set_relatives
+    task.dag = dag
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 626, in __setattr__
+    super().__setattr__(key, value)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 677, in dag
+    dag.add_task(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dag.py", line 1595, in add_task
+    raise AirflowException("Task is missing the start_date parameter")
+airflow.exceptions.AirflowException: Task is missing the start_date parameter
+[2021-05-11 15:50:29,472] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:50:29,478] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.137 seconds
+[2021-05-11 15:50:59,606] {scheduler_job.py:182} INFO - Started process (PID=98060) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:50:59,608] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:50:59,609] {logging_mixin.py:104} INFO - [2021-05-11 15:50:59,609] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:50:59,773] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:50:59,784] {logging_mixin.py:104} INFO - [2021-05-11 15:50:59,784] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 15:50:59,788] {logging_mixin.py:104} INFO - [2021-05-11 15:50:59,788] {dag.py:1843} INFO - Creating ORM DAG for etl
+[2021-05-11 15:50:59,799] {logging_mixin.py:104} INFO - [2021-05-11 15:50:59,799] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-10T04:00:00+00:00
+[2021-05-11 15:50:59,810] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.207 seconds
+[2021-05-11 15:51:30,875] {scheduler_job.py:182} INFO - Started process (PID=98079) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:51:30,877] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:51:30,879] {logging_mixin.py:104} INFO - [2021-05-11 15:51:30,878] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:51:31,065] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:51:31,075] {logging_mixin.py:104} INFO - [2021-05-11 15:51:31,075] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 15:51:31,119] {logging_mixin.py:104} INFO - [2021-05-11 15:51:31,119] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-10T04:00:00+00:00
+[2021-05-11 15:51:31,139] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.268 seconds
+[2021-05-11 15:52:01,861] {scheduler_job.py:182} INFO - Started process (PID=98133) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:52:01,863] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:52:01,864] {logging_mixin.py:104} INFO - [2021-05-11 15:52:01,864] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:52:01,998] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:52:02,006] {logging_mixin.py:104} INFO - [2021-05-11 15:52:02,006] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 15:52:02,015] {logging_mixin.py:104} INFO - [2021-05-11 15:52:02,015] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-10T12:00:00+00:00
+[2021-05-11 15:52:02,021] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.165 seconds
+[2021-05-11 15:52:33,185] {scheduler_job.py:182} INFO - Started process (PID=98254) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:52:33,187] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:52:33,188] {logging_mixin.py:104} INFO - [2021-05-11 15:52:33,188] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:52:33,326] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:52:33,335] {logging_mixin.py:104} INFO - [2021-05-11 15:52:33,335] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 15:52:33,346] {logging_mixin.py:104} INFO - [2021-05-11 15:52:33,346] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T12:00:00+00:00
+[2021-05-11 15:52:33,353] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.172 seconds
+[2021-05-11 15:53:03,459] {scheduler_job.py:182} INFO - Started process (PID=98291) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:53:03,462] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:53:03,463] {logging_mixin.py:104} INFO - [2021-05-11 15:53:03,462] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:53:03,659] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:53:03,668] {logging_mixin.py:104} INFO - [2021-05-11 15:53:03,668] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 15:53:03,677] {logging_mixin.py:104} INFO - [2021-05-11 15:53:03,677] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T18:00:00+00:00
+[2021-05-11 15:53:03,683] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.228 seconds
+[2021-05-11 15:53:34,756] {scheduler_job.py:182} INFO - Started process (PID=98292) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:53:34,758] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:53:34,759] {logging_mixin.py:104} INFO - [2021-05-11 15:53:34,759] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:53:34,883] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:53:34,891] {logging_mixin.py:104} INFO - [2021-05-11 15:53:34,891] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 15:53:34,899] {logging_mixin.py:104} INFO - [2021-05-11 15:53:34,899] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T18:00:00+00:00
+[2021-05-11 15:53:34,905] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.153 seconds
+[2021-05-11 15:54:05,002] {scheduler_job.py:182} INFO - Started process (PID=98298) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:54:05,006] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:54:05,008] {logging_mixin.py:104} INFO - [2021-05-11 15:54:05,007] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:54:05,203] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:54:05,212] {logging_mixin.py:104} INFO - [2021-05-11 15:54:05,211] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 15:54:05,220] {logging_mixin.py:104} INFO - [2021-05-11 15:54:05,220] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T18:00:00+00:00
+[2021-05-11 15:54:05,226] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.229 seconds
+[2021-05-11 15:54:36,274] {scheduler_job.py:182} INFO - Started process (PID=98309) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:54:36,276] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:54:36,277] {logging_mixin.py:104} INFO - [2021-05-11 15:54:36,277] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:54:36,473] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:54:36,481] {logging_mixin.py:104} INFO - [2021-05-11 15:54:36,481] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 15:54:36,490] {logging_mixin.py:104} INFO - [2021-05-11 15:54:36,490] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T18:00:00+00:00
+[2021-05-11 15:54:36,495] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.225 seconds
+[2021-05-11 15:55:07,263] {scheduler_job.py:182} INFO - Started process (PID=98326) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:55:07,265] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:55:07,266] {logging_mixin.py:104} INFO - [2021-05-11 15:55:07,265] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:55:07,391] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:55:07,399] {logging_mixin.py:104} INFO - [2021-05-11 15:55:07,399] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 15:55:07,408] {logging_mixin.py:104} INFO - [2021-05-11 15:55:07,408] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T18:00:00+00:00
+[2021-05-11 15:55:07,415] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.157 seconds
+[2021-05-11 15:55:37,476] {scheduler_job.py:182} INFO - Started process (PID=98334) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:55:37,478] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:55:37,479] {logging_mixin.py:104} INFO - [2021-05-11 15:55:37,479] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:55:37,668] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:55:37,677] {logging_mixin.py:104} INFO - [2021-05-11 15:55:37,677] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 15:55:37,691] {logging_mixin.py:104} INFO - [2021-05-11 15:55:37,690] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T18:00:00+00:00
+[2021-05-11 15:55:37,698] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.225 seconds
+[2021-05-11 15:56:08,779] {scheduler_job.py:182} INFO - Started process (PID=98347) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:56:08,780] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:56:08,782] {logging_mixin.py:104} INFO - [2021-05-11 15:56:08,781] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:56:08,912] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:56:08,921] {logging_mixin.py:104} INFO - [2021-05-11 15:56:08,920] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 15:56:08,931] {logging_mixin.py:104} INFO - [2021-05-11 15:56:08,931] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T18:00:00+00:00
+[2021-05-11 15:56:08,937] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.162 seconds
+[2021-05-11 15:56:39,404] {scheduler_job.py:182} INFO - Started process (PID=98358) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:56:39,408] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:56:39,411] {logging_mixin.py:104} INFO - [2021-05-11 15:56:39,410] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:56:39,541] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:56:39,551] {logging_mixin.py:104} INFO - [2021-05-11 15:56:39,551] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 15:56:39,562] {logging_mixin.py:104} INFO - [2021-05-11 15:56:39,562] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T18:00:00+00:00
+[2021-05-11 15:56:39,568] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.168 seconds
+[2021-05-11 15:57:09,665] {scheduler_job.py:182} INFO - Started process (PID=98361) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:57:09,667] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:57:09,668] {logging_mixin.py:104} INFO - [2021-05-11 15:57:09,667] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:57:09,851] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:57:09,861] {logging_mixin.py:104} INFO - [2021-05-11 15:57:09,861] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 15:57:09,871] {logging_mixin.py:104} INFO - [2021-05-11 15:57:09,871] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T18:00:00+00:00
+[2021-05-11 15:57:09,878] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.217 seconds
+[2021-05-11 15:57:40,984] {scheduler_job.py:182} INFO - Started process (PID=98362) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:57:40,986] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:57:40,988] {logging_mixin.py:104} INFO - [2021-05-11 15:57:40,987] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:57:41,188] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:57:41,198] {logging_mixin.py:104} INFO - [2021-05-11 15:57:41,197] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 15:57:41,208] {logging_mixin.py:104} INFO - [2021-05-11 15:57:41,208] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T18:00:00+00:00
+[2021-05-11 15:57:41,214] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.234 seconds
+[2021-05-11 15:58:12,246] {scheduler_job.py:182} INFO - Started process (PID=98385) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:58:12,247] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:58:12,250] {logging_mixin.py:104} INFO - [2021-05-11 15:58:12,250] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:58:12,433] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:58:12,442] {logging_mixin.py:104} INFO - [2021-05-11 15:58:12,442] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 15:58:12,453] {logging_mixin.py:104} INFO - [2021-05-11 15:58:12,453] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T18:00:00+00:00
+[2021-05-11 15:58:12,461] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.219 seconds
+[2021-05-11 15:58:43,394] {scheduler_job.py:182} INFO - Started process (PID=98386) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:58:43,400] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:58:43,401] {logging_mixin.py:104} INFO - [2021-05-11 15:58:43,400] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:58:43,584] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:58:43,592] {logging_mixin.py:104} INFO - [2021-05-11 15:58:43,592] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 15:58:43,607] {logging_mixin.py:104} INFO - [2021-05-11 15:58:43,607] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T18:00:00+00:00
+[2021-05-11 15:58:43,617] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.228 seconds
+[2021-05-11 15:59:13,964] {scheduler_job.py:182} INFO - Started process (PID=98389) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:59:13,965] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:59:13,967] {logging_mixin.py:104} INFO - [2021-05-11 15:59:13,966] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:59:14,099] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:59:14,108] {logging_mixin.py:104} INFO - [2021-05-11 15:59:14,108] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 15:59:14,118] {logging_mixin.py:104} INFO - [2021-05-11 15:59:14,118] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T18:00:00+00:00
+[2021-05-11 15:59:14,124] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.165 seconds
+[2021-05-11 15:59:44,251] {scheduler_job.py:182} INFO - Started process (PID=98393) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:59:44,252] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 15:59:44,254] {logging_mixin.py:104} INFO - [2021-05-11 15:59:44,253] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:59:44,385] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 15:59:44,394] {logging_mixin.py:104} INFO - [2021-05-11 15:59:44,393] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 15:59:44,404] {logging_mixin.py:104} INFO - [2021-05-11 15:59:44,404] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T18:00:00+00:00
+[2021-05-11 15:59:44,410] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.164 seconds
+[2021-05-11 16:00:14,538] {scheduler_job.py:182} INFO - Started process (PID=98406) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:00:14,540] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:00:14,541] {logging_mixin.py:104} INFO - [2021-05-11 16:00:14,541] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:00:14,670] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:00:14,679] {logging_mixin.py:104} INFO - [2021-05-11 16:00:14,679] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:00:14,692] {logging_mixin.py:104} INFO - [2021-05-11 16:00:14,692] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:00:14,698] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.164 seconds
+[2021-05-11 16:00:44,813] {scheduler_job.py:182} INFO - Started process (PID=98407) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:00:44,817] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:00:44,819] {logging_mixin.py:104} INFO - [2021-05-11 16:00:44,818] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:00:45,020] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:00:45,029] {logging_mixin.py:104} INFO - [2021-05-11 16:00:45,028] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:00:45,038] {logging_mixin.py:104} INFO - [2021-05-11 16:00:45,038] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:00:45,044] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.235 seconds
+[2021-05-11 16:01:15,207] {scheduler_job.py:182} INFO - Started process (PID=98411) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:01:15,209] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:01:15,210] {logging_mixin.py:104} INFO - [2021-05-11 16:01:15,210] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:01:15,376] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:01:15,388] {logging_mixin.py:104} INFO - [2021-05-11 16:01:15,387] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:01:15,399] {logging_mixin.py:104} INFO - [2021-05-11 16:01:15,399] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:01:15,405] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.202 seconds
+[2021-05-11 16:01:46,526] {scheduler_job.py:182} INFO - Started process (PID=98443) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:01:46,528] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:01:46,530] {logging_mixin.py:104} INFO - [2021-05-11 16:01:46,530] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:01:46,660] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:01:46,668] {logging_mixin.py:104} INFO - [2021-05-11 16:01:46,668] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:01:46,678] {logging_mixin.py:104} INFO - [2021-05-11 16:01:46,678] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:01:46,684] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.162 seconds
+[2021-05-11 16:02:16,795] {scheduler_job.py:182} INFO - Started process (PID=98451) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:02:16,797] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:02:16,799] {logging_mixin.py:104} INFO - [2021-05-11 16:02:16,799] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:02:16,997] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:02:17,006] {logging_mixin.py:104} INFO - [2021-05-11 16:02:17,006] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:02:17,016] {logging_mixin.py:104} INFO - [2021-05-11 16:02:17,016] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:02:17,021] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.231 seconds
+[2021-05-11 16:02:48,079] {scheduler_job.py:182} INFO - Started process (PID=98452) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:02:48,080] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:02:48,081] {logging_mixin.py:104} INFO - [2021-05-11 16:02:48,081] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:02:48,210] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:02:48,219] {logging_mixin.py:104} INFO - [2021-05-11 16:02:48,218] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:02:48,228] {logging_mixin.py:104} INFO - [2021-05-11 16:02:48,228] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:02:48,234] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.160 seconds
+[2021-05-11 16:03:18,357] {scheduler_job.py:182} INFO - Started process (PID=98454) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:03:18,359] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:03:18,360] {logging_mixin.py:104} INFO - [2021-05-11 16:03:18,359] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:03:18,488] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:03:18,497] {logging_mixin.py:104} INFO - [2021-05-11 16:03:18,497] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:03:18,506] {logging_mixin.py:104} INFO - [2021-05-11 16:03:18,506] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:03:18,513] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.160 seconds
+[2021-05-11 16:03:48,604] {scheduler_job.py:182} INFO - Started process (PID=98459) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:03:48,606] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:03:48,607] {logging_mixin.py:104} INFO - [2021-05-11 16:03:48,607] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:03:48,801] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:03:48,811] {logging_mixin.py:104} INFO - [2021-05-11 16:03:48,811] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:03:48,820] {logging_mixin.py:104} INFO - [2021-05-11 16:03:48,820] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:03:48,826] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.226 seconds
+[2021-05-11 16:04:18,975] {scheduler_job.py:182} INFO - Started process (PID=98467) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:04:18,977] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:04:18,978] {logging_mixin.py:104} INFO - [2021-05-11 16:04:18,977] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:04:19,149] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:04:19,160] {logging_mixin.py:104} INFO - [2021-05-11 16:04:19,159] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:04:19,173] {logging_mixin.py:104} INFO - [2021-05-11 16:04:19,172] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:04:19,180] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.211 seconds
+[2021-05-11 16:04:49,417] {scheduler_job.py:182} INFO - Started process (PID=98491) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:04:49,418] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:04:49,420] {logging_mixin.py:104} INFO - [2021-05-11 16:04:49,419] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:04:49,543] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:04:49,551] {logging_mixin.py:104} INFO - [2021-05-11 16:04:49,551] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:04:49,560] {logging_mixin.py:104} INFO - [2021-05-11 16:04:49,560] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:04:49,566] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.155 seconds
+[2021-05-11 16:05:19,697] {scheduler_job.py:182} INFO - Started process (PID=98496) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:05:19,700] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:05:19,701] {logging_mixin.py:104} INFO - [2021-05-11 16:05:19,701] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:05:19,887] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:05:19,895] {logging_mixin.py:104} INFO - [2021-05-11 16:05:19,895] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:05:19,905] {logging_mixin.py:104} INFO - [2021-05-11 16:05:19,904] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:05:19,910] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.218 seconds
+[2021-05-11 16:05:50,053] {scheduler_job.py:182} INFO - Started process (PID=98506) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:05:50,056] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:05:50,057] {logging_mixin.py:104} INFO - [2021-05-11 16:05:50,057] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:05:50,269] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:05:50,280] {logging_mixin.py:104} INFO - [2021-05-11 16:05:50,279] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:05:50,290] {logging_mixin.py:104} INFO - [2021-05-11 16:05:50,289] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:05:50,296] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.247 seconds
+[2021-05-11 16:06:20,412] {scheduler_job.py:182} INFO - Started process (PID=98508) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:06:20,415] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:06:20,416] {logging_mixin.py:104} INFO - [2021-05-11 16:06:20,416] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:06:20,587] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:06:20,595] {logging_mixin.py:104} INFO - [2021-05-11 16:06:20,595] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:06:20,604] {logging_mixin.py:104} INFO - [2021-05-11 16:06:20,604] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:06:20,610] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.201 seconds
+[2021-05-11 16:06:52,821] {scheduler_job.py:182} INFO - Started process (PID=98520) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:06:52,824] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:06:52,826] {logging_mixin.py:104} INFO - [2021-05-11 16:06:52,825] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:06:52,987] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:06:52,997] {logging_mixin.py:104} INFO - [2021-05-11 16:06:52,997] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:06:53,007] {logging_mixin.py:104} INFO - [2021-05-11 16:06:53,007] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:06:53,015] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.199 seconds
+[2021-05-11 16:07:23,864] {scheduler_job.py:182} INFO - Started process (PID=98542) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:07:23,865] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:07:23,866] {logging_mixin.py:104} INFO - [2021-05-11 16:07:23,866] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:07:24,095] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:07:24,106] {logging_mixin.py:104} INFO - [2021-05-11 16:07:24,105] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:07:24,118] {logging_mixin.py:104} INFO - [2021-05-11 16:07:24,118] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:07:24,130] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.271 seconds
+[2021-05-11 16:07:54,380] {scheduler_job.py:182} INFO - Started process (PID=98558) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:07:54,381] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:07:54,383] {logging_mixin.py:104} INFO - [2021-05-11 16:07:54,382] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:07:54,584] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:07:54,593] {logging_mixin.py:104} INFO - [2021-05-11 16:07:54,593] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:07:54,604] {logging_mixin.py:104} INFO - [2021-05-11 16:07:54,604] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:07:54,610] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.234 seconds
+[2021-05-11 16:08:24,916] {scheduler_job.py:182} INFO - Started process (PID=98563) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:08:24,918] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:08:24,919] {logging_mixin.py:104} INFO - [2021-05-11 16:08:24,919] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:08:25,105] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:08:25,116] {logging_mixin.py:104} INFO - [2021-05-11 16:08:25,115] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:08:25,126] {logging_mixin.py:104} INFO - [2021-05-11 16:08:25,126] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:08:25,132] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.220 seconds
+[2021-05-11 16:08:55,450] {scheduler_job.py:182} INFO - Started process (PID=98570) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:08:55,451] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:08:55,452] {logging_mixin.py:104} INFO - [2021-05-11 16:08:55,452] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:08:55,575] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:08:55,583] {logging_mixin.py:104} INFO - [2021-05-11 16:08:55,582] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:08:55,593] {logging_mixin.py:104} INFO - [2021-05-11 16:08:55,593] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:08:55,600] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.153 seconds
+[2021-05-11 16:09:26,316] {scheduler_job.py:182} INFO - Started process (PID=98590) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:09:26,318] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:09:26,319] {logging_mixin.py:104} INFO - [2021-05-11 16:09:26,318] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:09:26,487] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:09:26,498] {logging_mixin.py:104} INFO - [2021-05-11 16:09:26,498] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:09:26,510] {logging_mixin.py:104} INFO - [2021-05-11 16:09:26,509] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:09:26,523] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.210 seconds
+[2021-05-11 16:09:57,037] {scheduler_job.py:182} INFO - Started process (PID=98608) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:09:57,038] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:09:57,039] {logging_mixin.py:104} INFO - [2021-05-11 16:09:57,039] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:09:57,173] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:09:57,182] {logging_mixin.py:104} INFO - [2021-05-11 16:09:57,181] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:09:57,192] {logging_mixin.py:104} INFO - [2021-05-11 16:09:57,191] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:09:57,198] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.166 seconds
+[2021-05-11 16:10:27,292] {scheduler_job.py:182} INFO - Started process (PID=98618) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:10:27,294] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:10:27,295] {logging_mixin.py:104} INFO - [2021-05-11 16:10:27,294] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:10:27,438] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:10:27,446] {logging_mixin.py:104} INFO - [2021-05-11 16:10:27,446] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:10:27,455] {logging_mixin.py:104} INFO - [2021-05-11 16:10:27,455] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:10:27,462] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.174 seconds
+[2021-05-11 16:10:57,541] {scheduler_job.py:182} INFO - Started process (PID=98627) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:10:57,543] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:10:57,544] {logging_mixin.py:104} INFO - [2021-05-11 16:10:57,543] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:10:57,748] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:10:57,757] {logging_mixin.py:104} INFO - [2021-05-11 16:10:57,757] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:10:57,768] {logging_mixin.py:104} INFO - [2021-05-11 16:10:57,768] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:10:57,776] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.238 seconds
+[2021-05-11 16:11:28,789] {scheduler_job.py:182} INFO - Started process (PID=98629) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:11:28,790] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:11:28,791] {logging_mixin.py:104} INFO - [2021-05-11 16:11:28,791] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:11:28,871] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:11:28,883] {logging_mixin.py:104} INFO - [2021-05-11 16:11:28,882] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:11:28,894] {logging_mixin.py:104} INFO - [2021-05-11 16:11:28,894] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:11:28,901] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.115 seconds
+[2021-05-11 16:11:59,021] {scheduler_job.py:182} INFO - Started process (PID=98634) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:11:59,023] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:11:59,024] {logging_mixin.py:104} INFO - [2021-05-11 16:11:59,024] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:11:59,120] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:11:59,131] {logging_mixin.py:104} INFO - [2021-05-11 16:11:59,131] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:11:59,144] {logging_mixin.py:104} INFO - [2021-05-11 16:11:59,144] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:11:59,151] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.133 seconds
+[2021-05-11 16:12:29,988] {scheduler_job.py:182} INFO - Started process (PID=98639) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:12:29,989] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:12:29,990] {logging_mixin.py:104} INFO - [2021-05-11 16:12:29,989] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:12:30,066] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:12:30,098] {logging_mixin.py:104} INFO - [2021-05-11 16:12:30,097] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:12:30,118] {logging_mixin.py:104} INFO - [2021-05-11 16:12:30,118] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:12:30,138] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.153 seconds
+[2021-05-11 16:13:00,476] {scheduler_job.py:182} INFO - Started process (PID=98646) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:13:00,477] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:13:00,478] {logging_mixin.py:104} INFO - [2021-05-11 16:13:00,478] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:13:00,576] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:13:00,589] {logging_mixin.py:104} INFO - [2021-05-11 16:13:00,588] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:13:00,600] {logging_mixin.py:104} INFO - [2021-05-11 16:13:00,600] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:13:00,607] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.134 seconds
+[2021-05-11 16:13:30,735] {scheduler_job.py:182} INFO - Started process (PID=98652) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:13:30,736] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:13:30,737] {logging_mixin.py:104} INFO - [2021-05-11 16:13:30,736] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:13:30,829] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:13:30,841] {logging_mixin.py:104} INFO - [2021-05-11 16:13:30,841] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:13:30,856] {logging_mixin.py:104} INFO - [2021-05-11 16:13:30,856] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:13:30,864] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.133 seconds
+[2021-05-11 16:14:01,007] {scheduler_job.py:182} INFO - Started process (PID=98655) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:14:01,008] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:14:01,009] {logging_mixin.py:104} INFO - [2021-05-11 16:14:01,009] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:14:01,087] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:14:01,098] {logging_mixin.py:104} INFO - [2021-05-11 16:14:01,098] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:14:01,109] {logging_mixin.py:104} INFO - [2021-05-11 16:14:01,109] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:14:01,116] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.113 seconds
+[2021-05-11 16:14:31,248] {scheduler_job.py:182} INFO - Started process (PID=98656) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:14:31,250] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:14:31,251] {logging_mixin.py:104} INFO - [2021-05-11 16:14:31,251] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:14:31,335] {logging_mixin.py:104} INFO - [2021-05-11 16:14:31,329] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 51, in <module>
+    bash_command='cat ./loading_data_to_s3.py',
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 89, in __call__
+    obj: BaseOperator = type.__call__(cls, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/utils/decorators.py", line 90, in wrapper
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['python_callable'] is required
+[2021-05-11 16:14:31,336] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:14:31,345] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.101 seconds
+[2021-05-11 16:15:01,522] {scheduler_job.py:182} INFO - Started process (PID=98661) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:15:01,524] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:15:01,525] {logging_mixin.py:104} INFO - [2021-05-11 16:15:01,525] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:15:01,601] {logging_mixin.py:104} INFO - [2021-05-11 16:15:01,600] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 51, in <module>
+    bash_command='cat ./loading_data_to_s3.py',
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 89, in __call__
+    obj: BaseOperator = type.__call__(cls, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/utils/decorators.py", line 90, in wrapper
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['python_callable'] is required
+[2021-05-11 16:15:01,602] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:15:01,611] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.094 seconds
+[2021-05-11 16:15:31,777] {scheduler_job.py:182} INFO - Started process (PID=98663) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:15:31,778] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:15:31,780] {logging_mixin.py:104} INFO - [2021-05-11 16:15:31,779] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:15:31,866] {logging_mixin.py:104} INFO - [2021-05-11 16:15:31,865] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 51, in <module>
+    bash_command='cat ./loading_data_to_s3.py',
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 89, in __call__
+    obj: BaseOperator = type.__call__(cls, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/utils/decorators.py", line 90, in wrapper
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['python_callable'] is required
+[2021-05-11 16:15:31,866] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:15:31,876] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.103 seconds
+[2021-05-11 16:16:02,044] {scheduler_job.py:182} INFO - Started process (PID=98669) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:16:02,048] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:16:02,050] {logging_mixin.py:104} INFO - [2021-05-11 16:16:02,050] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:16:02,217] {logging_mixin.py:104} INFO - [2021-05-11 16:16:02,214] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 51, in <module>
+    bash_command='cat ./loading_data_to_s3.py',
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 89, in __call__
+    obj: BaseOperator = type.__call__(cls, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/utils/decorators.py", line 90, in wrapper
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['python_callable'] is required
+[2021-05-11 16:16:02,217] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:16:02,229] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.189 seconds
+[2021-05-11 16:16:32,310] {scheduler_job.py:182} INFO - Started process (PID=98674) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:16:32,311] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:16:32,313] {logging_mixin.py:104} INFO - [2021-05-11 16:16:32,312] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:16:33,160] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:16:33,170] {logging_mixin.py:104} INFO - [2021-05-11 16:16:33,169] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:16:33,179] {logging_mixin.py:104} INFO - [2021-05-11 16:16:33,179] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:16:33,187] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.880 seconds
+[2021-05-11 16:17:04,602] {scheduler_job.py:182} INFO - Started process (PID=98690) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:17:04,603] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:17:04,604] {logging_mixin.py:104} INFO - [2021-05-11 16:17:04,604] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:17:05,088] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:17:05,095] {logging_mixin.py:104} INFO - [2021-05-11 16:17:05,095] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:17:05,104] {logging_mixin.py:104} INFO - [2021-05-11 16:17:05,104] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:17:05,110] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.510 seconds
+[2021-05-11 16:17:35,300] {scheduler_job.py:182} INFO - Started process (PID=98701) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:17:35,302] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:17:35,303] {logging_mixin.py:104} INFO - [2021-05-11 16:17:35,303] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:17:35,804] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:17:35,812] {logging_mixin.py:104} INFO - [2021-05-11 16:17:35,812] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:17:35,821] {logging_mixin.py:104} INFO - [2021-05-11 16:17:35,821] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:17:35,827] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.530 seconds
+[2021-05-11 16:18:06,198] {scheduler_job.py:182} INFO - Started process (PID=98707) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:18:06,200] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:18:06,201] {logging_mixin.py:104} INFO - [2021-05-11 16:18:06,201] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:18:06,887] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:18:06,900] {logging_mixin.py:104} INFO - [2021-05-11 16:18:06,899] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:18:06,911] {logging_mixin.py:104} INFO - [2021-05-11 16:18:06,911] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:18:06,918] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.723 seconds
+[2021-05-11 16:18:37,275] {scheduler_job.py:182} INFO - Started process (PID=98708) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:18:37,277] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:18:37,278] {logging_mixin.py:104} INFO - [2021-05-11 16:18:37,277] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:18:37,980] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:18:37,988] {logging_mixin.py:104} INFO - [2021-05-11 16:18:37,988] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:18:37,998] {logging_mixin.py:104} INFO - [2021-05-11 16:18:37,998] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:18:38,004] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.733 seconds
+[2021-05-11 16:19:08,361] {scheduler_job.py:182} INFO - Started process (PID=98710) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:19:08,364] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:19:08,365] {logging_mixin.py:104} INFO - [2021-05-11 16:19:08,364] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:19:09,131] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:19:09,143] {logging_mixin.py:104} INFO - [2021-05-11 16:19:09,142] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:19:09,154] {logging_mixin.py:104} INFO - [2021-05-11 16:19:09,153] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:19:09,162] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.805 seconds
+[2021-05-11 16:19:39,525] {scheduler_job.py:182} INFO - Started process (PID=98711) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:19:39,527] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:19:39,528] {logging_mixin.py:104} INFO - [2021-05-11 16:19:39,528] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:19:40,059] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:19:40,068] {logging_mixin.py:104} INFO - [2021-05-11 16:19:40,067] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:19:40,078] {logging_mixin.py:104} INFO - [2021-05-11 16:19:40,078] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:19:40,083] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.562 seconds
+[2021-05-11 16:20:10,761] {scheduler_job.py:182} INFO - Started process (PID=98745) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:20:10,762] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:20:10,764] {logging_mixin.py:104} INFO - [2021-05-11 16:20:10,763] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:20:11,262] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:20:11,270] {logging_mixin.py:104} INFO - [2021-05-11 16:20:11,270] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:20:11,282] {logging_mixin.py:104} INFO - [2021-05-11 16:20:11,281] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:20:11,288] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.531 seconds
+[2021-05-11 16:20:41,398] {scheduler_job.py:182} INFO - Started process (PID=98758) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:20:41,400] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:20:41,401] {logging_mixin.py:104} INFO - [2021-05-11 16:20:41,401] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:20:41,887] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:20:41,895] {logging_mixin.py:104} INFO - [2021-05-11 16:20:41,894] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:20:41,903] {logging_mixin.py:104} INFO - [2021-05-11 16:20:41,903] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:20:41,908] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.514 seconds
+[2021-05-11 16:21:12,504] {scheduler_job.py:182} INFO - Started process (PID=98772) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:21:12,507] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:21:12,509] {logging_mixin.py:104} INFO - [2021-05-11 16:21:12,509] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:21:13,046] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:21:13,055] {logging_mixin.py:104} INFO - [2021-05-11 16:21:13,054] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:21:13,063] {logging_mixin.py:104} INFO - [2021-05-11 16:21:13,063] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:21:13,069] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.569 seconds
+[2021-05-11 16:21:43,800] {scheduler_job.py:182} INFO - Started process (PID=98775) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:21:43,802] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:21:43,804] {logging_mixin.py:104} INFO - [2021-05-11 16:21:43,803] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:21:44,405] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:21:44,415] {logging_mixin.py:104} INFO - [2021-05-11 16:21:44,415] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:21:44,424] {logging_mixin.py:104} INFO - [2021-05-11 16:21:44,424] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:21:44,430] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.634 seconds
+[2021-05-11 16:22:15,065] {scheduler_job.py:182} INFO - Started process (PID=98787) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:22:15,066] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:22:15,067] {logging_mixin.py:104} INFO - [2021-05-11 16:22:15,067] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:22:15,765] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:22:15,774] {logging_mixin.py:104} INFO - [2021-05-11 16:22:15,774] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:22:15,784] {logging_mixin.py:104} INFO - [2021-05-11 16:22:15,784] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:22:15,789] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.729 seconds
+[2021-05-11 16:22:46,229] {scheduler_job.py:182} INFO - Started process (PID=98799) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:22:46,232] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:22:46,233] {logging_mixin.py:104} INFO - [2021-05-11 16:22:46,233] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:22:47,074] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:22:47,082] {logging_mixin.py:104} INFO - [2021-05-11 16:22:47,082] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:22:47,095] {logging_mixin.py:104} INFO - [2021-05-11 16:22:47,095] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:22:47,101] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.876 seconds
+[2021-05-11 16:23:17,205] {scheduler_job.py:182} INFO - Started process (PID=98827) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:23:17,207] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:23:17,208] {logging_mixin.py:104} INFO - [2021-05-11 16:23:17,208] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:23:17,662] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:23:17,669] {logging_mixin.py:104} INFO - [2021-05-11 16:23:17,669] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:23:17,677] {logging_mixin.py:104} INFO - [2021-05-11 16:23:17,677] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:23:17,684] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.483 seconds
+[2021-05-11 16:23:47,973] {scheduler_job.py:182} INFO - Started process (PID=98833) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:23:47,974] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:23:47,975] {logging_mixin.py:104} INFO - [2021-05-11 16:23:47,975] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:23:48,482] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:23:48,491] {logging_mixin.py:104} INFO - [2021-05-11 16:23:48,490] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:23:48,500] {logging_mixin.py:104} INFO - [2021-05-11 16:23:48,500] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:23:48,506] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.536 seconds
+[2021-05-11 16:24:18,868] {scheduler_job.py:182} INFO - Started process (PID=98835) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:24:18,870] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:24:18,871] {logging_mixin.py:104} INFO - [2021-05-11 16:24:18,870] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:24:19,356] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:24:19,365] {logging_mixin.py:104} INFO - [2021-05-11 16:24:19,364] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:24:19,374] {logging_mixin.py:104} INFO - [2021-05-11 16:24:19,373] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:24:19,379] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.514 seconds
+[2021-05-11 16:24:49,761] {scheduler_job.py:182} INFO - Started process (PID=98837) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:24:49,763] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:24:49,764] {logging_mixin.py:104} INFO - [2021-05-11 16:24:49,764] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:24:50,631] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:24:50,640] {logging_mixin.py:104} INFO - [2021-05-11 16:24:50,640] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:24:50,650] {logging_mixin.py:104} INFO - [2021-05-11 16:24:50,650] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:24:50,655] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.898 seconds
+[2021-05-11 16:25:21,618] {scheduler_job.py:182} INFO - Started process (PID=98874) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:25:21,622] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:25:21,624] {logging_mixin.py:104} INFO - [2021-05-11 16:25:21,624] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:25:22,094] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:25:22,102] {logging_mixin.py:104} INFO - [2021-05-11 16:25:22,101] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:25:22,111] {logging_mixin.py:104} INFO - [2021-05-11 16:25:22,111] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:25:22,116] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.503 seconds
+[2021-05-11 16:25:52,497] {scheduler_job.py:182} INFO - Started process (PID=98882) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:25:52,498] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:25:52,499] {logging_mixin.py:104} INFO - [2021-05-11 16:25:52,499] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:25:53,012] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:25:53,020] {logging_mixin.py:104} INFO - [2021-05-11 16:25:53,020] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:25:53,029] {logging_mixin.py:104} INFO - [2021-05-11 16:25:53,029] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:25:53,034] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.541 seconds
+[2021-05-11 16:26:23,391] {scheduler_job.py:182} INFO - Started process (PID=98892) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:26:23,392] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:26:23,393] {logging_mixin.py:104} INFO - [2021-05-11 16:26:23,393] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:26:23,887] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:26:23,895] {logging_mixin.py:104} INFO - [2021-05-11 16:26:23,895] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:26:23,904] {logging_mixin.py:104} INFO - [2021-05-11 16:26:23,904] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:26:23,910] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.523 seconds
+[2021-05-11 16:26:54,285] {scheduler_job.py:182} INFO - Started process (PID=98900) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:26:54,286] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:26:54,287] {logging_mixin.py:104} INFO - [2021-05-11 16:26:54,287] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:26:54,839] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:26:54,848] {logging_mixin.py:104} INFO - [2021-05-11 16:26:54,847] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:26:54,856] {logging_mixin.py:104} INFO - [2021-05-11 16:26:54,856] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:26:54,862] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.581 seconds
+[2021-05-11 16:27:27,449] {scheduler_job.py:182} INFO - Started process (PID=98928) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:27:27,452] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:27:27,453] {logging_mixin.py:104} INFO - [2021-05-11 16:27:27,453] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:27:27,988] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:27:28,000] {logging_mixin.py:104} INFO - [2021-05-11 16:27:27,999] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:27:28,010] {logging_mixin.py:104} INFO - [2021-05-11 16:27:28,010] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:27:28,018] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.572 seconds
+[2021-05-11 16:27:58,533] {scheduler_job.py:182} INFO - Started process (PID=98933) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:27:58,535] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:27:58,536] {logging_mixin.py:104} INFO - [2021-05-11 16:27:58,535] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:27:59,098] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:27:59,108] {logging_mixin.py:104} INFO - [2021-05-11 16:27:59,108] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:27:59,117] {logging_mixin.py:104} INFO - [2021-05-11 16:27:59,117] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:27:59,122] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.594 seconds
+[2021-05-11 16:28:29,623] {scheduler_job.py:182} INFO - Started process (PID=98947) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:28:29,625] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:28:29,626] {logging_mixin.py:104} INFO - [2021-05-11 16:28:29,625] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:28:30,477] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:28:30,486] {logging_mixin.py:104} INFO - [2021-05-11 16:28:30,485] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:28:30,497] {logging_mixin.py:104} INFO - [2021-05-11 16:28:30,496] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:28:30,502] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.883 seconds
+[2021-05-11 16:29:00,733] {scheduler_job.py:182} INFO - Started process (PID=98950) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:29:00,735] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:29:00,736] {logging_mixin.py:104} INFO - [2021-05-11 16:29:00,736] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:29:01,234] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:29:01,242] {logging_mixin.py:104} INFO - [2021-05-11 16:29:01,242] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:29:01,252] {logging_mixin.py:104} INFO - [2021-05-11 16:29:01,252] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:29:01,257] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.528 seconds
+[2021-05-11 16:29:31,607] {scheduler_job.py:182} INFO - Started process (PID=98951) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:29:31,609] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:29:31,610] {logging_mixin.py:104} INFO - [2021-05-11 16:29:31,610] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:29:32,122] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:29:32,131] {logging_mixin.py:104} INFO - [2021-05-11 16:29:32,130] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:29:32,140] {logging_mixin.py:104} INFO - [2021-05-11 16:29:32,140] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:29:32,146] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.542 seconds
+[2021-05-11 16:30:02,499] {scheduler_job.py:182} INFO - Started process (PID=98966) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:30:02,500] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:30:02,501] {logging_mixin.py:104} INFO - [2021-05-11 16:30:02,501] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:30:02,972] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:30:02,980] {logging_mixin.py:104} INFO - [2021-05-11 16:30:02,979] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:30:02,989] {logging_mixin.py:104} INFO - [2021-05-11 16:30:02,989] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:30:02,994] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.498 seconds
+[2021-05-11 16:30:33,277] {scheduler_job.py:182} INFO - Started process (PID=98975) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:30:33,286] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:30:33,288] {logging_mixin.py:104} INFO - [2021-05-11 16:30:33,287] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:30:34,172] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:30:34,181] {logging_mixin.py:104} INFO - [2021-05-11 16:30:34,180] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:30:34,200] {logging_mixin.py:104} INFO - [2021-05-11 16:30:34,200] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:30:34,206] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.933 seconds
+[2021-05-11 16:31:04,442] {scheduler_job.py:182} INFO - Started process (PID=99000) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:31:04,444] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:31:04,445] {logging_mixin.py:104} INFO - [2021-05-11 16:31:04,445] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:31:04,907] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:31:04,915] {logging_mixin.py:104} INFO - [2021-05-11 16:31:04,914] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:31:04,925] {logging_mixin.py:104} INFO - [2021-05-11 16:31:04,925] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:31:04,932] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.494 seconds
+[2021-05-11 16:31:35,199] {scheduler_job.py:182} INFO - Started process (PID=99002) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:31:35,212] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:31:35,215] {logging_mixin.py:104} INFO - [2021-05-11 16:31:35,214] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:31:35,707] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:31:35,715] {logging_mixin.py:104} INFO - [2021-05-11 16:31:35,714] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:31:35,724] {logging_mixin.py:104} INFO - [2021-05-11 16:31:35,723] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:31:35,729] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.534 seconds
+[2021-05-11 16:32:06,079] {scheduler_job.py:182} INFO - Started process (PID=99006) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:32:06,080] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:32:06,081] {logging_mixin.py:104} INFO - [2021-05-11 16:32:06,081] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:32:06,579] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:32:06,587] {logging_mixin.py:104} INFO - [2021-05-11 16:32:06,587] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:32:06,596] {logging_mixin.py:104} INFO - [2021-05-11 16:32:06,596] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:32:06,602] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.527 seconds
+[2021-05-11 16:32:36,949] {scheduler_job.py:182} INFO - Started process (PID=99010) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:32:36,951] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:32:36,952] {logging_mixin.py:104} INFO - [2021-05-11 16:32:36,952] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:32:37,741] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:32:37,749] {logging_mixin.py:104} INFO - [2021-05-11 16:32:37,748] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:32:37,760] {logging_mixin.py:104} INFO - [2021-05-11 16:32:37,760] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:32:37,766] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.822 seconds
+[2021-05-11 16:33:08,122] {scheduler_job.py:182} INFO - Started process (PID=99019) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:33:08,124] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:33:08,125] {logging_mixin.py:104} INFO - [2021-05-11 16:33:08,125] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:33:08,950] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:33:08,959] {logging_mixin.py:104} INFO - [2021-05-11 16:33:08,958] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:33:08,967] {logging_mixin.py:104} INFO - [2021-05-11 16:33:08,967] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:33:08,974] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.856 seconds
+[2021-05-11 16:33:39,312] {scheduler_job.py:182} INFO - Started process (PID=99027) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:33:39,316] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:33:39,319] {logging_mixin.py:104} INFO - [2021-05-11 16:33:39,318] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:33:39,866] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:33:39,875] {logging_mixin.py:104} INFO - [2021-05-11 16:33:39,875] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:33:39,887] {logging_mixin.py:104} INFO - [2021-05-11 16:33:39,887] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:33:39,896] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.589 seconds
+[2021-05-11 16:34:10,191] {scheduler_job.py:182} INFO - Started process (PID=99052) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:34:10,194] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:34:10,196] {logging_mixin.py:104} INFO - [2021-05-11 16:34:10,195] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:34:10,802] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:34:10,810] {logging_mixin.py:104} INFO - [2021-05-11 16:34:10,809] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:34:10,819] {logging_mixin.py:104} INFO - [2021-05-11 16:34:10,819] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:34:10,826] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.642 seconds
+[2021-05-11 16:34:41,136] {scheduler_job.py:182} INFO - Started process (PID=99060) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:34:41,137] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:34:41,138] {logging_mixin.py:104} INFO - [2021-05-11 16:34:41,138] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:34:41,687] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:34:41,696] {logging_mixin.py:104} INFO - [2021-05-11 16:34:41,696] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:34:41,705] {logging_mixin.py:104} INFO - [2021-05-11 16:34:41,705] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:34:41,711] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.579 seconds
+[2021-05-11 16:35:11,988] {scheduler_job.py:182} INFO - Started process (PID=99063) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:35:11,991] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:35:11,992] {logging_mixin.py:104} INFO - [2021-05-11 16:35:11,991] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:35:12,156] {logging_mixin.py:104} INFO - [2021-05-11 16:35:12,154] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 8, in <module>
+    from load_data_to_s3 import load_data_to_s3
+  File "/Users/raphaelcarvalho/Documents/forex/load_data_to_s3.py", line 25
+    if max_ts[0][0]m is None:
+                   ^
+SyntaxError: invalid syntax
+[2021-05-11 16:35:12,157] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:35:12,168] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.183 seconds
+[2021-05-11 16:35:42,464] {scheduler_job.py:182} INFO - Started process (PID=99079) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:35:42,466] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:35:42,468] {logging_mixin.py:104} INFO - [2021-05-11 16:35:42,467] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:35:42,639] {logging_mixin.py:104} INFO - [2021-05-11 16:35:42,637] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 8, in <module>
+    from load_data_to_s3 import load_data_to_s3
+  File "/Users/raphaelcarvalho/Documents/forex/load_data_to_s3.py", line 25
+    if max_ts[0][0]m is None:
+                   ^
+SyntaxError: invalid syntax
+[2021-05-11 16:35:42,640] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:35:42,649] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.191 seconds
+[2021-05-11 16:36:13,067] {scheduler_job.py:182} INFO - Started process (PID=99086) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:36:13,070] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:36:13,071] {logging_mixin.py:104} INFO - [2021-05-11 16:36:13,070] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:36:13,155] {logging_mixin.py:104} INFO - [2021-05-11 16:36:13,154] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 8, in <module>
+    from load_data_to_s3 import load_data_to_s3
+  File "/Users/raphaelcarvalho/Documents/forex/load_data_to_s3.py", line 25
+    if max_ts[0][0]m is None:
+                   ^
+SyntaxError: invalid syntax
+[2021-05-11 16:36:13,155] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:36:13,164] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.102 seconds
+[2021-05-11 16:36:43,545] {scheduler_job.py:182} INFO - Started process (PID=99088) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:36:43,546] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:36:43,547] {logging_mixin.py:104} INFO - [2021-05-11 16:36:43,547] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:36:43,621] {logging_mixin.py:104} INFO - [2021-05-11 16:36:43,621] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 8, in <module>
+    from load_data_to_s3 import load_data_to_s3
+  File "/Users/raphaelcarvalho/Documents/forex/load_data_to_s3.py", line 25
+    if max_ts[0][0]m is None:
+                   ^
+SyntaxError: invalid syntax
+[2021-05-11 16:36:43,622] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:36:43,631] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.091 seconds
+[2021-05-11 16:37:13,921] {scheduler_job.py:182} INFO - Started process (PID=99095) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:37:13,922] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:37:13,924] {logging_mixin.py:104} INFO - [2021-05-11 16:37:13,923] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:37:14,006] {logging_mixin.py:104} INFO - [2021-05-11 16:37:14,005] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 8, in <module>
+    from load_data_to_s3 import load_data_to_s3
+  File "/Users/raphaelcarvalho/Documents/forex/load_data_to_s3.py", line 25
+    if max_ts[0][0]m is None:
+                   ^
+SyntaxError: invalid syntax
+[2021-05-11 16:37:14,006] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:37:14,016] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.100 seconds
+[2021-05-11 16:37:44,383] {scheduler_job.py:182} INFO - Started process (PID=99101) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:37:44,385] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:37:44,386] {logging_mixin.py:104} INFO - [2021-05-11 16:37:44,385] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:37:44,472] {logging_mixin.py:104} INFO - [2021-05-11 16:37:44,471] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 8, in <module>
+    from load_data_to_s3 import load_data_to_s3
+  File "/Users/raphaelcarvalho/Documents/forex/load_data_to_s3.py", line 25
+    if max_ts[0][0]m is None:
+                   ^
+SyntaxError: invalid syntax
+[2021-05-11 16:37:44,473] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:37:44,482] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.103 seconds
+[2021-05-11 16:38:14,857] {scheduler_job.py:182} INFO - Started process (PID=99108) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:38:14,859] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:38:14,860] {logging_mixin.py:104} INFO - [2021-05-11 16:38:14,860] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:38:14,935] {logging_mixin.py:104} INFO - [2021-05-11 16:38:14,934] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 8, in <module>
+    from load_data_to_s3 import load_data_to_s3
+  File "/Users/raphaelcarvalho/Documents/forex/load_data_to_s3.py", line 25
+    if max_ts[0][0]m is None:
+                   ^
+SyntaxError: invalid syntax
+[2021-05-11 16:38:14,935] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:38:14,944] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.091 seconds
+[2021-05-11 16:38:45,223] {scheduler_job.py:182} INFO - Started process (PID=99115) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:38:45,225] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:38:45,226] {logging_mixin.py:104} INFO - [2021-05-11 16:38:45,225] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:38:45,302] {logging_mixin.py:104} INFO - [2021-05-11 16:38:45,301] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 8, in <module>
+    from load_data_to_s3 import load_data_to_s3
+  File "/Users/raphaelcarvalho/Documents/forex/load_data_to_s3.py", line 25
+    if max_ts[0][0]m is None:
+                   ^
+SyntaxError: invalid syntax
+[2021-05-11 16:38:45,302] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:38:45,314] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.096 seconds
+[2021-05-11 16:39:15,695] {scheduler_job.py:182} INFO - Started process (PID=99118) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:39:15,698] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:39:15,699] {logging_mixin.py:104} INFO - [2021-05-11 16:39:15,698] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:39:15,773] {logging_mixin.py:104} INFO - [2021-05-11 16:39:15,772] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 8, in <module>
+    from load_data_to_s3 import load_data_to_s3
+  File "/Users/raphaelcarvalho/Documents/forex/load_data_to_s3.py", line 25
+    if max_ts[0][0]m is None:
+                   ^
+SyntaxError: invalid syntax
+[2021-05-11 16:39:15,773] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:39:15,782] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.091 seconds
+[2021-05-11 16:39:46,068] {scheduler_job.py:182} INFO - Started process (PID=99127) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:39:46,070] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:39:46,072] {logging_mixin.py:104} INFO - [2021-05-11 16:39:46,071] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:39:46,174] {logging_mixin.py:104} INFO - [2021-05-11 16:39:46,173] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 8, in <module>
+    from load_data_to_s3 import load_data_to_s3
+  File "/Users/raphaelcarvalho/Documents/forex/load_data_to_s3.py", line 25
+    if max_ts[0][0]m is None:
+                   ^
+SyntaxError: invalid syntax
+[2021-05-11 16:39:46,175] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:39:46,186] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.124 seconds
+[2021-05-11 16:40:16,552] {scheduler_job.py:182} INFO - Started process (PID=99130) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:40:16,553] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:40:16,554] {logging_mixin.py:104} INFO - [2021-05-11 16:40:16,554] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:40:16,626] {logging_mixin.py:104} INFO - [2021-05-11 16:40:16,625] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 8, in <module>
+    from load_data_to_s3 import load_data_to_s3
+  File "/Users/raphaelcarvalho/Documents/forex/load_data_to_s3.py", line 25
+    if max_ts[0][0]m is None:
+                   ^
+SyntaxError: invalid syntax
+[2021-05-11 16:40:16,626] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:40:16,636] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.088 seconds
+[2021-05-11 16:40:46,931] {scheduler_job.py:182} INFO - Started process (PID=99133) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:40:46,933] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:40:46,934] {logging_mixin.py:104} INFO - [2021-05-11 16:40:46,934] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:40:47,010] {logging_mixin.py:104} INFO - [2021-05-11 16:40:47,009] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 8, in <module>
+    from load_data_to_s3 import load_data_to_s3
+  File "/Users/raphaelcarvalho/Documents/forex/load_data_to_s3.py", line 25
+    if max_ts[0][0]m is None:
+                   ^
+SyntaxError: invalid syntax
+[2021-05-11 16:40:47,010] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:40:47,020] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.094 seconds
+[2021-05-11 16:41:17,404] {scheduler_job.py:182} INFO - Started process (PID=99142) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:41:17,406] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:41:17,407] {logging_mixin.py:104} INFO - [2021-05-11 16:41:17,407] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:41:17,487] {logging_mixin.py:104} INFO - [2021-05-11 16:41:17,486] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 8, in <module>
+    from load_data_to_s3 import load_data_to_s3
+  File "/Users/raphaelcarvalho/Documents/forex/load_data_to_s3.py", line 25
+    if max_ts[0][0]m is None:
+                   ^
+SyntaxError: invalid syntax
+[2021-05-11 16:41:17,487] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:41:17,497] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.097 seconds
+[2021-05-11 16:41:47,882] {scheduler_job.py:182} INFO - Started process (PID=99144) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:41:47,884] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:41:47,885] {logging_mixin.py:104} INFO - [2021-05-11 16:41:47,885] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:41:47,959] {logging_mixin.py:104} INFO - [2021-05-11 16:41:47,958] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 8, in <module>
+    from load_data_to_s3 import load_data_to_s3
+  File "/Users/raphaelcarvalho/Documents/forex/load_data_to_s3.py", line 25
+    if max_ts[0][0]m is None:
+                   ^
+SyntaxError: invalid syntax
+[2021-05-11 16:41:47,960] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:41:47,969] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.091 seconds
+[2021-05-11 16:42:18,068] {scheduler_job.py:182} INFO - Started process (PID=99151) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:42:18,070] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:42:18,071] {logging_mixin.py:104} INFO - [2021-05-11 16:42:18,071] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:42:18,157] {logging_mixin.py:104} INFO - [2021-05-11 16:42:18,156] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 8, in <module>
+    from load_data_to_s3 import load_data_to_s3
+  File "/Users/raphaelcarvalho/Documents/forex/load_data_to_s3.py", line 25
+    if max_ts[0][0]m is None:
+                   ^
+SyntaxError: invalid syntax
+[2021-05-11 16:42:18,157] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:42:18,168] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.104 seconds
+[2021-05-11 16:42:48,361] {scheduler_job.py:182} INFO - Started process (PID=99158) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:42:48,363] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:42:48,364] {logging_mixin.py:104} INFO - [2021-05-11 16:42:48,364] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:42:48,441] {logging_mixin.py:104} INFO - [2021-05-11 16:42:48,440] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 8, in <module>
+    from load_data_to_s3 import load_data_to_s3
+  File "/Users/raphaelcarvalho/Documents/forex/load_data_to_s3.py", line 25
+    if max_ts[0][0]m is None:
+                   ^
+SyntaxError: invalid syntax
+[2021-05-11 16:42:48,441] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:42:48,451] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.093 seconds
+[2021-05-11 16:43:18,540] {scheduler_job.py:182} INFO - Started process (PID=99171) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:43:18,543] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:43:18,545] {logging_mixin.py:104} INFO - [2021-05-11 16:43:18,545] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:43:19,327] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl']) retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:43:19,338] {logging_mixin.py:104} INFO - [2021-05-11 16:43:19,338] {dag.py:1824} INFO - Sync 1 DAGs
+[2021-05-11 16:43:19,349] {logging_mixin.py:104} INFO - [2021-05-11 16:43:19,349] {dag.py:2280} INFO - Setting next_dagrun for etl to 2021-05-11T19:00:00+00:00
+[2021-05-11 16:43:19,357] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 0.823 seconds
+[2021-05-11 16:44:15,058] {scheduler_job.py:182} INFO - Started process (PID=99195) to work on /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:44:15,059] {scheduler_job.py:629} INFO - Processing file /Users/raphaelcarvalho/Documents/forex/dags/etl.py for tasks to queue
+[2021-05-11 16:44:15,060] {logging_mixin.py:104} INFO - [2021-05-11 16:44:15,060] {dagbag.py:451} INFO - Filling up the DagBag from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:44:45,063] {logging_mixin.py:104} INFO - [2021-05-11 16:44:45,062] {timeout.py:36} ERROR - Process timed out, PID: 99195
+[2021-05-11 16:44:45,089] {logging_mixin.py:104} INFO - [2021-05-11 16:44:45,064] {dagbag.py:308} ERROR - Failed to import: /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/raphaelcarvalho/Documents/forex/dags/etl.py", line 8, in <module>
+    from load_data_to_s3 import load_data_to_s3
+  File "/Users/raphaelcarvalho/Documents/forex/load_data_to_s3.py", line 5, in <module>
+    import functions as f
+  File "/Users/raphaelcarvalho/Documents/forex/functions.py", line 17, in <module>
+    aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/boto3/__init__.py", line 102, in resource
+    return _get_default_session().resource(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/boto3/session.py", line 389, in resource
+    aws_session_token=aws_session_token, config=config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/boto3/session.py", line 263, in client
+    aws_session_token=aws_session_token, config=config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/botocore/session.py", line 851, in create_client
+    client_config=config, api_version=api_version)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/botocore/client.py", line 87, in create_client
+    verify, credentials, scoped_config, client_config, endpoint_bridge)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/botocore/client.py", line 328, in _get_client_args
+    verify, credentials, scoped_config, client_config, endpoint_bridge)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/botocore/args.py", line 108, in get_client_args
+    proxies_config=new_config.proxies_config)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/botocore/endpoint.py", line 289, in create_endpoint
+    proxies = self._get_proxies(endpoint_url)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/botocore/endpoint.py", line 314, in _get_proxies
+    return get_environ_proxies(url)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/botocore/utils.py", line 2187, in get_environ_proxies
+    if should_bypass_proxies(url):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/botocore/utils.py", line 2206, in should_bypass_proxies
+    if proxy_bypass(urlparse(url).netloc):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py", line 2610, in proxy_bypass
+    return proxy_bypass_macosx_sysconf(host)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py", line 2587, in proxy_bypass_macosx_sysconf
+    return _proxy_bypass_macosx_sysconf(host, proxy_settings)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py", line 2560, in _proxy_bypass_macosx_sysconf
+    hostIP = socket.gethostbyname(hostonly)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /Users/raphaelcarvalho/Documents/forex/dags/etl.py after 30.0s, PID: 99195
+[2021-05-11 16:44:45,090] {scheduler_job.py:641} WARNING - No viable dags retrieved from /Users/raphaelcarvalho/Documents/forex/dags/etl.py
+[2021-05-11 16:44:45,102] {scheduler_job.py:190} INFO - Processing /Users/raphaelcarvalho/Documents/forex/dags/etl.py took 30.049 seconds

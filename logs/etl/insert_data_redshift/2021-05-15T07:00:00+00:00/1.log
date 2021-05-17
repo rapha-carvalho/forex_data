@@ -1,0 +1,43 @@
+[2021-05-15 10:15:35,267] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.insert_data_redshift 2021-05-15T07:00:00+00:00 [queued]>
+[2021-05-15 10:15:35,272] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.insert_data_redshift 2021-05-15T07:00:00+00:00 [queued]>
+[2021-05-15 10:15:35,273] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-15 10:15:35,273] {taskinstance.py:1069} INFO - Starting attempt 1 of 1
+[2021-05-15 10:15:35,273] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-15 10:15:35,277] {taskinstance.py:1089} INFO - Executing <Task(StageToRedshiftOperator): insert_data_redshift> on 2021-05-15T07:00:00+00:00
+[2021-05-15 10:15:35,280] {standard_task_runner.py:52} INFO - Started process 27297 to run task
+[2021-05-15 10:15:35,288] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'etl', 'insert_data_redshift', '2021-05-15T07:00:00+00:00', '--job-id', '672', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmp35abzxwn', '--error-file', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmprkhim_6q']
+[2021-05-15 10:15:35,301] {standard_task_runner.py:77} INFO - Job 672: Subtask insert_data_redshift
+[2021-05-15 10:15:35,335] {logging_mixin.py:104} INFO - Running <TaskInstance: etl.insert_data_redshift 2021-05-15T07:00:00+00:00 [running]> on host 27.2.168.192.in-addr.arpa
+[2021-05-15 10:15:35,360] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=udacity
+AIRFLOW_CTX_DAG_ID=etl
+AIRFLOW_CTX_TASK_ID=insert_data_redshift
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-15T07:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-05-15T07:00:00+00:00
+[2021-05-15 10:15:35,361] {base_aws.py:368} INFO - Airflow Connection: aws_conn_id=aws_credentials
+[2021-05-15 10:15:35,365] {base_aws.py:166} INFO - Credentials retrieved from login
+[2021-05-15 10:15:35,365] {base_aws.py:87} INFO - Creating session with aws_access_key_id=AKIAQ74WHTWTHRQEC6BU region_name=None
+[2021-05-15 10:15:35,376] {base_aws.py:157} INFO - role_arn is None
+[2021-05-15 10:15:35,376] {insert_data_redshift.py:51} INFO - Copying data from S3 to Redshift
+[2021-05-15 10:15:35,376] {insert_data_redshift.py:53} INFO - Rendered Key: consolidated_data
+[2021-05-15 10:15:35,379] {base.py:78} INFO - Using connection to: id: redshift. Host: redshift-cluster-1.caua6g9a7jto.us-east-1.redshift.amazonaws.com, Port: 5439, Schema: dev, Login: awsuser, Password: XXXXXXXX, extra: None
+[2021-05-15 10:15:36,533] {dbapi.py:180} INFO - Running statement: 
+        COPY forex.binary_options_historical_quotes
+        FROM 's3://udac-forex-project/consolidated_data'
+        ACCESS_KEY_ID 'AKIAQ74WHTWTHRQEC6BU'
+        SECRET_ACCESS_KEY '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'
+        REGION AS 'us-east-1'
+        FORMAT AS CSV
+        DELIMITER AS ','
+        TIMEFORMAT 'epochmillisecs'
+        IGNOREHEADER 1
+        NULL AS 'NULL'
+        BLANKSASNULL
+        ;
+    , parameters: None
+[2021-05-15 10:15:41,069] {dbapi.py:186} INFO - Rows affected: -1
+[2021-05-15 10:15:41,283] {taskinstance.py:1192} INFO - Marking task as SUCCESS. dag_id=etl, task_id=insert_data_redshift, execution_date=20210515T070000, start_date=20210515T131535, end_date=20210515T131541
+[2021-05-15 10:15:41,327] {taskinstance.py:1246} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-05-15 10:15:41,344] {local_task_job.py:146} INFO - Task exited with return code 0

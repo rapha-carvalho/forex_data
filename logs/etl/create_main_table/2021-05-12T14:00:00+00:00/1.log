@@ -1,0 +1,33 @@
+[2021-05-12 12:00:02,921] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.create_main_table 2021-05-12T14:00:00+00:00 [queued]>
+[2021-05-12 12:00:02,927] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.create_main_table 2021-05-12T14:00:00+00:00 [queued]>
+[2021-05-12 12:00:02,927] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-12 12:00:02,927] {taskinstance.py:1069} INFO - Starting attempt 1 of 1
+[2021-05-12 12:00:02,927] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-12 12:00:02,931] {taskinstance.py:1089} INFO - Executing <Task(ExecuteQueryOperator): create_main_table> on 2021-05-12T14:00:00+00:00
+[2021-05-12 12:00:02,934] {standard_task_runner.py:52} INFO - Started process 1759 to run task
+[2021-05-12 12:00:02,939] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-12T14:00:00+00:00', '--job-id', '168', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmp69czdhov', '--error-file', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmpepu94kx_']
+[2021-05-12 12:00:02,941] {standard_task_runner.py:77} INFO - Job 168: Subtask create_main_table
+[2021-05-12 12:00:02,973] {logging_mixin.py:104} INFO - Running <TaskInstance: etl.create_main_table 2021-05-12T14:00:00+00:00 [running]> on host 27.2.168.192.in-addr.arpa
+[2021-05-12 12:00:02,999] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=udacity
+AIRFLOW_CTX_DAG_ID=etl
+AIRFLOW_CTX_TASK_ID=create_main_table
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-12T14:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-05-12T14:00:00+00:00
+[2021-05-12 12:00:03,000] {execute_query.py:21} INFO - Executing query
+[2021-05-12 12:00:03,003] {base.py:78} INFO - Using connection to: id: redshift. Host: redshift-cluster-1.caua6g9a7jto.us-east-1.redshift.amazonaws.com, Port: 5439, Schema: dev, Login: awsuser, Password: XXXXXXXX, extra: None
+[2021-05-12 12:00:04,474] {dbapi.py:180} INFO - Running statement: 
+    CREATE TABLE IF NOT EXISTS forex.binary_options_historical_quotes (
+        quote_sk BIGINT IDENTITY (0, 1),
+        date_seconds TIMESTAMP,
+        active_id INT,
+        value NUMERIC (10, 6),
+        PRIMARY KEY (quote_sk)
+    );
+, parameters: None
+[2021-05-12 12:00:04,834] {dbapi.py:186} INFO - Rows affected: -1
+[2021-05-12 12:00:05,021] {taskinstance.py:1192} INFO - Marking task as SUCCESS. dag_id=etl, task_id=create_main_table, execution_date=20210512T140000, start_date=20210512T150002, end_date=20210512T150005
+[2021-05-12 12:00:05,060] {taskinstance.py:1246} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-05-12 12:00:05,105] {local_task_job.py:146} INFO - Task exited with return code 0

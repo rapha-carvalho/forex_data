@@ -1,0 +1,40 @@
+[2021-05-11 15:52:04,410] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.create_main_table 2021-05-10T13:00:00+00:00 [queued]>
+[2021-05-11 15:52:04,415] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.create_main_table 2021-05-10T13:00:00+00:00 [queued]>
+[2021-05-11 15:52:04,415] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-11 15:52:04,416] {taskinstance.py:1069} INFO - Starting attempt 1 of 1
+[2021-05-11 15:52:04,416] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-11 15:52:04,420] {taskinstance.py:1089} INFO - Executing <Task(ExecuteQueryOperator): create_main_table> on 2021-05-10T13:00:00+00:00
+[2021-05-11 15:52:04,422] {standard_task_runner.py:52} INFO - Started process 98143 to run task
+[2021-05-11 15:52:04,428] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'etl', 'create_main_table', '2021-05-10T13:00:00+00:00', '--job-id', '12', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmpens547av', '--error-file', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmpnvo5tdec']
+[2021-05-11 15:52:04,430] {standard_task_runner.py:77} INFO - Job 12: Subtask create_main_table
+[2021-05-11 15:52:04,461] {logging_mixin.py:104} INFO - Running <TaskInstance: etl.create_main_table 2021-05-10T13:00:00+00:00 [running]> on host 27.2.168.192.in-addr.arpa
+[2021-05-11 15:52:04,486] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=udacity
+AIRFLOW_CTX_DAG_ID=etl
+AIRFLOW_CTX_TASK_ID=create_main_table
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-10T13:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-05-10T13:00:00+00:00
+[2021-05-11 15:52:04,487] {execute_query.py:21} INFO - Executing query
+[2021-05-11 15:52:04,492] {taskinstance.py:1482} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1138, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/Users/raphaelcarvalho/Documents/forex/plugins/execute_query.py", line 22, in execute
+    redshift.run(self.query)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 173, in run
+    with closing(self.get_conn()) as conn:
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/providers/postgres/hooks/postgres.py", line 83, in get_conn
+    conn = self.connection or self.get_connection(conn_id)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/hooks/base.py", line 67, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/connection.py", line 354, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `redshift` isn't defined
+[2021-05-11 15:52:04,495] {taskinstance.py:1532} INFO - Marking task as FAILED. dag_id=etl, task_id=create_main_table, execution_date=20210510T130000, start_date=20210511T185204, end_date=20210511T185204
+[2021-05-11 15:52:04,523] {local_task_job.py:146} INFO - Task exited with return code 1

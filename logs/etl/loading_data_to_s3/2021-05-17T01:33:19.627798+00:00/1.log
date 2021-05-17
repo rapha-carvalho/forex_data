@@ -1,0 +1,591 @@
+[2021-05-16 22:33:32,588] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.loading_data_to_s3 2021-05-17T01:33:19.627798+00:00 [queued]>
+[2021-05-16 22:33:32,595] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.loading_data_to_s3 2021-05-17T01:33:19.627798+00:00 [queued]>
+[2021-05-16 22:33:32,595] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-16 22:33:32,595] {taskinstance.py:1069} INFO - Starting attempt 1 of 1
+[2021-05-16 22:33:32,596] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-16 22:33:32,602] {taskinstance.py:1089} INFO - Executing <Task(PythonOperator): loading_data_to_s3> on 2021-05-17T01:33:19.627798+00:00
+[2021-05-16 22:33:32,605] {standard_task_runner.py:52} INFO - Started process 32755 to run task
+[2021-05-16 22:33:32,612] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-17T01:33:19.627798+00:00', '--job-id', '836', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmp9mtcmm9z', '--error-file', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmpq3148rrg']
+[2021-05-16 22:33:32,613] {standard_task_runner.py:77} INFO - Job 836: Subtask loading_data_to_s3
+[2021-05-16 22:33:32,643] {logging_mixin.py:104} INFO - Running <TaskInstance: etl.loading_data_to_s3 2021-05-17T01:33:19.627798+00:00 [running]> on host 27.2.168.192.in-addr.arpa
+[2021-05-16 22:33:32,669] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=udacity
+AIRFLOW_CTX_DAG_ID=etl
+AIRFLOW_CTX_TASK_ID=loading_data_to_s3
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-17T01:33:19.627798+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-05-17T01:33:19.627798+00:00
+[2021-05-16 22:33:33,890] {logging_mixin.py:104} INFO - Fetching interval list
+[2021-05-16 22:33:33,893] {logging_mixin.py:104} INFO - Inverval list built
+[2021-05-16 22:33:33,893] {logging_mixin.py:104} INFO - Processing data
+[2021-05-16 22:33:33,894] {logging_mixin.py:104} INFO - df initialized
+[2021-05-16 22:33:33,895] {logging_mixin.py:104} INFO - (array([1621211613000, 1621213413000]), 1)
+[2021-05-16 22:33:33,896] {logging_mixin.py:104} INFO - (array([1621211613000, 1621213413000]), 2)
+[2021-05-16 22:33:33,897] {logging_mixin.py:104} INFO - (array([1621211613000, 1621213413000]), 3)
+[2021-05-16 22:33:33,897] {logging_mixin.py:104} INFO - (array([1621209813000, 1621211613000]), 1)
+[2021-05-16 22:33:33,898] {logging_mixin.py:104} INFO - (array([1621209813000, 1621211613000]), 2)
+[2021-05-16 22:33:33,898] {logging_mixin.py:104} INFO - (array([1621209813000, 1621211613000]), 3)
+[2021-05-16 22:33:33,899] {logging_mixin.py:104} INFO - (array([1621208013000, 1621209813000]), 1)
+[2021-05-16 22:33:33,899] {logging_mixin.py:104} INFO - (array([1621208013000, 1621209813000]), 2)
+[2021-05-16 22:33:33,900] {logging_mixin.py:104} INFO - (array([1621208013000, 1621209813000]), 3)
+[2021-05-16 22:33:33,900] {logging_mixin.py:104} INFO - (array([1621206213000, 1621208013000]), 1)
+[2021-05-16 22:33:33,901] {logging_mixin.py:104} INFO - (array([1621206213000, 1621208013000]), 2)
+[2021-05-16 22:33:33,901] {logging_mixin.py:104} INFO - (array([1621206213000, 1621208013000]), 3)
+[2021-05-16 22:33:33,901] {logging_mixin.py:104} INFO - (array([1621204413000, 1621206213000]), 1)
+[2021-05-16 22:33:33,902] {logging_mixin.py:104} INFO - (array([1621204413000, 1621206213000]), 2)
+[2021-05-16 22:33:33,902] {logging_mixin.py:104} INFO - (array([1621204413000, 1621206213000]), 3)
+[2021-05-16 22:33:33,903] {logging_mixin.py:104} INFO - (array([1621202613000, 1621204413000]), 1)
+[2021-05-16 22:33:33,903] {logging_mixin.py:104} INFO - (array([1621202613000, 1621204413000]), 2)
+[2021-05-16 22:33:33,903] {logging_mixin.py:104} INFO - (array([1621202613000, 1621204413000]), 3)
+[2021-05-16 22:33:33,904] {logging_mixin.py:104} INFO - (array([1621200813000, 1621202613000]), 1)
+[2021-05-16 22:33:33,904] {logging_mixin.py:104} INFO - (array([1621200813000, 1621202613000]), 2)
+[2021-05-16 22:33:33,905] {logging_mixin.py:104} INFO - (array([1621200813000, 1621202613000]), 3)
+[2021-05-16 22:33:33,905] {logging_mixin.py:104} INFO - (array([1621199013000, 1621200813000]), 1)
+[2021-05-16 22:33:33,905] {logging_mixin.py:104} INFO - (array([1621199013000, 1621200813000]), 2)
+[2021-05-16 22:33:33,906] {logging_mixin.py:104} INFO - (array([1621199013000, 1621200813000]), 3)
+[2021-05-16 22:33:33,906] {logging_mixin.py:104} INFO - (array([1621197213000, 1621199013000]), 1)
+[2021-05-16 22:33:33,906] {logging_mixin.py:104} INFO - (array([1621197213000, 1621199013000]), 2)
+[2021-05-16 22:33:33,907] {logging_mixin.py:104} INFO - (array([1621197213000, 1621199013000]), 3)
+[2021-05-16 22:33:33,907] {logging_mixin.py:104} INFO - (array([1621195413000, 1621197213000]), 1)
+[2021-05-16 22:33:33,908] {logging_mixin.py:104} INFO - (array([1621195413000, 1621197213000]), 2)
+[2021-05-16 22:33:33,908] {logging_mixin.py:104} INFO - (array([1621195413000, 1621197213000]), 3)
+[2021-05-16 22:33:33,908] {logging_mixin.py:104} INFO - (array([1621193613000, 1621195413000]), 1)
+[2021-05-16 22:33:33,909] {logging_mixin.py:104} INFO - (array([1621193613000, 1621195413000]), 2)
+[2021-05-16 22:33:33,909] {logging_mixin.py:104} INFO - (array([1621193613000, 1621195413000]), 3)
+[2021-05-16 22:33:33,909] {logging_mixin.py:104} INFO - (array([1621191813000, 1621193613000]), 1)
+[2021-05-16 22:33:33,910] {logging_mixin.py:104} INFO - (array([1621191813000, 1621193613000]), 2)
+[2021-05-16 22:33:33,910] {logging_mixin.py:104} INFO - (array([1621191813000, 1621193613000]), 3)
+[2021-05-16 22:33:33,910] {logging_mixin.py:104} INFO - (array([1621190013000, 1621191813000]), 1)
+[2021-05-16 22:33:33,910] {logging_mixin.py:104} INFO - (array([1621190013000, 1621191813000]), 2)
+[2021-05-16 22:33:33,911] {logging_mixin.py:104} INFO - (array([1621190013000, 1621191813000]), 3)
+[2021-05-16 22:33:33,911] {logging_mixin.py:104} INFO - (array([1621188213000, 1621190013000]), 1)
+[2021-05-16 22:33:33,911] {logging_mixin.py:104} INFO - (array([1621188213000, 1621190013000]), 2)
+[2021-05-16 22:33:33,912] {logging_mixin.py:104} INFO - (array([1621188213000, 1621190013000]), 3)
+[2021-05-16 22:33:33,912] {logging_mixin.py:104} INFO - (array([1621186413000, 1621188213000]), 1)
+[2021-05-16 22:33:33,912] {logging_mixin.py:104} INFO - (array([1621186413000, 1621188213000]), 2)
+[2021-05-16 22:33:33,913] {logging_mixin.py:104} INFO - (array([1621186413000, 1621188213000]), 3)
+[2021-05-16 22:33:33,913] {logging_mixin.py:104} INFO - (array([1621184613000, 1621186413000]), 1)
+[2021-05-16 22:33:33,913] {logging_mixin.py:104} INFO - (array([1621184613000, 1621186413000]), 2)
+[2021-05-16 22:33:33,913] {logging_mixin.py:104} INFO - (array([1621184613000, 1621186413000]), 3)
+[2021-05-16 22:33:33,914] {logging_mixin.py:104} INFO - (array([1621182813000, 1621184613000]), 1)
+[2021-05-16 22:33:33,914] {logging_mixin.py:104} INFO - (array([1621182813000, 1621184613000]), 2)
+[2021-05-16 22:33:33,914] {logging_mixin.py:104} INFO - (array([1621182813000, 1621184613000]), 3)
+[2021-05-16 22:33:33,915] {logging_mixin.py:104} INFO - (array([1621181013000, 1621182813000]), 1)
+[2021-05-16 22:33:33,915] {logging_mixin.py:104} INFO - (array([1621181013000, 1621182813000]), 2)
+[2021-05-16 22:33:33,915] {logging_mixin.py:104} INFO - (array([1621181013000, 1621182813000]), 3)
+[2021-05-16 22:33:33,915] {logging_mixin.py:104} INFO - (array([1621179213000, 1621181013000]), 1)
+[2021-05-16 22:33:33,916] {logging_mixin.py:104} INFO - (array([1621179213000, 1621181013000]), 2)
+[2021-05-16 22:33:33,916] {logging_mixin.py:104} INFO - (array([1621179213000, 1621181013000]), 3)
+[2021-05-16 22:33:33,916] {logging_mixin.py:104} INFO - (array([1621177413000, 1621179213000]), 1)
+[2021-05-16 22:33:33,917] {logging_mixin.py:104} INFO - (array([1621177413000, 1621179213000]), 2)
+[2021-05-16 22:33:33,917] {logging_mixin.py:104} INFO - (array([1621177413000, 1621179213000]), 3)
+[2021-05-16 22:33:33,917] {logging_mixin.py:104} INFO - (array([1621175613000, 1621177413000]), 1)
+[2021-05-16 22:33:33,918] {logging_mixin.py:104} INFO - (array([1621175613000, 1621177413000]), 2)
+[2021-05-16 22:33:33,918] {logging_mixin.py:104} INFO - (array([1621175613000, 1621177413000]), 3)
+[2021-05-16 22:33:33,918] {logging_mixin.py:104} INFO - (array([1621173813000, 1621175613000]), 1)
+[2021-05-16 22:33:33,918] {logging_mixin.py:104} INFO - (array([1621173813000, 1621175613000]), 2)
+[2021-05-16 22:33:33,919] {logging_mixin.py:104} INFO - (array([1621173813000, 1621175613000]), 3)
+[2021-05-16 22:33:33,919] {logging_mixin.py:104} INFO - (array([1621172013000, 1621173813000]), 1)
+[2021-05-16 22:33:33,919] {logging_mixin.py:104} INFO - (array([1621172013000, 1621173813000]), 2)
+[2021-05-16 22:33:33,919] {logging_mixin.py:104} INFO - (array([1621172013000, 1621173813000]), 3)
+[2021-05-16 22:33:33,920] {logging_mixin.py:104} INFO - (array([1621170213000, 1621172013000]), 1)
+[2021-05-16 22:33:33,920] {logging_mixin.py:104} INFO - (array([1621170213000, 1621172013000]), 2)
+[2021-05-16 22:33:33,920] {logging_mixin.py:104} INFO - (array([1621170213000, 1621172013000]), 3)
+[2021-05-16 22:33:33,921] {logging_mixin.py:104} INFO - (array([1621168413000, 1621170213000]), 1)
+[2021-05-16 22:33:33,921] {logging_mixin.py:104} INFO - (array([1621168413000, 1621170213000]), 2)
+[2021-05-16 22:33:33,921] {logging_mixin.py:104} INFO - (array([1621168413000, 1621170213000]), 3)
+[2021-05-16 22:33:33,922] {logging_mixin.py:104} INFO - (array([1621166613000, 1621168413000]), 1)
+[2021-05-16 22:33:33,922] {logging_mixin.py:104} INFO - (array([1621166613000, 1621168413000]), 2)
+[2021-05-16 22:33:33,923] {logging_mixin.py:104} INFO - (array([1621166613000, 1621168413000]), 3)
+[2021-05-16 22:33:33,923] {logging_mixin.py:104} INFO - (array([1621164813000, 1621166613000]), 1)
+[2021-05-16 22:33:33,923] {logging_mixin.py:104} INFO - (array([1621164813000, 1621166613000]), 2)
+[2021-05-16 22:33:33,924] {logging_mixin.py:104} INFO - (array([1621164813000, 1621166613000]), 3)
+[2021-05-16 22:33:33,924] {logging_mixin.py:104} INFO - (array([1621163013000, 1621164813000]), 1)
+[2021-05-16 22:33:33,924] {logging_mixin.py:104} INFO - (array([1621163013000, 1621164813000]), 2)
+[2021-05-16 22:33:33,925] {logging_mixin.py:104} INFO - (array([1621163013000, 1621164813000]), 3)
+[2021-05-16 22:33:33,925] {logging_mixin.py:104} INFO - (array([1621161213000, 1621163013000]), 1)
+[2021-05-16 22:33:33,925] {logging_mixin.py:104} INFO - (array([1621161213000, 1621163013000]), 2)
+[2021-05-16 22:33:33,925] {logging_mixin.py:104} INFO - (array([1621161213000, 1621163013000]), 3)
+[2021-05-16 22:33:33,926] {logging_mixin.py:104} INFO - (array([1621159413000, 1621161213000]), 1)
+[2021-05-16 22:33:33,926] {logging_mixin.py:104} INFO - (array([1621159413000, 1621161213000]), 2)
+[2021-05-16 22:33:33,926] {logging_mixin.py:104} INFO - (array([1621159413000, 1621161213000]), 3)
+[2021-05-16 22:33:33,926] {logging_mixin.py:104} INFO - (array([1621157613000, 1621159413000]), 1)
+[2021-05-16 22:33:33,927] {logging_mixin.py:104} INFO - (array([1621157613000, 1621159413000]), 2)
+[2021-05-16 22:33:33,927] {logging_mixin.py:104} INFO - (array([1621157613000, 1621159413000]), 3)
+[2021-05-16 22:33:33,927] {logging_mixin.py:104} INFO - (array([1621155813000, 1621157613000]), 1)
+[2021-05-16 22:33:33,927] {logging_mixin.py:104} INFO - (array([1621155813000, 1621157613000]), 2)
+[2021-05-16 22:33:33,928] {logging_mixin.py:104} INFO - (array([1621155813000, 1621157613000]), 3)
+[2021-05-16 22:33:33,928] {logging_mixin.py:104} INFO - (array([1621154013000, 1621155813000]), 1)
+[2021-05-16 22:33:33,928] {logging_mixin.py:104} INFO - (array([1621154013000, 1621155813000]), 2)
+[2021-05-16 22:33:33,929] {logging_mixin.py:104} INFO - (array([1621154013000, 1621155813000]), 3)
+[2021-05-16 22:33:33,929] {logging_mixin.py:104} INFO - (array([1621152213000, 1621154013000]), 1)
+[2021-05-16 22:33:33,929] {logging_mixin.py:104} INFO - (array([1621152213000, 1621154013000]), 2)
+[2021-05-16 22:33:33,929] {logging_mixin.py:104} INFO - (array([1621152213000, 1621154013000]), 3)
+[2021-05-16 22:33:33,930] {logging_mixin.py:104} INFO - (array([1621150413000, 1621152213000]), 1)
+[2021-05-16 22:33:33,930] {logging_mixin.py:104} INFO - (array([1621150413000, 1621152213000]), 2)
+[2021-05-16 22:33:33,930] {logging_mixin.py:104} INFO - (array([1621150413000, 1621152213000]), 3)
+[2021-05-16 22:33:33,930] {logging_mixin.py:104} INFO - (array([1621148613000, 1621150413000]), 1)
+[2021-05-16 22:33:33,931] {logging_mixin.py:104} INFO - (array([1621148613000, 1621150413000]), 2)
+[2021-05-16 22:33:33,931] {logging_mixin.py:104} INFO - (array([1621148613000, 1621150413000]), 3)
+[2021-05-16 22:33:33,931] {logging_mixin.py:104} INFO - (array([1621146813000, 1621148613000]), 1)
+[2021-05-16 22:33:33,931] {logging_mixin.py:104} INFO - (array([1621146813000, 1621148613000]), 2)
+[2021-05-16 22:33:33,932] {logging_mixin.py:104} INFO - (array([1621146813000, 1621148613000]), 3)
+[2021-05-16 22:33:33,932] {logging_mixin.py:104} INFO - (array([1621145013000, 1621146813000]), 1)
+[2021-05-16 22:33:33,932] {logging_mixin.py:104} INFO - (array([1621145013000, 1621146813000]), 2)
+[2021-05-16 22:33:33,932] {logging_mixin.py:104} INFO - (array([1621145013000, 1621146813000]), 3)
+[2021-05-16 22:33:33,933] {logging_mixin.py:104} INFO - (array([1621143213000, 1621145013000]), 1)
+[2021-05-16 22:33:33,933] {logging_mixin.py:104} INFO - (array([1621143213000, 1621145013000]), 2)
+[2021-05-16 22:33:33,933] {logging_mixin.py:104} INFO - (array([1621143213000, 1621145013000]), 3)
+[2021-05-16 22:33:33,933] {logging_mixin.py:104} INFO - (array([1621141413000, 1621143213000]), 1)
+[2021-05-16 22:33:33,934] {logging_mixin.py:104} INFO - (array([1621141413000, 1621143213000]), 2)
+[2021-05-16 22:33:33,934] {logging_mixin.py:104} INFO - (array([1621141413000, 1621143213000]), 3)
+[2021-05-16 22:33:33,934] {logging_mixin.py:104} INFO - (array([1621139613000, 1621141413000]), 1)
+[2021-05-16 22:33:33,934] {logging_mixin.py:104} INFO - (array([1621139613000, 1621141413000]), 2)
+[2021-05-16 22:33:33,935] {logging_mixin.py:104} INFO - (array([1621139613000, 1621141413000]), 3)
+[2021-05-16 22:33:33,935] {logging_mixin.py:104} INFO - (array([1621137813000, 1621139613000]), 1)
+[2021-05-16 22:33:33,935] {logging_mixin.py:104} INFO - (array([1621137813000, 1621139613000]), 2)
+[2021-05-16 22:33:33,936] {logging_mixin.py:104} INFO - (array([1621137813000, 1621139613000]), 3)
+[2021-05-16 22:33:33,936] {logging_mixin.py:104} INFO - (array([1621136013000, 1621137813000]), 1)
+[2021-05-16 22:33:33,936] {logging_mixin.py:104} INFO - (array([1621136013000, 1621137813000]), 2)
+[2021-05-16 22:33:33,936] {logging_mixin.py:104} INFO - (array([1621136013000, 1621137813000]), 3)
+[2021-05-16 22:33:33,937] {logging_mixin.py:104} INFO - (array([1621134213000, 1621136013000]), 1)
+[2021-05-16 22:33:33,937] {logging_mixin.py:104} INFO - (array([1621134213000, 1621136013000]), 2)
+[2021-05-16 22:33:33,937] {logging_mixin.py:104} INFO - (array([1621134213000, 1621136013000]), 3)
+[2021-05-16 22:33:33,938] {logging_mixin.py:104} INFO - (array([1621132413000, 1621134213000]), 1)
+[2021-05-16 22:33:33,938] {logging_mixin.py:104} INFO - (array([1621132413000, 1621134213000]), 2)
+[2021-05-16 22:33:33,939] {logging_mixin.py:104} INFO - (array([1621132413000, 1621134213000]), 3)
+[2021-05-16 22:33:33,939] {logging_mixin.py:104} INFO - (array([1621130613000, 1621132413000]), 1)
+[2021-05-16 22:33:33,940] {logging_mixin.py:104} INFO - (array([1621130613000, 1621132413000]), 2)
+[2021-05-16 22:33:33,940] {logging_mixin.py:104} INFO - (array([1621130613000, 1621132413000]), 3)
+[2021-05-16 22:33:33,941] {logging_mixin.py:104} INFO - (array([1621128813000, 1621130613000]), 1)
+[2021-05-16 22:33:33,941] {logging_mixin.py:104} INFO - (array([1621128813000, 1621130613000]), 2)
+[2021-05-16 22:33:33,941] {logging_mixin.py:104} INFO - (array([1621128813000, 1621130613000]), 3)
+[2021-05-16 22:33:33,942] {logging_mixin.py:104} INFO - ThreadPoolExecutor initialized
+[2021-05-16 22:33:33,942] {logging_mixin.py:104} INFO - running function for: (array([1621211613000, 1621213413000]), 1)
+[2021-05-16 22:33:33,943] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621213413000&from=1621211613000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:33,944] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,944] {logging_mixin.py:104} INFO - running function for: (array([1621211613000, 1621213413000]), 2)
+[2021-05-16 22:33:33,944] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621213413000&from=1621211613000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:33,945] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,945] {logging_mixin.py:104} INFO - running function for: (array([1621211613000, 1621213413000]), 3)
+[2021-05-16 22:33:33,945] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621213413000&from=1621211613000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:33,947] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,947] {logging_mixin.py:104} INFO - running function for: (array([1621209813000, 1621211613000]), 1)
+[2021-05-16 22:33:33,947] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621211613000&from=1621209813000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:33,948] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,948] {logging_mixin.py:104} INFO - running function for: (array([1621209813000, 1621211613000]), 2)
+[2021-05-16 22:33:33,948] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621211613000&from=1621209813000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:33,949] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,949] {logging_mixin.py:104} INFO - running function for: (array([1621209813000, 1621211613000]), 3)
+[2021-05-16 22:33:33,949] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621211613000&from=1621209813000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:33,950] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,950] {logging_mixin.py:104} INFO - running function for: (array([1621208013000, 1621209813000]), 1)
+[2021-05-16 22:33:33,950] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621209813000&from=1621208013000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:33,951] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,951] {logging_mixin.py:104} INFO - running function for: (array([1621208013000, 1621209813000]), 2)
+[2021-05-16 22:33:33,951] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621209813000&from=1621208013000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:33,951] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,952] {logging_mixin.py:104} INFO - running function for: (array([1621208013000, 1621209813000]), 3)
+[2021-05-16 22:33:33,952] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,952] {logging_mixin.py:104} INFO - running function for: (array([1621206213000, 1621208013000]), 1)
+[2021-05-16 22:33:33,952] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,953] {logging_mixin.py:104} INFO - running function for: (array([1621206213000, 1621208013000]), 2)
+[2021-05-16 22:33:33,953] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,953] {logging_mixin.py:104} INFO - running function for: (array([1621206213000, 1621208013000]), 3)
+[2021-05-16 22:33:33,953] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,954] {logging_mixin.py:104} INFO - running function for: (array([1621204413000, 1621206213000]), 1)
+[2021-05-16 22:33:33,954] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,955] {logging_mixin.py:104} INFO - running function for: (array([1621204413000, 1621206213000]), 2)
+[2021-05-16 22:33:33,955] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,955] {logging_mixin.py:104} INFO - running function for: (array([1621204413000, 1621206213000]), 3)
+[2021-05-16 22:33:33,957] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,957] {logging_mixin.py:104} INFO - running function for: (array([1621202613000, 1621204413000]), 1)
+[2021-05-16 22:33:33,958] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,958] {logging_mixin.py:104} INFO - running function for: (array([1621202613000, 1621204413000]), 2)
+[2021-05-16 22:33:33,958] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,959] {logging_mixin.py:104} INFO - running function for: (array([1621202613000, 1621204413000]), 3)
+[2021-05-16 22:33:33,959] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,959] {logging_mixin.py:104} INFO - running function for: (array([1621200813000, 1621202613000]), 1)
+[2021-05-16 22:33:33,959] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,960] {logging_mixin.py:104} INFO - running function for: (array([1621200813000, 1621202613000]), 2)
+[2021-05-16 22:33:33,960] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,960] {logging_mixin.py:104} INFO - running function for: (array([1621200813000, 1621202613000]), 3)
+[2021-05-16 22:33:33,960] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,961] {logging_mixin.py:104} INFO - running function for: (array([1621199013000, 1621200813000]), 1)
+[2021-05-16 22:33:33,961] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,961] {logging_mixin.py:104} INFO - running function for: (array([1621199013000, 1621200813000]), 2)
+[2021-05-16 22:33:33,962] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,962] {logging_mixin.py:104} INFO - running function for: (array([1621199013000, 1621200813000]), 3)
+[2021-05-16 22:33:33,962] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,963] {logging_mixin.py:104} INFO - running function for: (array([1621197213000, 1621199013000]), 1)
+[2021-05-16 22:33:33,963] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,963] {logging_mixin.py:104} INFO - running function for: (array([1621197213000, 1621199013000]), 2)
+[2021-05-16 22:33:33,963] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,965] {logging_mixin.py:104} INFO - running function for: (array([1621197213000, 1621199013000]), 3)
+[2021-05-16 22:33:33,965] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,966] {logging_mixin.py:104} INFO - running function for: (array([1621195413000, 1621197213000]), 1)
+[2021-05-16 22:33:33,966] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,967] {logging_mixin.py:104} INFO - running function for: (array([1621195413000, 1621197213000]), 2)
+[2021-05-16 22:33:33,967] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,968] {logging_mixin.py:104} INFO - running function for: (array([1621195413000, 1621197213000]), 3)
+[2021-05-16 22:33:33,968] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,968] {logging_mixin.py:104} INFO - running function for: (array([1621193613000, 1621195413000]), 1)
+[2021-05-16 22:33:33,969] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,969] {logging_mixin.py:104} INFO - running function for: (array([1621193613000, 1621195413000]), 2)
+[2021-05-16 22:33:33,970] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,971] {logging_mixin.py:104} INFO - running function for: (array([1621193613000, 1621195413000]), 3)
+[2021-05-16 22:33:33,971] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,972] {logging_mixin.py:104} INFO - running function for: (array([1621191813000, 1621193613000]), 1)
+[2021-05-16 22:33:33,973] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,975] {logging_mixin.py:104} INFO - running function for: (array([1621191813000, 1621193613000]), 2)
+[2021-05-16 22:33:33,976] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,977] {logging_mixin.py:104} INFO - running function for: (array([1621191813000, 1621193613000]), 3)
+[2021-05-16 22:33:33,978] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,978] {logging_mixin.py:104} INFO - running function for: (array([1621190013000, 1621191813000]), 1)
+[2021-05-16 22:33:33,979] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,980] {logging_mixin.py:104} INFO - running function for: (array([1621190013000, 1621191813000]), 2)
+[2021-05-16 22:33:33,981] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,981] {logging_mixin.py:104} INFO - running function for: (array([1621190013000, 1621191813000]), 3)
+[2021-05-16 22:33:33,981] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,982] {logging_mixin.py:104} INFO - running function for: (array([1621188213000, 1621190013000]), 1)
+[2021-05-16 22:33:33,982] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,982] {logging_mixin.py:104} INFO - running function for: (array([1621188213000, 1621190013000]), 2)
+[2021-05-16 22:33:33,983] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,983] {logging_mixin.py:104} INFO - running function for: (array([1621188213000, 1621190013000]), 3)
+[2021-05-16 22:33:33,983] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,983] {logging_mixin.py:104} INFO - running function for: (array([1621186413000, 1621188213000]), 1)
+[2021-05-16 22:33:33,984] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,984] {logging_mixin.py:104} INFO - running function for: (array([1621186413000, 1621188213000]), 2)
+[2021-05-16 22:33:33,984] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,984] {logging_mixin.py:104} INFO - running function for: (array([1621186413000, 1621188213000]), 3)
+[2021-05-16 22:33:33,985] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,985] {logging_mixin.py:104} INFO - running function for: (array([1621184613000, 1621186413000]), 1)
+[2021-05-16 22:33:33,985] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,985] {logging_mixin.py:104} INFO - running function for: (array([1621184613000, 1621186413000]), 2)
+[2021-05-16 22:33:33,986] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,986] {logging_mixin.py:104} INFO - running function for: (array([1621184613000, 1621186413000]), 3)
+[2021-05-16 22:33:33,986] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,986] {logging_mixin.py:104} INFO - running function for: (array([1621182813000, 1621184613000]), 1)
+[2021-05-16 22:33:33,987] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,987] {logging_mixin.py:104} INFO - running function for: (array([1621182813000, 1621184613000]), 2)
+[2021-05-16 22:33:33,987] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,988] {logging_mixin.py:104} INFO - running function for: (array([1621182813000, 1621184613000]), 3)
+[2021-05-16 22:33:33,988] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,988] {logging_mixin.py:104} INFO - running function for: (array([1621181013000, 1621182813000]), 1)
+[2021-05-16 22:33:33,988] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,989] {logging_mixin.py:104} INFO - running function for: (array([1621181013000, 1621182813000]), 2)
+[2021-05-16 22:33:33,989] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,989] {logging_mixin.py:104} INFO - running function for: (array([1621181013000, 1621182813000]), 3)
+[2021-05-16 22:33:33,990] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,990] {logging_mixin.py:104} INFO - running function for: (array([1621179213000, 1621181013000]), 1)
+[2021-05-16 22:33:33,990] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,990] {logging_mixin.py:104} INFO - running function for: (array([1621179213000, 1621181013000]), 2)
+[2021-05-16 22:33:33,991] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,991] {logging_mixin.py:104} INFO - running function for: (array([1621179213000, 1621181013000]), 3)
+[2021-05-16 22:33:33,991] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,991] {logging_mixin.py:104} INFO - running function for: (array([1621177413000, 1621179213000]), 1)
+[2021-05-16 22:33:33,992] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,992] {logging_mixin.py:104} INFO - running function for: (array([1621177413000, 1621179213000]), 2)
+[2021-05-16 22:33:33,992] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,992] {logging_mixin.py:104} INFO - running function for: (array([1621177413000, 1621179213000]), 3)
+[2021-05-16 22:33:33,993] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,993] {logging_mixin.py:104} INFO - running function for: (array([1621175613000, 1621177413000]), 1)
+[2021-05-16 22:33:33,993] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,993] {logging_mixin.py:104} INFO - running function for: (array([1621175613000, 1621177413000]), 2)
+[2021-05-16 22:33:33,994] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,994] {logging_mixin.py:104} INFO - running function for: (array([1621175613000, 1621177413000]), 3)
+[2021-05-16 22:33:33,994] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,994] {logging_mixin.py:104} INFO - running function for: (array([1621173813000, 1621175613000]), 1)
+[2021-05-16 22:33:33,995] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,995] {logging_mixin.py:104} INFO - running function for: (array([1621173813000, 1621175613000]), 2)
+[2021-05-16 22:33:33,995] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,996] {logging_mixin.py:104} INFO - running function for: (array([1621173813000, 1621175613000]), 3)
+[2021-05-16 22:33:33,997] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,997] {logging_mixin.py:104} INFO - running function for: (array([1621172013000, 1621173813000]), 1)
+[2021-05-16 22:33:33,997] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,998] {logging_mixin.py:104} INFO - running function for: (array([1621172013000, 1621173813000]), 2)
+[2021-05-16 22:33:33,998] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,998] {logging_mixin.py:104} INFO - running function for: (array([1621172013000, 1621173813000]), 3)
+[2021-05-16 22:33:33,998] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,999] {logging_mixin.py:104} INFO - running function for: (array([1621170213000, 1621172013000]), 1)
+[2021-05-16 22:33:33,999] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:33,999] {logging_mixin.py:104} INFO - running function for: (array([1621170213000, 1621172013000]), 2)
+[2021-05-16 22:33:33,999] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,000] {logging_mixin.py:104} INFO - running function for: (array([1621170213000, 1621172013000]), 3)
+[2021-05-16 22:33:34,000] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,000] {logging_mixin.py:104} INFO - running function for: (array([1621168413000, 1621170213000]), 1)
+[2021-05-16 22:33:34,000] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,001] {logging_mixin.py:104} INFO - running function for: (array([1621168413000, 1621170213000]), 2)
+[2021-05-16 22:33:34,001] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,001] {logging_mixin.py:104} INFO - running function for: (array([1621168413000, 1621170213000]), 3)
+[2021-05-16 22:33:34,002] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,002] {logging_mixin.py:104} INFO - running function for: (array([1621166613000, 1621168413000]), 1)
+[2021-05-16 22:33:34,002] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,002] {logging_mixin.py:104} INFO - running function for: (array([1621166613000, 1621168413000]), 2)
+[2021-05-16 22:33:34,003] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,003] {logging_mixin.py:104} INFO - running function for: (array([1621166613000, 1621168413000]), 3)
+[2021-05-16 22:33:34,003] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,004] {logging_mixin.py:104} INFO - running function for: (array([1621164813000, 1621166613000]), 1)
+[2021-05-16 22:33:34,004] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,006] {logging_mixin.py:104} INFO - running function for: (array([1621164813000, 1621166613000]), 2)
+[2021-05-16 22:33:34,006] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,007] {logging_mixin.py:104} INFO - running function for: (array([1621164813000, 1621166613000]), 3)
+[2021-05-16 22:33:34,008] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,008] {logging_mixin.py:104} INFO - running function for: (array([1621163013000, 1621164813000]), 1)
+[2021-05-16 22:33:34,009] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,009] {logging_mixin.py:104} INFO - running function for: (array([1621163013000, 1621164813000]), 2)
+[2021-05-16 22:33:34,010] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,010] {logging_mixin.py:104} INFO - running function for: (array([1621163013000, 1621164813000]), 3)
+[2021-05-16 22:33:34,010] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,011] {logging_mixin.py:104} INFO - running function for: (array([1621161213000, 1621163013000]), 1)
+[2021-05-16 22:33:34,011] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,012] {logging_mixin.py:104} INFO - running function for: (array([1621161213000, 1621163013000]), 2)
+[2021-05-16 22:33:34,012] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,013] {logging_mixin.py:104} INFO - running function for: (array([1621161213000, 1621163013000]), 3)
+[2021-05-16 22:33:34,015] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,015] {logging_mixin.py:104} INFO - running function for: (array([1621159413000, 1621161213000]), 1)
+[2021-05-16 22:33:34,016] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,016] {logging_mixin.py:104} INFO - running function for: (array([1621159413000, 1621161213000]), 2)
+[2021-05-16 22:33:34,017] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,017] {logging_mixin.py:104} INFO - running function for: (array([1621159413000, 1621161213000]), 3)
+[2021-05-16 22:33:34,017] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,018] {logging_mixin.py:104} INFO - running function for: (array([1621157613000, 1621159413000]), 1)
+[2021-05-16 22:33:34,018] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,019] {logging_mixin.py:104} INFO - running function for: (array([1621157613000, 1621159413000]), 2)
+[2021-05-16 22:33:34,019] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,019] {logging_mixin.py:104} INFO - running function for: (array([1621157613000, 1621159413000]), 3)
+[2021-05-16 22:33:34,019] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,019] {logging_mixin.py:104} INFO - running function for: (array([1621155813000, 1621157613000]), 1)
+[2021-05-16 22:33:34,020] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,020] {logging_mixin.py:104} INFO - running function for: (array([1621155813000, 1621157613000]), 2)
+[2021-05-16 22:33:34,020] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,021] {logging_mixin.py:104} INFO - running function for: (array([1621155813000, 1621157613000]), 3)
+[2021-05-16 22:33:34,021] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,021] {logging_mixin.py:104} INFO - running function for: (array([1621154013000, 1621155813000]), 1)
+[2021-05-16 22:33:34,022] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,022] {logging_mixin.py:104} INFO - running function for: (array([1621154013000, 1621155813000]), 2)
+[2021-05-16 22:33:34,023] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,023] {logging_mixin.py:104} INFO - running function for: (array([1621154013000, 1621155813000]), 3)
+[2021-05-16 22:33:34,023] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,023] {logging_mixin.py:104} INFO - running function for: (array([1621152213000, 1621154013000]), 1)
+[2021-05-16 22:33:34,024] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,024] {logging_mixin.py:104} INFO - running function for: (array([1621152213000, 1621154013000]), 2)
+[2021-05-16 22:33:34,024] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,024] {logging_mixin.py:104} INFO - running function for: (array([1621152213000, 1621154013000]), 3)
+[2021-05-16 22:33:34,025] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,025] {logging_mixin.py:104} INFO - running function for: (array([1621150413000, 1621152213000]), 1)
+[2021-05-16 22:33:34,025] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,025] {logging_mixin.py:104} INFO - running function for: (array([1621150413000, 1621152213000]), 2)
+[2021-05-16 22:33:34,026] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,026] {logging_mixin.py:104} INFO - running function for: (array([1621150413000, 1621152213000]), 3)
+[2021-05-16 22:33:34,026] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,027] {logging_mixin.py:104} INFO - running function for: (array([1621148613000, 1621150413000]), 1)
+[2021-05-16 22:33:34,027] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,027] {logging_mixin.py:104} INFO - running function for: (array([1621148613000, 1621150413000]), 2)
+[2021-05-16 22:33:34,027] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,028] {logging_mixin.py:104} INFO - running function for: (array([1621148613000, 1621150413000]), 3)
+[2021-05-16 22:33:34,028] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,028] {logging_mixin.py:104} INFO - running function for: (array([1621146813000, 1621148613000]), 1)
+[2021-05-16 22:33:34,029] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,029] {logging_mixin.py:104} INFO - running function for: (array([1621146813000, 1621148613000]), 2)
+[2021-05-16 22:33:34,029] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,030] {logging_mixin.py:104} INFO - running function for: (array([1621146813000, 1621148613000]), 3)
+[2021-05-16 22:33:34,030] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,030] {logging_mixin.py:104} INFO - running function for: (array([1621145013000, 1621146813000]), 1)
+[2021-05-16 22:33:34,031] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,031] {logging_mixin.py:104} INFO - running function for: (array([1621145013000, 1621146813000]), 2)
+[2021-05-16 22:33:34,031] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,032] {logging_mixin.py:104} INFO - running function for: (array([1621145013000, 1621146813000]), 3)
+[2021-05-16 22:33:34,032] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,032] {logging_mixin.py:104} INFO - running function for: (array([1621143213000, 1621145013000]), 1)
+[2021-05-16 22:33:34,032] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,032] {logging_mixin.py:104} INFO - running function for: (array([1621143213000, 1621145013000]), 2)
+[2021-05-16 22:33:34,033] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,033] {logging_mixin.py:104} INFO - running function for: (array([1621143213000, 1621145013000]), 3)
+[2021-05-16 22:33:34,033] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,033] {logging_mixin.py:104} INFO - running function for: (array([1621141413000, 1621143213000]), 1)
+[2021-05-16 22:33:34,034] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,034] {logging_mixin.py:104} INFO - running function for: (array([1621141413000, 1621143213000]), 2)
+[2021-05-16 22:33:34,034] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,034] {logging_mixin.py:104} INFO - running function for: (array([1621141413000, 1621143213000]), 3)
+[2021-05-16 22:33:34,035] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,035] {logging_mixin.py:104} INFO - running function for: (array([1621139613000, 1621141413000]), 1)
+[2021-05-16 22:33:34,035] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,035] {logging_mixin.py:104} INFO - running function for: (array([1621139613000, 1621141413000]), 2)
+[2021-05-16 22:33:34,036] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,036] {logging_mixin.py:104} INFO - running function for: (array([1621139613000, 1621141413000]), 3)
+[2021-05-16 22:33:34,036] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,036] {logging_mixin.py:104} INFO - running function for: (array([1621137813000, 1621139613000]), 1)
+[2021-05-16 22:33:34,037] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,037] {logging_mixin.py:104} INFO - running function for: (array([1621137813000, 1621139613000]), 2)
+[2021-05-16 22:33:34,037] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,037] {logging_mixin.py:104} INFO - running function for: (array([1621137813000, 1621139613000]), 3)
+[2021-05-16 22:33:34,038] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,038] {logging_mixin.py:104} INFO - running function for: (array([1621136013000, 1621137813000]), 1)
+[2021-05-16 22:33:34,038] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,038] {logging_mixin.py:104} INFO - running function for: (array([1621136013000, 1621137813000]), 2)
+[2021-05-16 22:33:34,039] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,039] {logging_mixin.py:104} INFO - running function for: (array([1621136013000, 1621137813000]), 3)
+[2021-05-16 22:33:34,039] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,039] {logging_mixin.py:104} INFO - running function for: (array([1621134213000, 1621136013000]), 1)
+[2021-05-16 22:33:34,040] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,040] {logging_mixin.py:104} INFO - running function for: (array([1621134213000, 1621136013000]), 2)
+[2021-05-16 22:33:34,040] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,040] {logging_mixin.py:104} INFO - running function for: (array([1621134213000, 1621136013000]), 3)
+[2021-05-16 22:33:34,041] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,041] {logging_mixin.py:104} INFO - running function for: (array([1621132413000, 1621134213000]), 1)
+[2021-05-16 22:33:34,041] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,041] {logging_mixin.py:104} INFO - running function for: (array([1621132413000, 1621134213000]), 2)
+[2021-05-16 22:33:34,041] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,042] {logging_mixin.py:104} INFO - running function for: (array([1621132413000, 1621134213000]), 3)
+[2021-05-16 22:33:34,042] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,042] {logging_mixin.py:104} INFO - running function for: (array([1621130613000, 1621132413000]), 1)
+[2021-05-16 22:33:34,042] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,043] {logging_mixin.py:104} INFO - running function for: (array([1621130613000, 1621132413000]), 2)
+[2021-05-16 22:33:34,043] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,043] {logging_mixin.py:104} INFO - running function for: (array([1621130613000, 1621132413000]), 3)
+[2021-05-16 22:33:34,043] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,044] {logging_mixin.py:104} INFO - running function for: (array([1621128813000, 1621130613000]), 1)
+[2021-05-16 22:33:34,044] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,044] {logging_mixin.py:104} INFO - running function for: (array([1621128813000, 1621130613000]), 2)
+[2021-05-16 22:33:34,044] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:34,045] {logging_mixin.py:104} INFO - running function for: (array([1621128813000, 1621130613000]), 3)
+[2021-05-16 22:33:34,045] {logging_mixin.py:104} INFO - submitted
+[2021-05-16 22:33:37,458] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621209813000&from=1621208013000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:37,702] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621208013000&from=1621206213000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:37,724] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621208013000&from=1621206213000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:37,775] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621208013000&from=1621206213000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:37,853] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621206213000&from=1621204413000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:37,859] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621206213000&from=1621204413000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:37,891] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621206213000&from=1621204413000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:37,909] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621204413000&from=1621202613000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:39,801] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621204413000&from=1621202613000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:39,825] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621204413000&from=1621202613000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:39,915] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621202613000&from=1621200813000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:39,947] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621202613000&from=1621200813000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:39,965] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621202613000&from=1621200813000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:39,969] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621200813000&from=1621199013000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:39,994] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621200813000&from=1621199013000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:40,037] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621200813000&from=1621199013000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:41,592] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621199013000&from=1621197213000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:41,617] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621199013000&from=1621197213000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:41,649] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621199013000&from=1621197213000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:41,686] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621197213000&from=1621195413000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:41,717] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621197213000&from=1621195413000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:41,722] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621197213000&from=1621195413000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:41,743] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621195413000&from=1621193613000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:42,023] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621195413000&from=1621193613000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:43,074] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621195413000&from=1621193613000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:43,098] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621193613000&from=1621191813000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:43,162] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621193613000&from=1621191813000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:43,168] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621193613000&from=1621191813000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:43,203] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621191813000&from=1621190013000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:43,212] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621191813000&from=1621190013000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:43,234] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621191813000&from=1621190013000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:43,577] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621190013000&from=1621188213000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:44,529] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621190013000&from=1621188213000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:44,587] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621190013000&from=1621188213000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:44,687] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621188213000&from=1621186413000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:44,710] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621188213000&from=1621186413000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:44,806] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621188213000&from=1621186413000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:44,807] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621186413000&from=1621184613000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:44,815] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621186413000&from=1621184613000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:44,876] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621186413000&from=1621184613000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:45,842] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621184613000&from=1621182813000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:45,905] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621184613000&from=1621182813000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:46,010] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621184613000&from=1621182813000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:46,031] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621182813000&from=1621181013000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:46,164] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621182813000&from=1621181013000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:46,173] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621182813000&from=1621181013000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:46,193] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621181013000&from=1621179213000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:46,198] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621181013000&from=1621179213000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:47,188] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621181013000&from=1621179213000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:47,217] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621179213000&from=1621177413000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:47,376] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621179213000&from=1621177413000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:47,389] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621179213000&from=1621177413000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:47,491] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621177413000&from=1621175613000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:47,564] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621177413000&from=1621175613000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:47,568] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621177413000&from=1621175613000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:47,616] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621175613000&from=1621173813000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:48,544] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621175613000&from=1621173813000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:48,599] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621175613000&from=1621173813000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:48,721] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621173813000&from=1621172013000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:48,784] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621173813000&from=1621172013000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:48,901] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621173813000&from=1621172013000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:48,991] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621172013000&from=1621170213000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:49,002] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621172013000&from=1621170213000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:49,017] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621172013000&from=1621170213000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:49,889] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621170213000&from=1621168413000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:49,972] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621170213000&from=1621168413000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:50,027] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621170213000&from=1621168413000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:50,180] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621168413000&from=1621166613000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:50,212] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621168413000&from=1621166613000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:50,361] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621168413000&from=1621166613000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:50,367] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621166613000&from=1621164813000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:50,374] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621166613000&from=1621164813000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:51,209] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621166613000&from=1621164813000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:51,295] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621164813000&from=1621163013000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:51,383] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621164813000&from=1621163013000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:51,516] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621164813000&from=1621163013000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:51,634] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621163013000&from=1621161213000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:51,688] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621163013000&from=1621161213000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:51,804] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621163013000&from=1621161213000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:51,808] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621161213000&from=1621159413000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:52,560] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621161213000&from=1621159413000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:52,643] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621161213000&from=1621159413000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:52,721] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621159413000&from=1621157613000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:52,840] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621159413000&from=1621157613000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:52,978] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621159413000&from=1621157613000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:53,018] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621157613000&from=1621155813000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:53,131] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621157613000&from=1621155813000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:53,152] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621157613000&from=1621155813000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:53,887] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621155813000&from=1621154013000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:53,989] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621155813000&from=1621154013000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:54,018] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621155813000&from=1621154013000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:54,173] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621154013000&from=1621152213000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:54,349] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621154013000&from=1621152213000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:54,378] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621154013000&from=1621152213000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:54,440] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621152213000&from=1621150413000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:54,461] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621152213000&from=1621150413000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:55,183] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621152213000&from=1621150413000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:55,317] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621150413000&from=1621148613000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:55,363] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621150413000&from=1621148613000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:55,495] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621150413000&from=1621148613000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:55,659] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621148613000&from=1621146813000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:55,701] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621148613000&from=1621146813000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:55,784] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621148613000&from=1621146813000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:55,787] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621146813000&from=1621145013000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:56,499] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621146813000&from=1621145013000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:56,745] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621146813000&from=1621145013000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:56,764] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621145013000&from=1621143213000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:56,833] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621145013000&from=1621143213000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:57,003] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621145013000&from=1621143213000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:57,022] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621143213000&from=1621141413000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:57,131] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621143213000&from=1621141413000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:57,137] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621143213000&from=1621141413000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:57,827] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621141413000&from=1621139613000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:58,115] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621141413000&from=1621139613000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:58,118] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621141413000&from=1621139613000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:58,162] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621139613000&from=1621137813000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:58,323] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621139613000&from=1621137813000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:58,339] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621139613000&from=1621137813000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:58,594] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621137813000&from=1621136013000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:59,154] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621137813000&from=1621136013000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:59,486] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621137813000&from=1621136013000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:59,490] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621136013000&from=1621134213000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:59,629] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621136013000&from=1621134213000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:33:59,717] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621136013000&from=1621134213000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:33:59,765] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621134213000&from=1621132413000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:33:59,936] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621134213000&from=1621132413000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:34:00,605] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621134213000&from=1621132413000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:34:00,704] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621132413000&from=1621130613000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:34:00,833] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621132413000&from=1621130613000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:34:00,856] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621132413000&from=1621130613000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:34:00,968] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621130613000&from=1621128813000&active_id=1&only_round=true&_key=1614903660000
+[2021-05-16 22:34:01,024] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621130613000&from=1621128813000&active_id=2&only_round=true&_key=1614903660000
+[2021-05-16 22:34:01,276] {logging_mixin.py:104} INFO - https://cdn.iqoption.com/api/quotes-history/quotes/3.0?to=1621130613000&from=1621128813000&active_id=3&only_round=true&_key=1614903660000
+[2021-05-16 22:34:02,822] {python.py:118} INFO - Done. Returned value was: None
+[2021-05-16 22:34:02,826] {taskinstance.py:1192} INFO - Marking task as SUCCESS. dag_id=etl, task_id=loading_data_to_s3, execution_date=20210517T013319, start_date=20210517T013332, end_date=20210517T013402
+[2021-05-16 22:34:02,881] {taskinstance.py:1246} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-05-16 22:34:02,917] {local_task_job.py:146} INFO - Task exited with return code 0

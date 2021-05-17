@@ -1,0 +1,50 @@
+[2021-05-14 11:50:15,932] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.insert_data_redshift 2021-05-14T14:41:55.555921+00:00 [queued]>
+[2021-05-14 11:50:15,938] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.insert_data_redshift 2021-05-14T14:41:55.555921+00:00 [queued]>
+[2021-05-14 11:50:15,938] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-14 11:50:15,938] {taskinstance.py:1069} INFO - Starting attempt 1 of 1
+[2021-05-14 11:50:15,938] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-14 11:50:15,944] {taskinstance.py:1089} INFO - Executing <Task(StageToRedshiftOperator): insert_data_redshift> on 2021-05-14T14:41:55.555921+00:00
+[2021-05-14 11:50:15,948] {standard_task_runner.py:52} INFO - Started process 20294 to run task
+[2021-05-14 11:50:15,953] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'etl', 'insert_data_redshift', '2021-05-14T14:41:55.555921+00:00', '--job-id', '414', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmpx8cbssld', '--error-file', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmpb4h28oqu']
+[2021-05-14 11:50:15,955] {standard_task_runner.py:77} INFO - Job 414: Subtask insert_data_redshift
+[2021-05-14 11:50:15,986] {logging_mixin.py:104} INFO - Running <TaskInstance: etl.insert_data_redshift 2021-05-14T14:41:55.555921+00:00 [running]> on host 27.2.168.192.in-addr.arpa
+[2021-05-14 11:50:16,008] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=udacity
+AIRFLOW_CTX_DAG_ID=etl
+AIRFLOW_CTX_TASK_ID=insert_data_redshift
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-14T14:41:55.555921+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-05-14T14:41:55.555921+00:00
+[2021-05-14 11:50:16,009] {base_aws.py:368} INFO - Airflow Connection: aws_conn_id=aws_credentials
+[2021-05-14 11:50:16,013] {base_aws.py:166} INFO - Credentials retrieved from login
+[2021-05-14 11:50:16,013] {base_aws.py:87} INFO - Creating session with aws_access_key_id=AKIAQ74WHTWTHRQEC6BU region_name=None
+[2021-05-14 11:50:16,024] {base_aws.py:157} INFO - role_arn is None
+[2021-05-14 11:50:16,025] {insert_data_redshift.py:46} INFO - Copying data from S3 to Redshift
+[2021-05-14 11:50:16,025] {insert_data_redshift.py:48} INFO - Rendered Key: consolidated_data
+[2021-05-14 11:50:16,027] {base.py:78} INFO - Using connection to: id: redshift. Host: redshift-cluster-1.caua6g9a7jto.us-east-1.redshift.amazonaws.com, Port: 5439, Schema: dev, Login: awsuser, Password: XXXXXXXX, extra: None
+[2021-05-14 11:50:17,151] {dbapi.py:180} INFO - Running statement: 
+        COPY forex.binary_options_historical_quotes
+        FROM 's3://udac-forex-project/consolidated_data'
+        ACCESS_KEY_ID 'AKIAQ74WHTWTHRQEC6BU'
+        SECRET_ACCESS_KEY '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'
+        REGION AS 'us-east-1'
+        
+        ;
+    , parameters: None
+[2021-05-14 11:50:23,064] {taskinstance.py:1482} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1138, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/Users/raphaelcarvalho/Documents/forex/plugins/insert_data_redshift.py", line 58, in execute
+    redshift.run(formatted_sql)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 184, in run
+    cur.execute(sql_statement)
+psycopg2.InternalError: Load into table 'binary_options_historical_quotes' failed.  Check 'stl_load_errors' system table for details.
+
+[2021-05-14 11:50:23,074] {taskinstance.py:1532} INFO - Marking task as FAILED. dag_id=etl, task_id=insert_data_redshift, execution_date=20210514T144155, start_date=20210514T145015, end_date=20210514T145023
+[2021-05-14 11:50:23,115] {local_task_job.py:146} INFO - Task exited with return code 1

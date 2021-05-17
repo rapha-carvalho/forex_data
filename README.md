@@ -39,7 +39,11 @@ Besides that, you'll need to install Docker, as we'll need it to run transformat
 
 All the packages used in this project are listed in [**requirements.txt**](https://gitlab.com/projetos-di/valor-do-evento/blob/master/csv_handler/README.md). Just run `pip install requirements` and you'll be all set!
 
+You’ll also need to download the following jar files and place them into /jars folder:
 
+- [hadoop-aws 3.2.0](https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-aws/3.2.0)
+- [aws-java-sdk-bundle 1.11.1015](https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-bundle/1.11.1015)
+- [redshift-jdbc42 2.0.0.4](https://mvnrepository.com/artifact/com.amazon.redshift/redshift-jdbc42/2.0.0.4)
 
 
 ## How to run

@@ -1,0 +1,32 @@
+[2021-05-12 17:42:06,830] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.create_dim_table 2021-05-12T20:42:00.361247+00:00 [queued]>
+[2021-05-12 17:42:06,836] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.create_dim_table 2021-05-12T20:42:00.361247+00:00 [queued]>
+[2021-05-12 17:42:06,836] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-12 17:42:06,836] {taskinstance.py:1069} INFO - Starting attempt 1 of 1
+[2021-05-12 17:42:06,836] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-12 17:42:06,841] {taskinstance.py:1089} INFO - Executing <Task(ExecuteQueryOperator): create_dim_table> on 2021-05-12T20:42:00.361247+00:00
+[2021-05-12 17:42:06,844] {standard_task_runner.py:52} INFO - Started process 4110 to run task
+[2021-05-12 17:42:06,850] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'etl', 'create_dim_table', '2021-05-12T20:42:00.361247+00:00', '--job-id', '193', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmpgp0ibvli', '--error-file', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmpcb0zbucv']
+[2021-05-12 17:42:06,852] {standard_task_runner.py:77} INFO - Job 193: Subtask create_dim_table
+[2021-05-12 17:42:06,880] {logging_mixin.py:104} INFO - Running <TaskInstance: etl.create_dim_table 2021-05-12T20:42:00.361247+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2021-05-12 17:42:06,901] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=udacity
+AIRFLOW_CTX_DAG_ID=etl
+AIRFLOW_CTX_TASK_ID=create_dim_table
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-12T20:42:00.361247+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-05-12T20:42:00.361247+00:00
+[2021-05-12 17:42:06,901] {execute_query.py:21} INFO - Executing query
+[2021-05-12 17:42:06,905] {base.py:78} INFO - Using connection to: id: redshift. Host: redshift-cluster-1.caua6g9a7jto.us-east-1.redshift.amazonaws.com, Port: 5439, Schema: dev, Login: awsuser, Password: XXXXXXXX, extra: None
+[2021-05-12 17:42:07,946] {dbapi.py:180} INFO - Running statement: 
+    DROP TABLE IF EXISTS forex.dim_active_id; 
+    CREATE TABLE IF NOT EXISTS forex.dim_active_id (
+    active_id INT,
+    active_name TEXT,
+    PRIMARY KEY (active_id)
+    );
+, parameters: None
+[2021-05-12 17:42:08,252] {dbapi.py:186} INFO - Rows affected: -1
+[2021-05-12 17:42:08,445] {taskinstance.py:1192} INFO - Marking task as SUCCESS. dag_id=etl, task_id=create_dim_table, execution_date=20210512T204200, start_date=20210512T204206, end_date=20210512T204208
+[2021-05-12 17:42:08,488] {taskinstance.py:1246} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-05-12 17:42:08,518] {local_task_job.py:146} INFO - Task exited with return code 0

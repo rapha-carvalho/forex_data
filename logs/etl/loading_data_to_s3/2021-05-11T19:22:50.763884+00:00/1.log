@@ -1,0 +1,35 @@
+[2021-05-11 16:23:03,388] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.loading_data_to_s3 2021-05-11T19:22:50.763884+00:00 [queued]>
+[2021-05-11 16:23:03,394] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.loading_data_to_s3 2021-05-11T19:22:50.763884+00:00 [queued]>
+[2021-05-11 16:23:03,394] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-11 16:23:03,394] {taskinstance.py:1069} INFO - Starting attempt 1 of 1
+[2021-05-11 16:23:03,394] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-11 16:23:03,398] {taskinstance.py:1089} INFO - Executing <Task(PythonOperator): loading_data_to_s3> on 2021-05-11T19:22:50.763884+00:00
+[2021-05-11 16:23:03,403] {standard_task_runner.py:52} INFO - Started process 98825 to run task
+[2021-05-11 16:23:03,410] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'etl', 'loading_data_to_s3', '2021-05-11T19:22:50.763884+00:00', '--job-id', '75', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmpdpixwtte', '--error-file', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmpogz71fmy']
+[2021-05-11 16:23:03,412] {standard_task_runner.py:77} INFO - Job 75: Subtask loading_data_to_s3
+[2021-05-11 16:23:03,440] {logging_mixin.py:104} INFO - Running <TaskInstance: etl.loading_data_to_s3 2021-05-11T19:22:50.763884+00:00 [running]> on host 27.2.168.192.in-addr.arpa
+[2021-05-11 16:23:03,462] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=udacity
+AIRFLOW_CTX_DAG_ID=etl
+AIRFLOW_CTX_TASK_ID=loading_data_to_s3
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-11T19:22:50.763884+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-05-11T19:22:50.763884+00:00
+[2021-05-11 16:23:04,759] {taskinstance.py:1482} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1138, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/operators/python.py", line 117, in execute
+    return_value = self.execute_callable()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/operators/python.py", line 128, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/Users/raphaelcarvalho/Documents/forex/load_data_to_s3.py", line 24, in load_data_to_s3
+    if int(max_ts[0][0]) is None:
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+[2021-05-11 16:23:04,767] {taskinstance.py:1532} INFO - Marking task as FAILED. dag_id=etl, task_id=loading_data_to_s3, execution_date=20210511T192250, start_date=20210511T192303, end_date=20210511T192304
+[2021-05-11 16:23:04,793] {local_task_job.py:146} INFO - Task exited with return code 1

@@ -1,0 +1,1803 @@
+[2021-05-14 23:32:15,463] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.run_spark_job 2021-05-14T23:00:00+00:00 [queued]>
+[2021-05-14 23:32:15,473] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: etl.run_spark_job 2021-05-14T23:00:00+00:00 [queued]>
+[2021-05-14 23:32:15,473] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-14 23:32:15,473] {taskinstance.py:1069} INFO - Starting attempt 1 of 1
+[2021-05-14 23:32:15,473] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-14 23:32:15,480] {taskinstance.py:1089} INFO - Executing <Task(DockerOperator): run_spark_job> on 2021-05-14T23:00:00+00:00
+[2021-05-14 23:32:15,484] {standard_task_runner.py:52} INFO - Started process 26383 to run task
+[2021-05-14 23:32:15,494] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'etl', 'run_spark_job', '2021-05-14T23:00:00+00:00', '--job-id', '601', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmp0322_i7g', '--error-file', '/var/folders/_f/vg3x3jmj23bcz6s88l7v6fb40000gn/T/tmp1t1xx01i']
+[2021-05-14 23:32:15,496] {standard_task_runner.py:77} INFO - Job 601: Subtask run_spark_job
+[2021-05-14 23:32:15,545] {logging_mixin.py:104} INFO - Running <TaskInstance: etl.run_spark_job 2021-05-14T23:00:00+00:00 [running]> on host 27.2.168.192.in-addr.arpa
+[2021-05-14 23:32:15,593] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=udacity
+AIRFLOW_CTX_DAG_ID=etl
+AIRFLOW_CTX_TASK_ID=run_spark_job
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-14T23:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-05-14T23:00:00+00:00
+[2021-05-14 23:32:15,598] {docker.py:303} INFO - Pulling docker image raphacarvalho/udac_spark
+[2021-05-14 23:32:18,949] {docker.py:317} INFO - latest: Pulling from raphacarvalho/udac_spark
+[2021-05-14 23:32:18,951] {docker.py:312} INFO - Digest: sha256:4e46a1dd36dff0cd54870612109ad855e6261637c4ee65f5dbc48a05c92675ea
+[2021-05-14 23:32:18,952] {docker.py:312} INFO - Status: Image is up to date for raphacarvalho/udac_spark
+[2021-05-14 23:32:18,956] {docker.py:232} INFO - Starting docker container from image raphacarvalho/udac_spark
+[2021-05-14 23:32:21,149] {docker.py:276} INFO - WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/usr/local/spark-3.1.1-bin-hadoop3.2/jars/spark-unsafe_2.12-3.1.1.jar) to constructor java.nio.DirectByteBuffer(long,int)
+WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[2021-05-14 23:32:21,792] {docker.py:276} INFO - 21/05/15 02:32:21 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2021-05-14 23:32:24,094] {docker.py:276} INFO - Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+[2021-05-14 23:32:24,110] {docker.py:276} INFO - 21/05/15 02:32:24 INFO SparkContext: Running Spark version 3.1.1
+[2021-05-14 23:32:24,181] {docker.py:276} INFO - 21/05/15 02:32:24 INFO ResourceUtils: ==============================================================
+[2021-05-14 23:32:24,182] {docker.py:276} INFO - 21/05/15 02:32:24 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2021-05-14 23:32:24,182] {docker.py:276} INFO - 21/05/15 02:32:24 INFO ResourceUtils: ==============================================================
+[2021-05-14 23:32:24,183] {docker.py:276} INFO - 21/05/15 02:32:24 INFO SparkContext: Submitted application: spark.py
+[2021-05-14 23:32:24,221] {docker.py:276} INFO - 21/05/15 02:32:24 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memoryOverhead -> name: memoryOverhead, amount: 884, script: , vendor: , cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 500, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2021-05-14 23:32:24,238] {docker.py:276} INFO - 21/05/15 02:32:24 INFO ResourceProfile: Limiting resource is cpu
+[2021-05-14 23:32:24,239] {docker.py:276} INFO - 21/05/15 02:32:24 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2021-05-14 23:32:24,314] {docker.py:276} INFO - 21/05/15 02:32:24 INFO SecurityManager: Changing view acls to: jovyan
+[2021-05-14 23:32:24,315] {docker.py:276} INFO - 21/05/15 02:32:24 INFO SecurityManager: Changing modify acls to: jovyan
+[2021-05-14 23:32:24,315] {docker.py:276} INFO - 21/05/15 02:32:24 INFO SecurityManager: Changing view acls groups to:
+[2021-05-14 23:32:24,316] {docker.py:276} INFO - 21/05/15 02:32:24 INFO SecurityManager: Changing modify acls groups to:
+[2021-05-14 23:32:24,316] {docker.py:276} INFO - 21/05/15 02:32:24 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(jovyan); groups with view permissions: Set(); users  with modify permissions: Set(jovyan); groups with modify permissions: Set()
+[2021-05-14 23:32:24,687] {docker.py:276} INFO - 21/05/15 02:32:24 INFO Utils: Successfully started service 'sparkDriver' on port 40905.
+[2021-05-14 23:32:24,731] {docker.py:276} INFO - 21/05/15 02:32:24 INFO SparkEnv: Registering MapOutputTracker
+[2021-05-14 23:32:24,780] {docker.py:276} INFO - 21/05/15 02:32:24 INFO SparkEnv: Registering BlockManagerMaster
+[2021-05-14 23:32:24,817] {docker.py:276} INFO - 21/05/15 02:32:24 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2021-05-14 23:32:24,819] {docker.py:276} INFO - 21/05/15 02:32:24 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2021-05-14 23:32:24,826] {docker.py:276} INFO - 21/05/15 02:32:24 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2021-05-14 23:32:24,845] {docker.py:276} INFO - 21/05/15 02:32:24 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-66db3ae0-6ac6-44bc-89e8-153730d0354a
+[2021-05-14 23:32:24,876] {docker.py:276} INFO - 21/05/15 02:32:24 INFO MemoryStore: MemoryStore started with capacity 934.4 MiB
+[2021-05-14 23:32:24,901] {docker.py:276} INFO - 21/05/15 02:32:24 INFO SparkEnv: Registering OutputCommitCoordinator
+[2021-05-14 23:32:25,220] {docker.py:276} INFO - 21/05/15 02:32:25 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2021-05-14 23:32:25,318] {docker.py:276} INFO - 21/05/15 02:32:25 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://630404ebd283:4040
+[2021-05-14 23:32:25,634] {docker.py:276} INFO - 21/05/15 02:32:25 INFO Executor: Starting executor ID driver on host 630404ebd283
+[2021-05-14 23:32:25,689] {docker.py:276} INFO - 21/05/15 02:32:25 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42075.
+[2021-05-14 23:32:25,690] {docker.py:276} INFO - 21/05/15 02:32:25 INFO NettyBlockTransferService: Server created on 630404ebd283:42075
+[2021-05-14 23:32:25,693] {docker.py:276} INFO - 21/05/15 02:32:25 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2021-05-14 23:32:25,709] {docker.py:276} INFO - 21/05/15 02:32:25 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 630404ebd283, 42075, None)
+[2021-05-14 23:32:25,719] {docker.py:276} INFO - 21/05/15 02:32:25 INFO BlockManagerMasterEndpoint: Registering block manager 630404ebd283:42075 with 934.4 MiB RAM, BlockManagerId(driver, 630404ebd283, 42075, None)
+[2021-05-14 23:32:25,723] {docker.py:276} INFO - 21/05/15 02:32:25 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 630404ebd283, 42075, None)
+[2021-05-14 23:32:25,725] {docker.py:276} INFO - 21/05/15 02:32:25 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 630404ebd283, 42075, None)
+[2021-05-14 23:32:26,667] {docker.py:276} INFO - 21/05/15 02:32:26 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/jovyan/spark-warehouse').
+[2021-05-14 23:32:26,668] {docker.py:276} INFO - 21/05/15 02:32:26 INFO SharedState: Warehouse path is 'file:/home/jovyan/spark-warehouse'.
+[2021-05-14 23:32:28,358] {docker.py:276} INFO - 21/05/15 02:32:28 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+[2021-05-14 23:32:28,429] {docker.py:276} INFO - 21/05/15 02:32:28 INFO MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+[2021-05-14 23:32:28,430] {docker.py:276} INFO - 21/05/15 02:32:28 INFO MetricsSystemImpl: s3a-file-system metrics system started
+[2021-05-14 23:32:37,361] {docker.py:276} INFO - 21/05/15 02:32:37 INFO InMemoryFileIndex: It took 2239 ms to list leaf files for 12 paths.
+[2021-05-14 23:32:39,506] {docker.py:276} INFO - 21/05/15 02:32:39 INFO InMemoryFileIndex: It took 2056 ms to list leaf files for 12 paths.
+[2021-05-14 23:32:42,108] {docker.py:276} INFO - 21/05/15 02:32:42 INFO FileSourceStrategy: Pushed Filters:
+[2021-05-14 23:32:42,116] {docker.py:276} INFO - 21/05/15 02:32:42 INFO FileSourceStrategy: Post-Scan Filters: (length(trim(value#0, None)) > 0)
+[2021-05-14 23:32:42,124] {docker.py:276} INFO - 21/05/15 02:32:42 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+[2021-05-14 23:32:42,899] {docker.py:276} INFO - 21/05/15 02:32:42 INFO CodeGenerator: Code generated in 260.6156 ms
+[2021-05-14 23:32:42,969] {docker.py:276} INFO - 21/05/15 02:32:42 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 177.6 KiB, free 934.2 MiB)
+[2021-05-14 23:32:43,063] {docker.py:276} INFO - 21/05/15 02:32:43 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 28.2 KiB, free 934.2 MiB)
+[2021-05-14 23:32:43,066] {docker.py:276} INFO - 21/05/15 02:32:43 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 630404ebd283:42075 (size: 28.2 KiB, free: 934.4 MiB)
+[2021-05-14 23:32:43,074] {docker.py:276} INFO - 21/05/15 02:32:43 INFO SparkContext: Created broadcast 0 from csv at NativeMethodAccessorImpl.java:0
+[2021-05-14 23:32:43,106] {docker.py:276} INFO - 21/05/15 02:32:43 INFO FileSourceScanExec: Planning scan with bin packing, max size: 12903634 bytes, open cost is considered as scanning 4194304 bytes.
+[2021-05-14 23:32:43,265] {docker.py:276} INFO - 21/05/15 02:32:43 INFO SparkContext: Starting job: csv at NativeMethodAccessorImpl.java:0
+[2021-05-14 23:32:43,286] {docker.py:276} INFO - 21/05/15 02:32:43 INFO DAGScheduler: Got job 0 (csv at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2021-05-14 23:32:43,287] {docker.py:276} INFO - 21/05/15 02:32:43 INFO DAGScheduler: Final stage: ResultStage 0 (csv at NativeMethodAccessorImpl.java:0)
+[2021-05-14 23:32:43,288] {docker.py:276} INFO - 21/05/15 02:32:43 INFO DAGScheduler: Parents of final stage: List()
+[2021-05-14 23:32:43,290] {docker.py:276} INFO - 21/05/15 02:32:43 INFO DAGScheduler: Missing parents: List()
+[2021-05-14 23:32:43,297] {docker.py:276} INFO - 21/05/15 02:32:43 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2021-05-14 23:32:43,375] {docker.py:276} INFO - 21/05/15 02:32:43 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 10.8 KiB, free 934.2 MiB)
+[2021-05-14 23:32:43,400] {docker.py:276} INFO - 21/05/15 02:32:43 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 934.2 MiB)
+[2021-05-14 23:32:43,401] {docker.py:276} INFO - 21/05/15 02:32:43 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 630404ebd283:42075 (size: 5.4 KiB, free: 934.4 MiB)
+[2021-05-14 23:32:43,403] {docker.py:276} INFO - 21/05/15 02:32:43 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1383
+[2021-05-14 23:32:43,419] {docker.py:276} INFO - 21/05/15 02:32:43 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2021-05-14 23:32:43,420] {docker.py:276} INFO - 21/05/15 02:32:43 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+[2021-05-14 23:32:43,499] {docker.py:276} INFO - 21/05/15 02:32:43 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (630404ebd283, executor driver, partition 0, PROCESS_LOCAL, 5125 bytes) taskResourceAssignments Map()
+[2021-05-14 23:32:43,522] {docker.py:276} INFO - 21/05/15 02:32:43 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+[2021-05-14 23:32:43,693] {docker.py:276} INFO - 21/05/15 02:32:43 INFO FileScanRDD: Reading File path: s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621029654_to_1621031454.csv, range: 0-111710, partition values: [empty row]
+[2021-05-14 23:32:43,719] {docker.py:276} INFO - 21/05/15 02:32:43 INFO CodeGenerator: Code generated in 18.1139 ms
+[2021-05-14 23:32:44,136] {docker.py:276} INFO - 21/05/15 02:32:44 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1564 bytes result sent to driver
+[2021-05-14 23:32:44,147] {docker.py:276} INFO - 21/05/15 02:32:44 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 659 ms on 630404ebd283 (executor driver) (1/1)
+[2021-05-14 23:32:44,152] {docker.py:276} INFO - 21/05/15 02:32:44 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+[2021-05-14 23:32:44,159] {docker.py:276} INFO - 21/05/15 02:32:44 INFO DAGScheduler: ResultStage 0 (csv at NativeMethodAccessorImpl.java:0) finished in 0.843 s
+[2021-05-14 23:32:44,165] {docker.py:276} INFO - 21/05/15 02:32:44 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+[2021-05-14 23:32:44,166] {docker.py:276} INFO - 21/05/15 02:32:44 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+[2021-05-14 23:32:44,169] {docker.py:276} INFO - 21/05/15 02:32:44 INFO DAGScheduler: Job 0 finished: csv at NativeMethodAccessorImpl.java:0, took 0.905192 s
+[2021-05-14 23:32:44,201] {docker.py:276} INFO - 21/05/15 02:32:44 INFO CodeGenerator: Code generated in 14.8534 ms
+[2021-05-14 23:32:44,274] {docker.py:276} INFO - 21/05/15 02:32:44 INFO FileSourceStrategy: Pushed Filters:
+[2021-05-14 23:32:44,275] {docker.py:276} INFO - 21/05/15 02:32:44 INFO FileSourceStrategy: Post-Scan Filters:
+[2021-05-14 23:32:44,275] {docker.py:276} INFO - 21/05/15 02:32:44 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+[2021-05-14 23:32:44,283] {docker.py:276} INFO - 21/05/15 02:32:44 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 177.6 KiB, free 934.0 MiB)
+[2021-05-14 23:32:44,325] {docker.py:276} INFO - 21/05/15 02:32:44 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 28.2 KiB, free 934.0 MiB)
+[2021-05-14 23:32:44,340] {docker.py:276} INFO - 21/05/15 02:32:44 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 630404ebd283:42075 (size: 28.2 KiB, free: 934.3 MiB)
+[2021-05-14 23:32:44,342] {docker.py:276} INFO - 21/05/15 02:32:44 INFO SparkContext: Created broadcast 2 from csv at NativeMethodAccessorImpl.java:0
+[2021-05-14 23:32:44,344] {docker.py:276} INFO - 21/05/15 02:32:44 INFO FileSourceScanExec: Planning scan with bin packing, max size: 12903634 bytes, open cost is considered as scanning 4194304 bytes.
+[2021-05-14 23:32:44,352] {docker.py:276} INFO - 21/05/15 02:32:44 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 630404ebd283:42075 in memory (size: 5.4 KiB, free: 934.3 MiB)
+[2021-05-14 23:32:44,962] {docker.py:276} INFO - 21/05/15 02:32:44 INFO FileSourceStrategy: Pushed Filters: 
+21/05/15 02:32:44 INFO FileSourceStrategy: Post-Scan Filters:
+[2021-05-14 23:32:44,962] {docker.py:276} INFO - 21/05/15 02:32:44 INFO FileSourceStrategy: Output Data Schema: struct<ts: string, n: string, bid: string, ask: string, value: string ... 7 more fields>
+[2021-05-14 23:32:46,154] {docker.py:276} INFO - 21/05/15 02:32:46 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2021-05-14 23:32:46,154] {docker.py:276} INFO - 21/05/15 02:32:46 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2021-05-14 23:32:46,159] {docker.py:276} INFO - 21/05/15 02:32:46 INFO AbstractS3ACommitterFactory: Using committer partitioned to output data to s3a://udac-forex-project/consolidated_data
+[2021-05-14 23:32:46,160] {docker.py:276} INFO - 21/05/15 02:32:46 INFO AbstractS3ACommitterFactory: Using Commmitter PartitionedStagingCommitter{StagingCommitter{AbstractS3ACommitter{role=Task committer attempt_202105150232466952277468869037826_0000_m_000000_0, name=partitioned, outputPath=s3a://udac-forex-project/consolidated_data, workPath=file:/tmp/hadoop-jovyan/s3a/233c5013-a6ae-4404-b2fa-473cbe522907/_temporary/0/_temporary/attempt_202105150232466952277468869037826_0000_m_000000_0}, conflictResolution=REPLACE, wrappedCommitter=FileOutputCommitter{PathOutputCommitter{context=TaskAttemptContextImpl{JobContextImpl{jobId=job_202105150232466952277468869037826_0000}; taskId=attempt_202105150232466952277468869037826_0000_m_000000_0, status=''}; org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter@6471fbb4}; outputPath=file:/home/jovyan/tmp/staging/jovyan/233c5013-a6ae-4404-b2fa-473cbe522907/staging-uploads, workPath=null, algorithmVersion=1, skipCleanup=false, ignoreCleanupFailures=false}}} for s3a://udac-forex-project/consolidated_data
+[2021-05-14 23:32:46,161] {docker.py:276} INFO - 21/05/15 02:32:46 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.hadoop.fs.s3a.commit.staging.PartitionedStagingCommitter
+[2021-05-14 23:32:46,199] {docker.py:276} INFO - 21/05/15 02:32:46 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+[2021-05-14 23:32:46,303] {docker.py:276} INFO - 21/05/15 02:32:46 INFO CodeGenerator: Code generated in 67.9838 ms
+[2021-05-14 23:32:46,306] {docker.py:276} INFO - 21/05/15 02:32:46 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+[2021-05-14 23:32:46,358] {docker.py:276} INFO - 21/05/15 02:32:46 INFO CodeGenerator: Code generated in 42.7999 ms
+[2021-05-14 23:32:46,363] {docker.py:276} INFO - 21/05/15 02:32:46 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 177.5 KiB, free 933.8 MiB)
+[2021-05-14 23:32:46,394] {docker.py:276} INFO - 21/05/15 02:32:46 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 28.2 KiB, free 933.8 MiB)
+[2021-05-14 23:32:46,396] {docker.py:276} INFO - 21/05/15 02:32:46 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 630404ebd283:42075 (size: 28.2 KiB, free: 934.3 MiB)
+[2021-05-14 23:32:46,398] {docker.py:276} INFO - 21/05/15 02:32:46 INFO SparkContext: Created broadcast 3 from csv at NativeMethodAccessorImpl.java:0
+[2021-05-14 23:32:46,405] {docker.py:276} INFO - 21/05/15 02:32:46 INFO FileSourceScanExec: Planning scan with bin packing, max size: 12903634 bytes, open cost is considered as scanning 4194304 bytes.
+[2021-05-14 23:32:46,451] {docker.py:276} INFO - 21/05/15 02:32:46 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 630404ebd283:42075 in memory (size: 28.2 KiB, free: 934.3 MiB)
+[2021-05-14 23:32:46,541] {docker.py:276} INFO - 21/05/15 02:32:46 INFO SparkContext: Starting job: csv at NativeMethodAccessorImpl.java:0
+[2021-05-14 23:32:46,547] {docker.py:276} INFO - 21/05/15 02:32:46 INFO DAGScheduler: Registering RDD 13 (csv at NativeMethodAccessorImpl.java:0) as input to shuffle 0
+[2021-05-14 23:32:46,550] {docker.py:276} INFO - 21/05/15 02:32:46 INFO DAGScheduler: Got job 1 (csv at NativeMethodAccessorImpl.java:0) with 200 output partitions
+21/05/15 02:32:46 INFO DAGScheduler: Final stage: ResultStage 2 (csv at NativeMethodAccessorImpl.java:0)
+[2021-05-14 23:32:46,551] {docker.py:276} INFO - 21/05/15 02:32:46 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 1)
+[2021-05-14 23:32:46,553] {docker.py:276} INFO - 21/05/15 02:32:46 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 1)
+[2021-05-14 23:32:46,555] {docker.py:276} INFO - 21/05/15 02:32:46 INFO DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[13] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2021-05-14 23:32:46,572] {docker.py:276} INFO - 21/05/15 02:32:46 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 28.0 KiB, free 934.0 MiB)
+[2021-05-14 23:32:46,588] {docker.py:276} INFO - 21/05/15 02:32:46 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 12.0 KiB, free 934.0 MiB)
+[2021-05-14 23:32:46,590] {docker.py:276} INFO - 21/05/15 02:32:46 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 630404ebd283:42075 (size: 12.0 KiB, free: 934.3 MiB)
+[2021-05-14 23:32:46,594] {docker.py:276} INFO - 21/05/15 02:32:46 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1383
+[2021-05-14 23:32:46,600] {docker.py:276} INFO - 21/05/15 02:32:46 INFO DAGScheduler: Submitting 4 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[13] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+[2021-05-14 23:32:46,601] {docker.py:276} INFO - 21/05/15 02:32:46 INFO TaskSchedulerImpl: Adding task set 1.0 with 4 tasks resource profile 0
+[2021-05-14 23:32:46,605] {docker.py:276} INFO - 21/05/15 02:32:46 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (630404ebd283, executor driver, partition 0, PROCESS_LOCAL, 5114 bytes) taskResourceAssignments Map()
+[2021-05-14 23:32:46,606] {docker.py:276} INFO - 21/05/15 02:32:46 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 2) (630404ebd283, executor driver, partition 1, PROCESS_LOCAL, 5114 bytes) taskResourceAssignments Map()
+[2021-05-14 23:32:46,607] {docker.py:276} INFO - 21/05/15 02:32:46 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 3) (630404ebd283, executor driver, partition 2, PROCESS_LOCAL, 5114 bytes) taskResourceAssignments Map()
+[2021-05-14 23:32:46,608] {docker.py:276} INFO - 21/05/15 02:32:46 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 4) (630404ebd283, executor driver, partition 3, PROCESS_LOCAL, 5114 bytes) taskResourceAssignments Map()
+[2021-05-14 23:32:46,614] {docker.py:276} INFO - 21/05/15 02:32:46 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+[2021-05-14 23:32:46,625] {docker.py:276} INFO - 21/05/15 02:32:46 INFO Executor: Running task 2.0 in stage 1.0 (TID 3)
+[2021-05-14 23:32:46,626] {docker.py:276} INFO - 21/05/15 02:32:46 INFO Executor: Running task 1.0 in stage 1.0 (TID 2)
+[2021-05-14 23:32:46,648] {docker.py:276} INFO - 21/05/15 02:32:46 INFO Executor: Running task 3.0 in stage 1.0 (TID 4)
+[2021-05-14 23:32:46,698] {docker.py:276} INFO - 21/05/15 02:32:46 INFO BlockManagerInfo: Removed broadcast_2_piece0 on 630404ebd283:42075 in memory (size: 28.2 KiB, free: 934.4 MiB)
+[2021-05-14 23:32:46,783] {docker.py:276} INFO - 21/05/15 02:32:46 INFO CodeGenerator: Code generated in 34.7593 ms
+[2021-05-14 23:32:46,823] {docker.py:276} INFO - 21/05/15 02:32:46 INFO CodeGenerator: Code generated in 17.0377 ms
+[2021-05-14 23:32:46,864] {docker.py:276} INFO - 21/05/15 02:32:46 INFO CodeGenerator: Code generated in 26.0408 ms
+[2021-05-14 23:32:46,905] {docker.py:276} INFO - 21/05/15 02:32:46 INFO FileScanRDD: Reading File path: s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621035054_to_1621036854.csv, range: 0-111710, partition values: [empty row]
+[2021-05-14 23:32:46,906] {docker.py:276} INFO - 21/05/15 02:32:46 INFO FileScanRDD: Reading File path: s3a://udac-forex-project/2/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv, range: 0-104506, partition values: [empty row]
+[2021-05-14 23:32:46,907] {docker.py:276} INFO - 21/05/15 02:32:46 INFO FileScanRDD: Reading File path: s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621029654_to_1621031454.csv, range: 0-111710, partition values: [empty row]
+[2021-05-14 23:32:46,911] {docker.py:276} INFO - 21/05/15 02:32:46 INFO FileScanRDD: Reading File path: s3a://udac-forex-project/1/2021-05-14_21_30_54/from_1621033254_to_1621035054.csv, range: 0-104506, partition values: [empty row]
+[2021-05-14 23:32:47,732] {docker.py:276} INFO - 21/05/15 02:32:47 INFO FileScanRDD: Reading File path: s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv, range: 0-111710, partition values: [empty row]
+[2021-05-15 01:00:06,509] {docker.py:276} INFO - 21/05/15 02:32:50 INFO S3AInputStream: Got exception while trying to read from stream s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621035054_to_1621036854.csv trying to recover: com.amazonaws.thirdparty.apache.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 111,710; received: 34,396)
+[2021-05-15 01:00:06,639] {docker.py:276} INFO - 21/05/15 02:32:50 INFO S3AInputStream: Got exception while trying to read from stream s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv trying to recover: com.amazonaws.thirdparty.apache.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 111,710; received: 98,580)
+[2021-05-15 01:00:06,717] {docker.py:276} INFO - 21/05/15 02:32:50 INFO S3AInputStream: Got exception while trying to read from stream s3a://udac-forex-project/1/2021-05-14_21_30_54/from_1621033254_to_1621035054.csv trying to recover: com.amazonaws.thirdparty.apache.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 104,506; received: 85,596)
+[2021-05-15 01:00:08,827] {docker.py:276} INFO - 21/05/15 02:32:53 INFO FileScanRDD: Reading File path: s3a://udac-forex-project/1/2021-05-14_21_30_54/from_1621029654_to_1621031454.csv, range: 0-104506, partition values: [empty row]
+[2021-05-15 01:00:08,829] {docker.py:276} INFO - 21/05/15 02:32:53 INFO FileScanRDD: Reading File path: s3a://udac-forex-project/2/2021-05-14_21_30_54/from_1621033254_to_1621035054.csv, range: 0-104506, partition values: [empty row]
+[2021-05-15 01:00:09,889] {docker.py:276} INFO - 21/05/15 02:32:54 INFO FileScanRDD: Reading File path: s3a://udac-forex-project/1/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv, range: 0-104506, partition values: [empty row]
+[2021-05-15 01:00:09,894] {docker.py:276} INFO - 21/05/15 02:32:54 INFO FileScanRDD: Reading File path: s3a://udac-forex-project/2/2021-05-14_21_30_54/from_1621035054_to_1621036854.csv, range: 0-104506, partition values: [empty row]
+[2021-05-15 01:00:11,453] {docker.py:276} INFO - 21/05/15 02:32:56 INFO Executor: Finished task 1.0 in stage 1.0 (TID 2). 2722 bytes result sent to driver
+[2021-05-15 01:00:11,460] {docker.py:276} INFO - 21/05/15 02:32:56 INFO Executor: Finished task 3.0 in stage 1.0 (TID 4). 2679 bytes result sent to driver
+[2021-05-15 01:00:11,466] {docker.py:276} INFO - 21/05/15 02:32:56 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 2) in 9517 ms on 630404ebd283 (executor driver) (1/4)
+[2021-05-15 01:00:11,473] {docker.py:276} INFO - 21/05/15 02:32:56 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 4) in 9517 ms on 630404ebd283 (executor driver) (2/4)
+[2021-05-15 01:00:16,103] {docker.py:276} INFO - 21/05/15 04:00:15 ERROR TaskContextImpl: Error in TaskCompletionListener
+com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	at com.amazonaws.util.LengthCheckInputStream.checkLength(LengthCheckInputStream.java:151)
+	at com.amazonaws.util.LengthCheckInputStream.read(LengthCheckInputStream.java:93)
+	at com.amazonaws.internal.SdkFilterInputStream.read(SdkFilterInputStream.java:84)
+	at com.amazonaws.services.s3.internal.S3AbortableInputStream.read(S3AbortableInputStream.java:99)
+	at com.amazonaws.internal.SdkFilterInputStream.read(SdkFilterInputStream.java:84)
+	at org.apache.hadoop.fs.s3a.S3AInputStream.closeStream(S3AInputStream.java:537)
+	at org.apache.hadoop.fs.s3a.S3AInputStream.close(S3AInputStream.java:498)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at org.apache.hadoop.util.LineReader.close(LineReader.java:152)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.close(LineRecordReader.java:239)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.close(RecordReaderIterator.scala:60)
+	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.close(HadoopFileLinesReader.scala:73)
+	at org.apache.spark.sql.execution.datasources.csv.TextInputCSVDataSource$.$anonfun$readFile$2(CSVDataSource.scala:98)
+	at org.apache.spark.sql.execution.datasources.csv.TextInputCSVDataSource$.$anonfun$readFile$2$adapted(CSVDataSource.scala:98)
+	at org.apache.spark.TaskContext$$anon$1.onTaskCompletion(TaskContext.scala:125)
+	at org.apache.spark.TaskContextImpl.$anonfun$markTaskCompleted$1(TaskContextImpl.scala:124)
+	at org.apache.spark.TaskContextImpl.$anonfun$markTaskCompleted$1$adapted(TaskContextImpl.scala:124)
+	at org.apache.spark.TaskContextImpl.$anonfun$invokeListeners$1(TaskContextImpl.scala:137)
+	at org.apache.spark.TaskContextImpl.$anonfun$invokeListeners$1$adapted(TaskContextImpl.scala:135)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:135)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[2021-05-15 01:00:16,124] {docker.py:276} INFO - 21/05/15 04:00:16 ERROR TaskContextImpl: Error in TaskCompletionListener
+com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=85596; expectedLength=104506; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	at com.amazonaws.util.LengthCheckInputStream.checkLength(LengthCheckInputStream.java:151)
+	at com.amazonaws.util.LengthCheckInputStream.read(LengthCheckInputStream.java:93)
+	at com.amazonaws.internal.SdkFilterInputStream.read(SdkFilterInputStream.java:84)
+	at com.amazonaws.services.s3.internal.S3AbortableInputStream.read(S3AbortableInputStream.java:99)
+	at com.amazonaws.internal.SdkFilterInputStream.read(SdkFilterInputStream.java:84)
+	at org.apache.hadoop.fs.s3a.S3AInputStream.closeStream(S3AInputStream.java:537)
+	at org.apache.hadoop.fs.s3a.S3AInputStream.close(S3AInputStream.java:498)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at org.apache.hadoop.util.LineReader.close(LineReader.java:152)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.close(LineRecordReader.java:239)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.close(RecordReaderIterator.scala:60)
+	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.close(HadoopFileLinesReader.scala:73)
+	at org.apache.spark.sql.execution.datasources.csv.TextInputCSVDataSource$.$anonfun$readFile$2(CSVDataSource.scala:98)
+	at org.apache.spark.sql.execution.datasources.csv.TextInputCSVDataSource$.$anonfun$readFile$2$adapted(CSVDataSource.scala:98)
+	at org.apache.spark.TaskContext$$anon$1.onTaskCompletion(TaskContext.scala:125)
+	at org.apache.spark.TaskContextImpl.$anonfun$markTaskCompleted$1(TaskContextImpl.scala:124)
+	at org.apache.spark.TaskContextImpl.$anonfun$markTaskCompleted$1$adapted(TaskContextImpl.scala:124)
+	at org.apache.spark.TaskContextImpl.$anonfun$invokeListeners$1(TaskContextImpl.scala:137)
+	at org.apache.spark.TaskContextImpl.$anonfun$invokeListeners$1$adapted(TaskContextImpl.scala:135)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:135)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[2021-05-15 01:00:16,238] {docker.py:276} INFO - 21/05/15 04:00:16 ERROR Executor: Exception in task 0.0 in stage 1.0 (TID 1)
+org.apache.spark.util.TaskCompletionListenerException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+
+Previous exception in task: read on s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv: com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:189)
+	org.apache.hadoop.fs.s3a.Invoker.once(Invoker.java:111)
+	org.apache.hadoop.fs.s3a.Invoker.lambda$retry$3(Invoker.java:265)
+	org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:322)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:261)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:236)
+	org.apache.hadoop.fs.s3a.S3AInputStream.read(S3AInputStream.java:446)
+	java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:218)
+	org.apache.hadoop.util.LineReader.readLine(LineReader.java:176)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:194)
+	org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:37)
+	org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:511)
+	scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:489)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:93)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.agg_doAggregateWithKeys_0$(Unknown Source)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:755)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:132)
+	org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	org.apache.spark.scheduler.Task.run(Task.scala:131)
+	org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	java.base/java.lang.Thread.run(Thread.java:829)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:145)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[2021-05-15 01:00:16,250] {docker.py:276} INFO - 21/05/15 04:00:16 ERROR Executor: Exception in task 2.0 in stage 1.0 (TID 3)
+org.apache.spark.util.TaskCompletionListenerException: Data read has a different length than the expected: dataLength=85596; expectedLength=104506; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+
+Previous exception in task: read on s3a://udac-forex-project/1/2021-05-14_21_30_54/from_1621033254_to_1621035054.csv: com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=85596; expectedLength=104506; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0: Data read has a different length than the expected: dataLength=85596; expectedLength=104506; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:189)
+	org.apache.hadoop.fs.s3a.Invoker.once(Invoker.java:111)
+	org.apache.hadoop.fs.s3a.Invoker.lambda$retry$3(Invoker.java:265)
+	org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:322)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:261)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:236)
+	org.apache.hadoop.fs.s3a.S3AInputStream.read(S3AInputStream.java:446)
+	java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:218)
+	org.apache.hadoop.util.LineReader.readLine(LineReader.java:176)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:194)
+	org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:37)
+	org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:511)
+	scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:489)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:93)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.agg_doAggregateWithKeys_0$(Unknown Source)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:755)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:132)
+	org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	org.apache.spark.scheduler.Task.run(Task.scala:131)
+	org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	java.base/java.lang.Thread.run(Thread.java:829)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:145)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[2021-05-15 01:00:16,961] {docker.py:276} INFO - 21/05/15 04:00:16 WARN TaskSetManager: Lost task 0.0 in stage 1.0 (TID 1) (630404ebd283 executor driver): org.apache.spark.util.TaskCompletionListenerException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+
+Previous exception in task: read on s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv: com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:189)
+	org.apache.hadoop.fs.s3a.Invoker.once(Invoker.java:111)
+	org.apache.hadoop.fs.s3a.Invoker.lambda$retry$3(Invoker.java:265)
+	org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:322)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:261)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:236)
+	org.apache.hadoop.fs.s3a.S3AInputStream.read(S3AInputStream.java:446)
+	java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:218)
+	org.apache.hadoop.util.LineReader.readLine(LineReader.java:176)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:194)
+	org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:37)
+	org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:511)
+	scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:489)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:93)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.agg_doAggregateWithKeys_0$(Unknown Source)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:755)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:132)
+	org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	org.apache.spark.scheduler.Task.run(Task.scala:131)
+	org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	java.base/java.lang.Thread.run(Thread.java:829)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:145)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[2021-05-15 01:00:17,005] {docker.py:276} INFO - 21/05/15 04:00:16 ERROR TaskSetManager: Task 0 in stage 1.0 failed 1 times; aborting job
+[2021-05-15 01:00:17,026] {docker.py:276} INFO - 21/05/15 04:00:17 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+[2021-05-15 01:00:17,062] {docker.py:276} INFO - 21/05/15 04:00:17 WARN TaskSetManager: Lost task 2.0 in stage 1.0 (TID 3) (630404ebd283 executor driver): org.apache.spark.util.TaskCompletionListenerException: Data read has a different length than the expected: dataLength=85596; expectedLength=104506; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+
+Previous exception in task: read on s3a://udac-forex-project/1/2021-05-14_21_30_54/from_1621033254_to_1621035054.csv: com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=85596; expectedLength=104506; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0: Data read has a different length than the expected: dataLength=85596; expectedLength=104506; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:189)
+	org.apache.hadoop.fs.s3a.Invoker.once(Invoker.java:111)
+	org.apache.hadoop.fs.s3a.Invoker.lambda$retry$3(Invoker.java:265)
+	org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:322)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:261)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:236)
+	org.apache.hadoop.fs.s3a.S3AInputStream.read(S3AInputStream.java:446)
+	java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:218)
+	org.apache.hadoop.util.LineReader.readLine(LineReader.java:176)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:194)
+	org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:37)
+	org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:511)
+	scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:489)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:93)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.agg_doAggregateWithKeys_0$(Unknown Source)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:755)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:132)
+	org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	org.apache.spark.scheduler.Task.run(Task.scala:131)
+	org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	java.base/java.lang.Thread.run(Thread.java:829)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:145)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[2021-05-15 01:00:17,067] {docker.py:276} INFO - 21/05/15 04:00:17 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+[2021-05-15 01:00:17,208] {docker.py:276} INFO - 21/05/15 04:00:17 INFO TaskSchedulerImpl: Cancelling stage 1
+[2021-05-15 01:00:17,213] {docker.py:276} INFO - 21/05/15 04:00:17 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage cancelled
+[2021-05-15 01:00:17,238] {docker.py:276} INFO - 21/05/15 04:00:17 INFO DAGScheduler: ShuffleMapStage 1 (csv at NativeMethodAccessorImpl.java:0) failed in 5250.629 s due to Job aborted due to stage failure: Task 0 in stage 1.0 failed 1 times, most recent failure: Lost task 0.0 in stage 1.0 (TID 1) (630404ebd283 executor driver): org.apache.spark.util.TaskCompletionListenerException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+
+Previous exception in task: read on s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv: com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:189)
+	org.apache.hadoop.fs.s3a.Invoker.once(Invoker.java:111)
+	org.apache.hadoop.fs.s3a.Invoker.lambda$retry$3(Invoker.java:265)
+	org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:322)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:261)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:236)
+	org.apache.hadoop.fs.s3a.S3AInputStream.read(S3AInputStream.java:446)
+	java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:218)
+	org.apache.hadoop.util.LineReader.readLine(LineReader.java:176)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:194)
+	org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:37)
+	org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:511)
+	scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:489)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:93)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.agg_doAggregateWithKeys_0$(Unknown Source)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:755)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:132)
+	org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	org.apache.spark.scheduler.Task.run(Task.scala:131)
+	org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	java.base/java.lang.Thread.run(Thread.java:829)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:145)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Driver stacktrace:
+[2021-05-15 01:00:17,296] {docker.py:276} INFO - 21/05/15 04:00:17 INFO DAGScheduler: Job 1 failed: csv at NativeMethodAccessorImpl.java:0, took 15.404191 s
+[2021-05-15 01:00:17,342] {docker.py:276} INFO - 21/05/15 04:00:17 ERROR FileFormatWriter: Aborting job 233c5013-a6ae-4404-b2fa-473cbe522907.
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 1.0 failed 1 times, most recent failure: Lost task 0.0 in stage 1.0 (TID 1) (630404ebd283 executor driver): org.apache.spark.util.TaskCompletionListenerException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+
+Previous exception in task: read on s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv: com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:189)
+	org.apache.hadoop.fs.s3a.Invoker.once(Invoker.java:111)
+	org.apache.hadoop.fs.s3a.Invoker.lambda$retry$3(Invoker.java:265)
+	org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:322)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:261)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:236)
+	org.apache.hadoop.fs.s3a.S3AInputStream.read(S3AInputStream.java:446)
+	java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:218)
+	org.apache.hadoop.util.LineReader.readLine(LineReader.java:176)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:194)
+	org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:37)
+	org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:511)
+	scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:489)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:93)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.agg_doAggregateWithKeys_0$(Unknown Source)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:755)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:132)
+	org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	org.apache.spark.scheduler.Task.run(Task.scala:131)
+	org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	java.base/java.lang.Thread.run(Thread.java:829)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:145)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2253)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2202)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2201)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2201)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1078)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1078)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1078)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2440)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2382)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2371)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:868)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2202)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:200)
+	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:188)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:108)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:106)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.doExecute(commands.scala:131)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:180)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:218)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:215)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:176)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:132)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:131)
+	at org.apache.spark.sql.DataFrameWriter.$anonfun$runCommand$1(DataFrameWriter.scala:989)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:772)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:989)
+	at org.apache.spark.sql.DataFrameWr
+[2021-05-15 01:00:17,348] {docker.py:276} INFO - iter.sav
+[2021-05-15 01:00:17,378] {docker.py:276} INFO - eToV1Source(DataFrameWriter.scala:438)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:415)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:293)
+	at org.apache.spark.sql.DataFrameWriter.csv(DataFrameWriter.scala:979)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.apache.spark.util.TaskCompletionListenerException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+
+Previous exception in task: read on s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv: com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:189)
+	org.apache.hadoop.fs.s3a.Invoker.once(Invoker.java:111)
+	org.apache.hadoop.fs.s3a.Invoker.lambda$retry$3(Invoker.java:265)
+	org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:322)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:261)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:236)
+	org.apache.hadoop.fs.s3a.S3AInputStream.read(S3AInputStream.java:446)
+	java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:218)
+	org.apache.hadoop.util.LineReader.readLine(LineReader.java:176)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:194)
+	org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:37)
+	org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:511)
+	scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:489)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:93)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.agg_doAggregateWithKeys_0$(Unknown Source)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:755)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:132)
+	org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	org.apache.spark.scheduler.Task.run(Task.scala:131)
+	org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	java.base/java.lang.Thread.run(Thread.java:829)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:145)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	... 1 more
+[2021-05-15 01:00:17,395] {docker.py:276} INFO - 21/05/15 04:00:17 INFO AbstractS3ACommitter: Task committer attempt_202105150232466952277468869037826_0000_m_000000_0: aborting job (no job ID) in state FAILED
+[2021-05-15 01:00:17,417] {docker.py:276} INFO - 21/05/15 04:00:17 INFO StagingCommitter: Starting: Task committer attempt_202105150232466952277468869037826_0000_m_000000_0: aborting job in state (no job ID)
+[2021-05-15 01:00:17,594] {docker.py:276} INFO - 21/05/15 04:00:17 INFO AbstractS3ACommitter: Task committer attempt_202105150232466952277468869037826_0000_m_000000_0: no pending commits to abort
+[2021-05-15 01:00:17,599] {docker.py:276} INFO - 21/05/15 04:00:17 INFO StagingCommitter: Task committer attempt_202105150232466952277468869037826_0000_m_000000_0: aborting job in state (no job ID) : duration 0:00.176s
+[2021-05-15 01:00:19,327] {docker.py:276} INFO - 21/05/15 04:00:19 WARN S3AUtils: Failed to delete s3a://udac-forex-project/consolidated_data/_temporary
+java.nio.file.AccessDeniedException: s3a://udac-forex-project/consolidated_data/_temporary: getFileStatus on s3a://udac-forex-project/consolidated_data/_temporary: com.amazonaws.services.s3.model.AmazonS3Exception: Forbidden (Service: Amazon S3; Status Code: 403; Error Code: 403 Forbidden; Request ID: 68JTBCSTYF76D7YZ; S3 Extended Request ID: 6RSsvMYknybyQnlv9CzcMRQA5WkEAwydWgqH5sMmK1deND/Tf1SBjFusc89Uj+qjepQZ8bWM8hw=; Proxy: null), S3 Extended Request ID: 6RSsvMYknybyQnlv9CzcMRQA5WkEAwydWgqH5sMmK1deND/Tf1SBjFusc89Uj+qjepQZ8bWM8hw=:403 Forbidden
+	at org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:230)
+	at org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:151)
+	at org.apache.hadoop.fs.s3a.S3AFileSystem.s3GetFileStatus(S3AFileSystem.java:2198)
+	at org.apache.hadoop.fs.s3a.S3AFileSystem.innerGetFileStatus(S3AFileSystem.java:2163)
+	at org.apache.hadoop.fs.s3a.S3AFileSystem.delete(S3AFileSystem.java:1711)
+	at org.apache.hadoop.fs.s3a.S3AUtils.deleteWithWarning(S3AUtils.java:1130)
+	at org.apache.hadoop.fs.s3a.commit.staging.StagingCommitter.deleteDestinationPaths(StagingCommitter.java:595)
+	at org.apache.hadoop.fs.s3a.commit.staging.StagingCommitter.lambda$cleanup$2(StagingCommitter.java:536)
+	at org.apache.hadoop.fs.s3a.commit.AbstractS3ACommitter.maybeIgnore(AbstractS3ACommitter.java:660)
+	at org.apache.hadoop.fs.s3a.commit.staging.StagingCommitter.cleanup(StagingCommitter.java:535)
+	at org.apache.hadoop.fs.s3a.commit.AbstractS3ACommitter.abortJobInternal(AbstractS3ACommitter.java:519)
+	at org.apache.hadoop.fs.s3a.commit.staging.StagingCommitter.abortJobInternal(StagingCommitter.java:569)
+	at org.apache.hadoop.fs.s3a.commit.AbstractS3ACommitter.abortJob(AbstractS3ACommitter.java:503)
+	at org.apache.spark.internal.io.HadoopMapReduceCommitProtocol.abortJob(HadoopMapReduceCommitProtocol.scala:233)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:230)
+	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:188)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:108)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:106)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.doExecute(commands.scala:131)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:180)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:218)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:215)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:176)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:132)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:131)
+	at org.apache.spark.sql.DataFrameWriter.$anonfun$runCommand$1(DataFrameWriter.scala:989)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:772)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:989)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:438)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:415)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:293)
+	at org.apache.spark.sql.DataFrameWriter.csv(DataFrameWriter.scala:979)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: com.amazonaws.services.s3.model.AmazonS3Exception: Forbidden (Service: Amazon S3; Status Code: 403; Error Code: 403 Forbidden; Request ID: 68JTBCSTYF76D7YZ; S3 Extended Request ID: 6RSsvMYknybyQnlv9CzcMRQA5WkEAwydWgqH5sMmK1deND/Tf1SBjFusc89Uj+qjepQZ8bWM8hw=; Proxy: null), S3 Extended Request ID: 6RSsvMYknybyQnlv9CzcMRQA5WkEAwydWgqH5sMmK1deND/Tf1SBjFusc89Uj+qjepQZ8bWM8hw=
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleErrorResponse(AmazonHttpClient.java:1819)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleServiceErrorResponse(AmazonHttpClient.java:1403)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeOneRequest(AmazonHttpClient.java:1372)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeHelper(AmazonHttpClient.java:1145)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:802)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:770)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:744)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.access$500(AmazonHttpClient.java:704)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutionBuilderImpl.execute(AmazonHttpClient.java:686)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:550)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:530)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5445)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5392)
+	at com.amazonaws.services.s3.AmazonS3Client.getObjectMetadata(AmazonS3Client.java:1367)
+	at org.apache.hadoop.fs.s3a.S3AFileSystem.lambda$getObjectMetadata$4(S3AFileSystem.java:1249)
+	at org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:322)
+	at org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:285)
+	at org.apache.hadoop.fs.s3a.S3AFileSystem.getObjectMetadata(S3AFileSystem.java:1246)
+	at org.apache.hadoop.fs.s3a.S3AFileSystem.s3GetFileStatus(S3AFileSystem.java:2183)
+	... 45 more
+[2021-05-15 01:00:19,338] {docker.py:276} INFO - 21/05/15 04:00:19 INFO AbstractS3ACommitter: Starting: Cleanup job (no job ID)
+[2021-05-15 01:00:19,342] {docker.py:276} INFO - 21/05/15 04:00:19 INFO AbstractS3ACommitter: Starting: Aborting all pending commits under s3a://udac-forex-project/consolidated_data
+[2021-05-15 01:00:19,870] {docker.py:276} INFO - 21/05/15 04:00:19 INFO AbstractS3ACommitter: Aborting all pending commits under s3a://udac-forex-project/consolidated_data: duration 0:00.530s
+21/05/15 04:00:19 INFO AbstractS3ACommitter: Cleanup job (no job ID): duration 0:00.536s
+[2021-05-15 01:00:21,082] {docker.py:276} INFO - 21/05/15 04:00:21 INFO BlockManagerInfo: Removed broadcast_4_piece0 on 630404ebd283:42075 in memory (size: 12.0 KiB, free: 934.4 MiB)
+[2021-05-15 01:00:21,821] {docker.py:276} INFO - Traceback (most recent call last):
+  File "/home/jovyan/spark.py", line 72, in <module>
+[2021-05-15 01:00:21,828] {docker.py:276} INFO - df \
+  File "/usr/local/spark/python/pyspark/sql/readwriter.py", line 1371, in csv
+[2021-05-15 01:00:21,845] {docker.py:276} INFO - self._jwrite.csv(path)
+  File "/usr/local/spark/python/lib/py4j-0.10.9-src.zip/py4j/java_gateway.py", line 1304, in __call__
+[2021-05-15 01:00:21,853] {docker.py:276} INFO - File "/usr/local/spark/python/pyspark/sql/utils.py", line 111, in deco
+[2021-05-15 01:00:21,859] {docker.py:276} INFO - return f(*a, **kw)
+  File "/usr/local/spark/python/lib/py4j-0.10.9-src.zip/py4j/protocol.py", line 326, in get_return_value
+[2021-05-15 01:00:21,874] {docker.py:276} INFO - py4j.protocol.Py4JJavaError
+[2021-05-15 01:00:21,965] {docker.py:276} INFO - : An error occurred while calling o89.csv.
+: org.apache.spark.SparkException: Job aborted.
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:231)
+	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:188)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:108)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:106)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.doExecute(commands.scala:131)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:180)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:218)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:215)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:176)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:132)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:131)
+	at org.apache.spark.sql.DataFrameWriter.$anonfun$runCommand$1(DataFrameWriter.scala:989)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:772)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:989)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:438)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:415)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:293)
+	at org.apache.spark.sql.DataFrameWriter.csv(DataFrameWriter.scala:979)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 1.0 failed 1 times, most recent failure: Lost task 0.0 in stage 1.0 (TID 1) (630404ebd283 executor driver): org.apache.spark.util.TaskCompletionListenerException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+
+Previous exception in task: read on s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv: com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:189)
+	org.apache.hadoop.fs.s3a.Invoker.once(Invoker.java:111)
+	org.apache.hadoop.fs.s3a.Invoker.lambda$retry$3(Invoker.java:265)
+	org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:322)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:261)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:236)
+	org.apache.hadoop.fs.s3a.S3AInputStream.read(S3AInputStream.java:446)
+	java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:218)
+	org.apache.hadoop.util.LineReader.readLine(LineReader.java:176)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:194)
+	org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:37)
+	org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:511)
+	scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:489)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:93)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.agg_doAggregateWithKeys_0$(Unknown Source)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:755)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:132)
+	org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	org.apache.spark.scheduler.Task.run(Task.scala:131)
+	org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	java.base/java.lang.Thread.run(Thread.java:829)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:145)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2253)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2202)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2201)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at sc
+[2021-05-15 01:00:21,970] {docker.py:276} INFO - ala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2201)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1078)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1078)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1078)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2440)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2382)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2371)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:868)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2202)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:200)
+	... 33 more
+Caused by: org.apache.spark.util.TaskCompletionListenerException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+
+Previous exception in task: read on s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv: com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:189)
+	org.apache.hadoop.fs.s3a.Invoker.once(Invoker.java:111)
+	org.apache.hadoop.fs.s3a.Invoker.lambda$retry$3(Invoker.java:265)
+	org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:322)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:261)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:236)
+	org.apache.hadoop.fs.s3a.S3AInputStream.read(S3AInputStream.java:446)
+	java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:218)
+	org.apache.hadoop.util.LineReader.readLine(LineReader.java:176)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:194)
+	org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:37)
+	org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:511)
+	scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:489)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:93)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.agg_doAggregateWithKeys_0$(Unknown Source)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:755)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:132)
+	org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	org.apache.spark.scheduler.Task.run(Task.scala:131)
+	org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	java.base/java.lang.Thread.run(Thread.java:829)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:145)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	... 1 more
+[2021-05-15 01:00:23,215] {docker.py:276} INFO - 21/05/15 04:00:23 INFO SparkContext: Invoking stop() from shutdown hook
+[2021-05-15 01:00:23,464] {docker.py:276} INFO - 21/05/15 04:00:23 INFO SparkUI: Stopped Spark web UI at http://630404ebd283:4040
+[2021-05-15 01:00:23,937] {docker.py:276} INFO - 21/05/15 04:00:23 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2021-05-15 01:00:24,260] {docker.py:276} INFO - 21/05/15 04:00:24 INFO MemoryStore: MemoryStore cleared
+[2021-05-15 01:00:24,271] {docker.py:276} INFO - 21/05/15 04:00:24 INFO BlockManager: BlockManager stopped
+[2021-05-15 01:00:24,366] {docker.py:276} INFO - 21/05/15 04:00:24 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2021-05-15 01:00:24,501] {docker.py:276} INFO - 21/05/15 04:00:24 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2021-05-15 01:00:24,719] {docker.py:276} INFO - 21/05/15 04:00:24 INFO SparkContext: Successfully stopped SparkContext
+[2021-05-15 01:00:24,732] {docker.py:276} INFO - 21/05/15 04:00:24 INFO ShutdownHookManager: Shutdown hook called
+[2021-05-15 01:00:24,773] {docker.py:276} INFO - 21/05/15 04:00:24 INFO ShutdownHookManager: Deleting directory /tmp/spark-90a69449-c57d-47ea-a67c-af7b810d4036
+[2021-05-15 01:00:24,867] {docker.py:276} INFO - 21/05/15 04:00:24 INFO ShutdownHookManager: Deleting directory /tmp/spark-90a69449-c57d-47ea-a67c-af7b810d4036/pyspark-826b5ffe-99f1-487f-8132-2d819f30276b
+[2021-05-15 01:00:24,972] {docker.py:276} INFO - 21/05/15 04:00:24 INFO ShutdownHookManager: Deleting directory /tmp/spark-fbb691b5-bfca-4efd-a15b-2edcfa42f0b8
+[2021-05-15 01:00:25,131] {docker.py:276} INFO - 21/05/15 04:00:25 INFO MetricsSystemImpl: Stopping s3a-file-system metrics system...
+[2021-05-15 01:00:25,157] {docker.py:276} INFO - 21/05/15 04:00:25 INFO MetricsSystemImpl: s3a-file-system metrics system stopped.
+[2021-05-15 01:00:25,170] {docker.py:276} INFO - 21/05/15 04:00:25 INFO MetricsSystemImpl: s3a-file-system metrics system shutdown complete.
+[2021-05-15 01:00:29,142] {taskinstance.py:1482} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1138, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/providers/docker/operators/docker.py", line 321, in execute
+    return self._run_image()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/providers/docker/operators/docker.py", line 281, in _run_image
+    raise AirflowException('docker container failed: ' + repr(result) + f"lines {res_lines}")
+airflow.exceptions.AirflowException: docker container failed: {'Error': None, 'StatusCode': 1}lines WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/usr/local/spark-3.1.1-bin-hadoop3.2/jars/spark-unsafe_2.12-3.1.1.jar) to constructor java.nio.DirectByteBuffer(long,int)
+WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+21/05/15 02:32:21 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+21/05/15 02:32:24 INFO SparkContext: Running Spark version 3.1.1
+21/05/15 02:32:24 INFO ResourceUtils: ==============================================================
+21/05/15 02:32:24 INFO ResourceUtils: No custom resources configured for spark.driver.
+21/05/15 02:32:24 INFO ResourceUtils: ==============================================================
+21/05/15 02:32:24 INFO SparkContext: Submitted application: spark.py
+21/05/15 02:32:24 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memoryOverhead -> name: memoryOverhead, amount: 884, script: , vendor: , cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 500, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+21/05/15 02:32:24 INFO ResourceProfile: Limiting resource is cpu
+21/05/15 02:32:24 INFO ResourceProfileManager: Added ResourceProfile id: 0
+21/05/15 02:32:24 INFO SecurityManager: Changing view acls to: jovyan
+21/05/15 02:32:24 INFO SecurityManager: Changing modify acls to: jovyan
+21/05/15 02:32:24 INFO SecurityManager: Changing view acls groups to:
+21/05/15 02:32:24 INFO SecurityManager: Changing modify acls groups to:
+21/05/15 02:32:24 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(jovyan); groups with view permissions: Set(); users  with modify permissions: Set(jovyan); groups with modify permissions: Set()
+21/05/15 02:32:24 INFO Utils: Successfully started service 'sparkDriver' on port 40905.
+21/05/15 02:32:24 INFO SparkEnv: Registering MapOutputTracker
+21/05/15 02:32:24 INFO SparkEnv: Registering BlockManagerMaster
+21/05/15 02:32:24 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+21/05/15 02:32:24 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+21/05/15 02:32:24 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+21/05/15 02:32:24 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-66db3ae0-6ac6-44bc-89e8-153730d0354a
+21/05/15 02:32:24 INFO MemoryStore: MemoryStore started with capacity 934.4 MiB
+21/05/15 02:32:24 INFO SparkEnv: Registering OutputCommitCoordinator
+21/05/15 02:32:25 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+21/05/15 02:32:25 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://630404ebd283:4040
+21/05/15 02:32:25 INFO Executor: Starting executor ID driver on host 630404ebd283
+21/05/15 02:32:25 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42075.
+21/05/15 02:32:25 INFO NettyBlockTransferService: Server created on 630404ebd283:42075
+21/05/15 02:32:25 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+21/05/15 02:32:25 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 630404ebd283, 42075, None)
+21/05/15 02:32:25 INFO BlockManagerMasterEndpoint: Registering block manager 630404ebd283:42075 with 934.4 MiB RAM, BlockManagerId(driver, 630404ebd283, 42075, None)
+21/05/15 02:32:25 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 630404ebd283, 42075, None)
+21/05/15 02:32:25 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 630404ebd283, 42075, None)
+21/05/15 02:32:26 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/jovyan/spark-warehouse').
+21/05/15 02:32:26 INFO SharedState: Warehouse path is 'file:/home/jovyan/spark-warehouse'.
+21/05/15 02:32:28 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+21/05/15 02:32:28 INFO MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+21/05/15 02:32:28 INFO MetricsSystemImpl: s3a-file-system metrics system started
+21/05/15 02:32:37 INFO InMemoryFileIndex: It took 2239 ms to list leaf files for 12 paths.
+21/05/15 02:32:39 INFO InMemoryFileIndex: It took 2056 ms to list leaf files for 12 paths.
+21/05/15 02:32:42 INFO FileSourceStrategy: Pushed Filters:
+21/05/15 02:32:42 INFO FileSourceStrategy: Post-Scan Filters: (length(trim(value#0, None)) > 0)
+21/05/15 02:32:42 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+21/05/15 02:32:42 INFO CodeGenerator: Code generated in 260.6156 ms
+21/05/15 02:32:42 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 177.6 KiB, free 934.2 MiB)
+21/05/15 02:32:43 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 28.2 KiB, free 934.2 MiB)
+21/05/15 02:32:43 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 630404ebd283:42075 (size: 28.2 KiB, free: 934.4 MiB)
+21/05/15 02:32:43 INFO SparkContext: Created broadcast 0 from csv at NativeMethodAccessorImpl.java:0
+21/05/15 02:32:43 INFO FileSourceScanExec: Planning scan with bin packing, max size: 12903634 bytes, open cost is considered as scanning 4194304 bytes.
+21/05/15 02:32:43 INFO SparkContext: Starting job: csv at NativeMethodAccessorImpl.java:0
+21/05/15 02:32:43 INFO DAGScheduler: Got job 0 (csv at NativeMethodAccessorImpl.java:0) with 1 output partitions
+21/05/15 02:32:43 INFO DAGScheduler: Final stage: ResultStage 0 (csv at NativeMethodAccessorImpl.java:0)
+21/05/15 02:32:43 INFO DAGScheduler: Parents of final stage: List()
+21/05/15 02:32:43 INFO DAGScheduler: Missing parents: List()
+21/05/15 02:32:43 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+21/05/15 02:32:43 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 10.8 KiB, free 934.2 MiB)
+21/05/15 02:32:43 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 934.2 MiB)
+21/05/15 02:32:43 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 630404ebd283:42075 (size: 5.4 KiB, free: 934.4 MiB)
+21/05/15 02:32:43 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1383
+21/05/15 02:32:43 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+21/05/15 02:32:43 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+21/05/15 02:32:43 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (630404ebd283, executor driver, partition 0, PROCESS_LOCAL, 5125 bytes) taskResourceAssignments Map()
+21/05/15 02:32:43 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+21/05/15 02:32:43 INFO FileScanRDD: Reading File path: s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621029654_to_1621031454.csv, range: 0-111710, partition values: [empty row]
+21/05/15 02:32:43 INFO CodeGenerator: Code generated in 18.1139 ms
+21/05/15 02:32:44 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1564 bytes result sent to driver
+21/05/15 02:32:44 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 659 ms on 630404ebd283 (executor driver) (1/1)
+21/05/15 02:32:44 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+21/05/15 02:32:44 INFO DAGScheduler: ResultStage 0 (csv at NativeMethodAccessorImpl.java:0) finished in 0.843 s
+21/05/15 02:32:44 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+21/05/15 02:32:44 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+21/05/15 02:32:44 INFO DAGScheduler: Job 0 finished: csv at NativeMethodAccessorImpl.java:0, took 0.905192 s
+21/05/15 02:32:44 INFO CodeGenerator: Code generated in 14.8534 ms
+21/05/15 02:32:44 INFO FileSourceStrategy: Pushed Filters:
+21/05/15 02:32:44 INFO FileSourceStrategy: Post-Scan Filters:
+21/05/15 02:32:44 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+21/05/15 02:32:44 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 177.6 KiB, free 934.0 MiB)
+21/05/15 02:32:44 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 28.2 KiB, free 934.0 MiB)
+21/05/15 02:32:44 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 630404ebd283:42075 (size: 28.2 KiB, free: 934.3 MiB)
+21/05/15 02:32:44 INFO SparkContext: Created broadcast 2 from csv at NativeMethodAccessorImpl.java:0
+21/05/15 02:32:44 INFO FileSourceScanExec: Planning scan with bin packing, max size: 12903634 bytes, open cost is considered as scanning 4194304 bytes.
+21/05/15 02:32:44 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 630404ebd283:42075 in memory (size: 5.4 KiB, free: 934.3 MiB)
+21/05/15 02:32:44 INFO FileSourceStrategy: Pushed Filters: 
+21/05/15 02:32:44 INFO FileSourceStrategy: Post-Scan Filters:
+21/05/15 02:32:44 INFO FileSourceStrategy: Output Data Schema: struct<ts: string, n: string, bid: string, ask: string, value: string ... 7 more fields>
+21/05/15 02:32:46 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+21/05/15 02:32:46 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+21/05/15 02:32:46 INFO AbstractS3ACommitterFactory: Using committer partitioned to output data to s3a://udac-forex-project/consolidated_data
+21/05/15 02:32:46 INFO AbstractS3ACommitterFactory: Using Commmitter PartitionedStagingCommitter{StagingCommitter{AbstractS3ACommitter{role=Task committer attempt_202105150232466952277468869037826_0000_m_000000_0, name=partitioned, outputPath=s3a://udac-forex-project/consolidated_data, workPath=file:/tmp/hadoop-jovyan/s3a/233c5013-a6ae-4404-b2fa-473cbe522907/_temporary/0/_temporary/attempt_202105150232466952277468869037826_0000_m_000000_0}, conflictResolution=REPLACE, wrappedCommitter=FileOutputCommitter{PathOutputCommitter{context=TaskAttemptContextImpl{JobContextImpl{jobId=job_202105150232466952277468869037826_0000}; taskId=attempt_202105150232466952277468869037826_0000_m_000000_0, status=''}; org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter@6471fbb4}; outputPath=file:/home/jovyan/tmp/staging/jovyan/233c5013-a6ae-4404-b2fa-473cbe522907/staging-uploads, workPath=null, algorithmVersion=1, skipCleanup=false, ignoreCleanupFailures=false}}} for s3a://udac-forex-project/consolidated_data
+21/05/15 02:32:46 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.hadoop.fs.s3a.commit.staging.PartitionedStagingCommitter
+21/05/15 02:32:46 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+21/05/15 02:32:46 INFO CodeGenerator: Code generated in 67.9838 ms
+21/05/15 02:32:46 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+21/05/15 02:32:46 INFO CodeGenerator: Code generated in 42.7999 ms
+21/05/15 02:32:46 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 177.5 KiB, free 933.8 MiB)
+21/05/15 02:32:46 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 28.2 KiB, free 933.8 MiB)
+21/05/15 02:32:46 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 630404ebd283:42075 (size: 28.2 KiB, free: 934.3 MiB)
+21/05/15 02:32:46 INFO SparkContext: Created broadcast 3 from csv at NativeMethodAccessorImpl.java:0
+21/05/15 02:32:46 INFO FileSourceScanExec: Planning scan with bin packing, max size: 12903634 bytes, open cost is considered as scanning 4194304 bytes.
+21/05/15 02:32:46 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 630404ebd283:42075 in memory (size: 28.2 KiB, free: 934.3 MiB)
+21/05/15 02:32:46 INFO SparkContext: Starting job: csv at NativeMethodAccessorImpl.java:0
+21/05/15 02:32:46 INFO DAGScheduler: Registering RDD 13 (csv at NativeMethodAccessorImpl.java:0) as input to shuffle 0
+21/05/15 02:32:46 INFO DAGScheduler: Got job 1 (csv at NativeMethodAccessorImpl.java:0) with 200 output partitions
+21/05/15 02:32:46 INFO DAGScheduler: Final stage: ResultStage 2 (csv at NativeMethodAccessorImpl.java:0)
+21/05/15 02:32:46 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 1)
+21/05/15 02:32:46 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 1)
+21/05/15 02:32:46 INFO DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[13] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+21/05/15 02:32:46 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 28.0 KiB, free 934.0 MiB)
+21/05/15 02:32:46 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 12.0 KiB, free 934.0 MiB)
+21/05/15 02:32:46 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 630404ebd283:42075 (size: 12.0 KiB, free: 934.3 MiB)
+21/05/15 02:32:46 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1383
+21/05/15 02:32:46 INFO DAGScheduler: Submitting 4 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[13] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+21/05/15 02:32:46 INFO TaskSchedulerImpl: Adding task set 1.0 with 4 tasks resource profile 0
+21/05/15 02:32:46 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (630404ebd283, executor driver, partition 0, PROCESS_LOCAL, 5114 bytes) taskResourceAssignments Map()
+21/05/15 02:32:46 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 2) (630404ebd283, executor driver, partition 1, PROCESS_LOCAL, 5114 bytes) taskResourceAssignments Map()
+21/05/15 02:32:46 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 3) (630404ebd283, executor driver, partition 2, PROCESS_LOCAL, 5114 bytes) taskResourceAssignments Map()
+21/05/15 02:32:46 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 4) (630404ebd283, executor driver, partition 3, PROCESS_LOCAL, 5114 bytes) taskResourceAssignments Map()
+21/05/15 02:32:46 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+21/05/15 02:32:46 INFO Executor: Running task 2.0 in stage 1.0 (TID 3)
+21/05/15 02:32:46 INFO Executor: Running task 1.0 in stage 1.0 (TID 2)
+21/05/15 02:32:46 INFO Executor: Running task 3.0 in stage 1.0 (TID 4)
+21/05/15 02:32:46 INFO BlockManagerInfo: Removed broadcast_2_piece0 on 630404ebd283:42075 in memory (size: 28.2 KiB, free: 934.4 MiB)
+21/05/15 02:32:46 INFO CodeGenerator: Code generated in 34.7593 ms
+21/05/15 02:32:46 INFO CodeGenerator: Code generated in 17.0377 ms
+21/05/15 02:32:46 INFO CodeGenerator: Code generated in 26.0408 ms
+21/05/15 02:32:46 INFO FileScanRDD: Reading File path: s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621035054_to_1621036854.csv, range: 0-111710, partition values: [empty row]
+21/05/15 02:32:46 INFO FileScanRDD: Reading File path: s3a://udac-forex-project/2/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv, range: 0-104506, partition values: [empty row]
+21/05/15 02:32:46 INFO FileScanRDD: Reading File path: s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621029654_to_1621031454.csv, range: 0-111710, partition values: [empty row]
+21/05/15 02:32:46 INFO FileScanRDD: Reading File path: s3a://udac-forex-project/1/2021-05-14_21_30_54/from_1621033254_to_1621035054.csv, range: 0-104506, partition values: [empty row]
+21/05/15 02:32:47 INFO FileScanRDD: Reading File path: s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv, range: 0-111710, partition values: [empty row]
+21/05/15 02:32:50 INFO S3AInputStream: Got exception while trying to read from stream s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621035054_to_1621036854.csv trying to recover: com.amazonaws.thirdparty.apache.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 111,710; received: 34,396)
+21/05/15 02:32:50 INFO S3AInputStream: Got exception while trying to read from stream s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv trying to recover: com.amazonaws.thirdparty.apache.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 111,710; received: 98,580)
+21/05/15 02:32:50 INFO S3AInputStream: Got exception while trying to read from stream s3a://udac-forex-project/1/2021-05-14_21_30_54/from_1621033254_to_1621035054.csv trying to recover: com.amazonaws.thirdparty.apache.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 104,506; received: 85,596)
+21/05/15 02:32:53 INFO FileScanRDD: Reading File path: s3a://udac-forex-project/1/2021-05-14_21_30_54/from_1621029654_to_1621031454.csv, range: 0-104506, partition values: [empty row]
+21/05/15 02:32:53 INFO FileScanRDD: Reading File path: s3a://udac-forex-project/2/2021-05-14_21_30_54/from_1621033254_to_1621035054.csv, range: 0-104506, partition values: [empty row]
+21/05/15 02:32:54 INFO FileScanRDD: Reading File path: s3a://udac-forex-project/1/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv, range: 0-104506, partition values: [empty row]
+21/05/15 02:32:54 INFO FileScanRDD: Reading File path: s3a://udac-forex-project/2/2021-05-14_21_30_54/from_1621035054_to_1621036854.csv, range: 0-104506, partition values: [empty row]
+21/05/15 02:32:56 INFO Executor: Finished task 1.0 in stage 1.0 (TID 2). 2722 bytes result sent to driver
+21/05/15 02:32:56 INFO Executor: Finished task 3.0 in stage 1.0 (TID 4). 2679 bytes result sent to driver
+21/05/15 02:32:56 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 2) in 9517 ms on 630404ebd283 (executor driver) (1/4)
+21/05/15 02:32:56 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 4) in 9517 ms on 630404ebd283 (executor driver) (2/4)
+21/05/15 04:00:15 ERROR TaskContextImpl: Error in TaskCompletionListener
+com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	at com.amazonaws.util.LengthCheckInputStream.checkLength(LengthCheckInputStream.java:151)
+	at com.amazonaws.util.LengthCheckInputStream.read(LengthCheckInputStream.java:93)
+	at com.amazonaws.internal.SdkFilterInputStream.read(SdkFilterInputStream.java:84)
+	at com.amazonaws.services.s3.internal.S3AbortableInputStream.read(S3AbortableInputStream.java:99)
+	at com.amazonaws.internal.SdkFilterInputStream.read(SdkFilterInputStream.java:84)
+	at org.apache.hadoop.fs.s3a.S3AInputStream.closeStream(S3AInputStream.java:537)
+	at org.apache.hadoop.fs.s3a.S3AInputStream.close(S3AInputStream.java:498)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at org.apache.hadoop.util.LineReader.close(LineReader.java:152)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.close(LineRecordReader.java:239)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.close(RecordReaderIterator.scala:60)
+	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.close(HadoopFileLinesReader.scala:73)
+	at org.apache.spark.sql.execution.datasources.csv.TextInputCSVDataSource$.$anonfun$readFile$2(CSVDataSource.scala:98)
+	at org.apache.spark.sql.execution.datasources.csv.TextInputCSVDataSource$.$anonfun$readFile$2$adapted(CSVDataSource.scala:98)
+	at org.apache.spark.TaskContext$$anon$1.onTaskCompletion(TaskContext.scala:125)
+	at org.apache.spark.TaskContextImpl.$anonfun$markTaskCompleted$1(TaskContextImpl.scala:124)
+	at org.apache.spark.TaskContextImpl.$anonfun$markTaskCompleted$1$adapted(TaskContextImpl.scala:124)
+	at org.apache.spark.TaskContextImpl.$anonfun$invokeListeners$1(TaskContextImpl.scala:137)
+	at org.apache.spark.TaskContextImpl.$anonfun$invokeListeners$1$adapted(TaskContextImpl.scala:135)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:135)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+21/05/15 04:00:16 ERROR TaskContextImpl: Error in TaskCompletionListener
+com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=85596; expectedLength=104506; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	at com.amazonaws.util.LengthCheckInputStream.checkLength(LengthCheckInputStream.java:151)
+	at com.amazonaws.util.LengthCheckInputStream.read(LengthCheckInputStream.java:93)
+	at com.amazonaws.internal.SdkFilterInputStream.read(SdkFilterInputStream.java:84)
+	at com.amazonaws.services.s3.internal.S3AbortableInputStream.read(S3AbortableInputStream.java:99)
+	at com.amazonaws.internal.SdkFilterInputStream.read(SdkFilterInputStream.java:84)
+	at org.apache.hadoop.fs.s3a.S3AInputStream.closeStream(S3AInputStream.java:537)
+	at org.apache.hadoop.fs.s3a.S3AInputStream.close(S3AInputStream.java:498)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at org.apache.hadoop.util.LineReader.close(LineReader.java:152)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.close(LineRecordReader.java:239)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.close(RecordReaderIterator.scala:60)
+	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.close(HadoopFileLinesReader.scala:73)
+	at org.apache.spark.sql.execution.datasources.csv.TextInputCSVDataSource$.$anonfun$readFile$2(CSVDataSource.scala:98)
+	at org.apache.spark.sql.execution.datasources.csv.TextInputCSVDataSource$.$anonfun$readFile$2$adapted(CSVDataSource.scala:98)
+	at org.apache.spark.TaskContext$$anon$1.onTaskCompletion(TaskContext.scala:125)
+	at org.apache.spark.TaskContextImpl.$anonfun$markTaskCompleted$1(TaskContextImpl.scala:124)
+	at org.apache.spark.TaskContextImpl.$anonfun$markTaskCompleted$1$adapted(TaskContextImpl.scala:124)
+	at org.apache.spark.TaskContextImpl.$anonfun$invokeListeners$1(TaskContextImpl.scala:137)
+	at org.apache.spark.TaskContextImpl.$anonfun$invokeListeners$1$adapted(TaskContextImpl.scala:135)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:135)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+21/05/15 04:00:16 ERROR Executor: Exception in task 0.0 in stage 1.0 (TID 1)
+org.apache.spark.util.TaskCompletionListenerException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+
+Previous exception in task: read on s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv: com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:189)
+	org.apache.hadoop.fs.s3a.Invoker.once(Invoker.java:111)
+	org.apache.hadoop.fs.s3a.Invoker.lambda$retry$3(Invoker.java:265)
+	org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:322)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:261)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:236)
+	org.apache.hadoop.fs.s3a.S3AInputStream.read(S3AInputStream.java:446)
+	java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:218)
+	org.apache.hadoop.util.LineReader.readLine(LineReader.java:176)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:194)
+	org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:37)
+	org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:511)
+	scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:489)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:93)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.agg_doAggregateWithKeys_0$(Unknown Source)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:755)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:132)
+	org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	org.apache.spark.scheduler.Task.run(Task.scala:131)
+	org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	java.base/java.lang.Thread.run(Thread.java:829)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:145)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+21/05/15 04:00:16 ERROR Executor: Exception in task 2.0 in stage 1.0 (TID 3)
+org.apache.spark.util.TaskCompletionListenerException: Data read has a different length than the expected: dataLength=85596; expectedLength=104506; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+
+Previous exception in task: read on s3a://udac-forex-project/1/2021-05-14_21_30_54/from_1621033254_to_1621035054.csv: com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=85596; expectedLength=104506; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0: Data read has a different length than the expected: dataLength=85596; expectedLength=104506; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:189)
+	org.apache.hadoop.fs.s3a.Invoker.once(Invoker.java:111)
+	org.apache.hadoop.fs.s3a.Invoker.lambda$retry$3(Invoker.java:265)
+	org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:322)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:261)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:236)
+	org.apache.hadoop.fs.s3a.S3AInputStream.read(S3AInputStream.java:446)
+	java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:218)
+	org.apache.hadoop.util.LineReader.readLine(LineReader.java:176)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:194)
+	org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:37)
+	org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:511)
+	scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:489)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:93)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.agg_doAggregateWithKeys_0$(Unknown Source)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:755)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:132)
+	org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	org.apache.spark.scheduler.Task.run(Task.scala:131)
+	org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	java.base/java.lang.Thread.run(Thread.java:829)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:145)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+21/05/15 04:00:16 WARN TaskSetManager: Lost task 0.0 in stage 1.0 (TID 1) (630404ebd283 executor driver): org.apache.spark.util.TaskCompletionListenerException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+
+Previous exception in task: read on s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv: com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:189)
+	org.apache.hadoop.fs.s3a.Invoker.once(Invoker.java:111)
+	org.apache.hadoop.fs.s3a.Invoker.lambda$retry$3(Invoker.java:265)
+	org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:322)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:261)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:236)
+	org.apache.hadoop.fs.s3a.S3AInputStream.read(S3AInputStream.java:446)
+	java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:218)
+	org.apache.hadoop.util.LineReader.readLine(LineReader.java:176)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:194)
+	org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:37)
+	org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:511)
+	scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:489)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:93)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.agg_doAggregateWithKeys_0$(Unknown Source)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:755)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:132)
+	org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	org.apache.spark.scheduler.Task.run(Task.scala:131)
+	org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	java.base/java.lang.Thread.run(Thread.java:829)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:145)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+21/05/15 04:00:16 ERROR TaskSetManager: Task 0 in stage 1.0 failed 1 times; aborting job
+21/05/15 04:00:17 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+21/05/15 04:00:17 WARN TaskSetManager: Lost task 2.0 in stage 1.0 (TID 3) (630404ebd283 executor driver): org.apache.spark.util.TaskCompletionListenerException: Data read has a different length than the expected: dataLength=85596; expectedLength=104506; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+
+Previous exception in task: read on s3a://udac-forex-project/1/2021-05-14_21_30_54/from_1621033254_to_1621035054.csv: com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=85596; expectedLength=104506; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0: Data read has a different length than the expected: dataLength=85596; expectedLength=104506; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:189)
+	org.apache.hadoop.fs.s3a.Invoker.once(Invoker.java:111)
+	org.apache.hadoop.fs.s3a.Invoker.lambda$retry$3(Invoker.java:265)
+	org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:322)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:261)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:236)
+	org.apache.hadoop.fs.s3a.S3AInputStream.read(S3AInputStream.java:446)
+	java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:218)
+	org.apache.hadoop.util.LineReader.readLine(LineReader.java:176)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:194)
+	org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:37)
+	org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:511)
+	scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:489)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:93)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.agg_doAggregateWithKeys_0$(Unknown Source)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:755)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:132)
+	org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	org.apache.spark.scheduler.Task.run(Task.scala:131)
+	org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	java.base/java.lang.Thread.run(Thread.java:829)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:145)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+21/05/15 04:00:17 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+21/05/15 04:00:17 INFO TaskSchedulerImpl: Cancelling stage 1
+21/05/15 04:00:17 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage cancelled
+21/05/15 04:00:17 INFO DAGScheduler: ShuffleMapStage 1 (csv at NativeMethodAccessorImpl.java:0) failed in 5250.629 s due to Job aborted due to stage failure: Task 0 in stage 1.0 failed 1 times, most recent failure: Lost task 0.0 in stage 1.0 (TID 1) (630404ebd283 executor driver): org.apache.spark.util.TaskCompletionListenerException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+
+Previous exception in task: read on s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv: com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:189)
+	org.apache.hadoop.fs.s3a.Invoker.once(Invoker.java:111)
+	org.apache.hadoop.fs.s3a.Invoker.lambda$retry$3(Invoker.java:265)
+	org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:322)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:261)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:236)
+	org.apache.hadoop.fs.s3a.S3AInputStream.read(S3AInputStream.java:446)
+	java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:218)
+	org.apache.hadoop.util.LineReader.readLine(LineReader.java:176)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:194)
+	org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:37)
+	org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:511)
+	scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:489)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:93)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.agg_doAggregateWithKeys_0$(Unknown Source)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:755)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:132)
+	org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	org.apache.spark.scheduler.Task.run(Task.scala:131)
+	org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	java.base/java.lang.Thread.run(Thread.java:829)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:145)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Driver stacktrace:
+21/05/15 04:00:17 INFO DAGScheduler: Job 1 failed: csv at NativeMethodAccessorImpl.java:0, took 15.404191 s
+21/05/15 04:00:17 ERROR FileFormatWriter: Aborting job 233c5013-a6ae-4404-b2fa-473cbe522907.
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 1.0 failed 1 times, most recent failure: Lost task 0.0 in stage 1.0 (TID 1) (630404ebd283 executor driver): org.apache.spark.util.TaskCompletionListenerException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+
+Previous exception in task: read on s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv: com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:189)
+	org.apache.hadoop.fs.s3a.Invoker.once(Invoker.java:111)
+	org.apache.hadoop.fs.s3a.Invoker.lambda$retry$3(Invoker.java:265)
+	org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:322)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:261)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:236)
+	org.apache.hadoop.fs.s3a.S3AInputStream.read(S3AInputStream.java:446)
+	java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:218)
+	org.apache.hadoop.util.LineReader.readLine(LineReader.java:176)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:194)
+	org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:37)
+	org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:511)
+	scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:489)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:93)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.agg_doAggregateWithKeys_0$(Unknown Source)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:755)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:132)
+	org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	org.apache.spark.scheduler.Task.run(Task.scala:131)
+	org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	java.base/java.lang.Thread.run(Thread.java:829)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:145)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2253)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2202)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2201)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2201)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1078)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1078)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1078)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2440)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2382)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2371)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:868)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2202)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:200)
+	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:188)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:108)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:106)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.doExecute(commands.scala:131)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:180)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:218)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:215)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:176)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:132)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:131)
+	at org.apache.spark.sql.DataFrameWriter.$anonfun$runCommand$1(DataFrameWriter.scala:989)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:772)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:989)
+	at org.apache.spark.sql.DataFrameWr
+iter.sav
+eToV1Source(DataFrameWriter.scala:438)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:415)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:293)
+	at org.apache.spark.sql.DataFrameWriter.csv(DataFrameWriter.scala:979)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.apache.spark.util.TaskCompletionListenerException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+
+Previous exception in task: read on s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv: com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:189)
+	org.apache.hadoop.fs.s3a.Invoker.once(Invoker.java:111)
+	org.apache.hadoop.fs.s3a.Invoker.lambda$retry$3(Invoker.java:265)
+	org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:322)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:261)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:236)
+	org.apache.hadoop.fs.s3a.S3AInputStream.read(S3AInputStream.java:446)
+	java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:218)
+	org.apache.hadoop.util.LineReader.readLine(LineReader.java:176)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:194)
+	org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:37)
+	org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:511)
+	scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:489)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:93)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.agg_doAggregateWithKeys_0$(Unknown Source)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:755)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:132)
+	org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	org.apache.spark.scheduler.Task.run(Task.scala:131)
+	org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	java.base/java.lang.Thread.run(Thread.java:829)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:145)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	... 1 more
+21/05/15 04:00:17 INFO AbstractS3ACommitter: Task committer attempt_202105150232466952277468869037826_0000_m_000000_0: aborting job (no job ID) in state FAILED
+21/05/15 04:00:17 INFO StagingCommitter: Starting: Task committer attempt_202105150232466952277468869037826_0000_m_000000_0: aborting job in state (no job ID)
+21/05/15 04:00:17 INFO AbstractS3ACommitter: Task committer attempt_202105150232466952277468869037826_0000_m_000000_0: no pending commits to abort
+21/05/15 04:00:17 INFO StagingCommitter: Task committer attempt_202105150232466952277468869037826_0000_m_000000_0: aborting job in state (no job ID) : duration 0:00.176s
+21/05/15 04:00:19 WARN S3AUtils: Failed to delete s3a://udac-forex-project/consolidated_data/_temporary
+java.nio.file.AccessDeniedException: s3a://udac-forex-project/consolidated_data/_temporary: getFileStatus on s3a://udac-forex-project/consolidated_data/_temporary: com.amazonaws.services.s3.model.AmazonS3Exception: Forbidden (Service: Amazon S3; Status Code: 403; Error Code: 403 Forbidden; Request ID: 68JTBCSTYF76D7YZ; S3 Extended Request ID: 6RSsvMYknybyQnlv9CzcMRQA5WkEAwydWgqH5sMmK1deND/Tf1SBjFusc89Uj+qjepQZ8bWM8hw=; Proxy: null), S3 Extended Request ID: 6RSsvMYknybyQnlv9CzcMRQA5WkEAwydWgqH5sMmK1deND/Tf1SBjFusc89Uj+qjepQZ8bWM8hw=:403 Forbidden
+	at org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:230)
+	at org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:151)
+	at org.apache.hadoop.fs.s3a.S3AFileSystem.s3GetFileStatus(S3AFileSystem.java:2198)
+	at org.apache.hadoop.fs.s3a.S3AFileSystem.innerGetFileStatus(S3AFileSystem.java:2163)
+	at org.apache.hadoop.fs.s3a.S3AFileSystem.delete(S3AFileSystem.java:1711)
+	at org.apache.hadoop.fs.s3a.S3AUtils.deleteWithWarning(S3AUtils.java:1130)
+	at org.apache.hadoop.fs.s3a.commit.staging.StagingCommitter.deleteDestinationPaths(StagingCommitter.java:595)
+	at org.apache.hadoop.fs.s3a.commit.staging.StagingCommitter.lambda$cleanup$2(StagingCommitter.java:536)
+	at org.apache.hadoop.fs.s3a.commit.AbstractS3ACommitter.maybeIgnore(AbstractS3ACommitter.java:660)
+	at org.apache.hadoop.fs.s3a.commit.staging.StagingCommitter.cleanup(StagingCommitter.java:535)
+	at org.apache.hadoop.fs.s3a.commit.AbstractS3ACommitter.abortJobInternal(AbstractS3ACommitter.java:519)
+	at org.apache.hadoop.fs.s3a.commit.staging.StagingCommitter.abortJobInternal(StagingCommitter.java:569)
+	at org.apache.hadoop.fs.s3a.commit.AbstractS3ACommitter.abortJob(AbstractS3ACommitter.java:503)
+	at org.apache.spark.internal.io.HadoopMapReduceCommitProtocol.abortJob(HadoopMapReduceCommitProtocol.scala:233)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:230)
+	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:188)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:108)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:106)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.doExecute(commands.scala:131)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:180)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:218)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:215)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:176)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:132)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:131)
+	at org.apache.spark.sql.DataFrameWriter.$anonfun$runCommand$1(DataFrameWriter.scala:989)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:772)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:989)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:438)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:415)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:293)
+	at org.apache.spark.sql.DataFrameWriter.csv(DataFrameWriter.scala:979)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: com.amazonaws.services.s3.model.AmazonS3Exception: Forbidden (Service: Amazon S3; Status Code: 403; Error Code: 403 Forbidden; Request ID: 68JTBCSTYF76D7YZ; S3 Extended Request ID: 6RSsvMYknybyQnlv9CzcMRQA5WkEAwydWgqH5sMmK1deND/Tf1SBjFusc89Uj+qjepQZ8bWM8hw=; Proxy: null), S3 Extended Request ID: 6RSsvMYknybyQnlv9CzcMRQA5WkEAwydWgqH5sMmK1deND/Tf1SBjFusc89Uj+qjepQZ8bWM8hw=
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleErrorResponse(AmazonHttpClient.java:1819)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleServiceErrorResponse(AmazonHttpClient.java:1403)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeOneRequest(AmazonHttpClient.java:1372)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeHelper(AmazonHttpClient.java:1145)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:802)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:770)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:744)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.access$500(AmazonHttpClient.java:704)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutionBuilderImpl.execute(AmazonHttpClient.java:686)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:550)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:530)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5445)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5392)
+	at com.amazonaws.services.s3.AmazonS3Client.getObjectMetadata(AmazonS3Client.java:1367)
+	at org.apache.hadoop.fs.s3a.S3AFileSystem.lambda$getObjectMetadata$4(S3AFileSystem.java:1249)
+	at org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:322)
+	at org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:285)
+	at org.apache.hadoop.fs.s3a.S3AFileSystem.getObjectMetadata(S3AFileSystem.java:1246)
+	at org.apache.hadoop.fs.s3a.S3AFileSystem.s3GetFileStatus(S3AFileSystem.java:2183)
+	... 45 more
+21/05/15 04:00:19 INFO AbstractS3ACommitter: Starting: Cleanup job (no job ID)
+21/05/15 04:00:19 INFO AbstractS3ACommitter: Starting: Aborting all pending commits under s3a://udac-forex-project/consolidated_data
+21/05/15 04:00:19 INFO AbstractS3ACommitter: Aborting all pending commits under s3a://udac-forex-project/consolidated_data: duration 0:00.530s
+21/05/15 04:00:19 INFO AbstractS3ACommitter: Cleanup job (no job ID): duration 0:00.536s
+21/05/15 04:00:21 INFO BlockManagerInfo: Removed broadcast_4_piece0 on 630404ebd283:42075 in memory (size: 12.0 KiB, free: 934.4 MiB)
+Traceback (most recent call last):
+  File "/home/jovyan/spark.py", line 72, in <module>
+df \
+  File "/usr/local/spark/python/pyspark/sql/readwriter.py", line 1371, in csv
+self._jwrite.csv(path)
+  File "/usr/local/spark/python/lib/py4j-0.10.9-src.zip/py4j/java_gateway.py", line 1304, in __call__
+File "/usr/local/spark/python/pyspark/sql/utils.py", line 111, in deco
+return f(*a, **kw)
+  File "/usr/local/spark/python/lib/py4j-0.10.9-src.zip/py4j/protocol.py", line 326, in get_return_value
+py4j.protocol.Py4JJavaError
+: An error occurred while calling o89.csv.
+: org.apache.spark.SparkException: Job aborted.
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:231)
+	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:188)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:108)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:106)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.doExecute(commands.scala:131)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:180)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:218)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:215)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:176)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:132)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:131)
+	at org.apache.spark.sql.DataFrameWriter.$anonfun$runCommand$1(DataFrameWriter.scala:989)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:772)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:989)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:438)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:415)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:293)
+	at org.apache.spark.sql.DataFrameWriter.csv(DataFrameWriter.scala:979)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 1.0 failed 1 times, most recent failure: Lost task 0.0 in stage 1.0 (TID 1) (630404ebd283 executor driver): org.apache.spark.util.TaskCompletionListenerException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+
+Previous exception in task: read on s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv: com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:189)
+	org.apache.hadoop.fs.s3a.Invoker.once(Invoker.java:111)
+	org.apache.hadoop.fs.s3a.Invoker.lambda$retry$3(Invoker.java:265)
+	org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:322)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:261)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:236)
+	org.apache.hadoop.fs.s3a.S3AInputStream.read(S3AInputStream.java:446)
+	java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:218)
+	org.apache.hadoop.util.LineReader.readLine(LineReader.java:176)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:194)
+	org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:37)
+	org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:511)
+	scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:489)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:93)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.agg_doAggregateWithKeys_0$(Unknown Source)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:755)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:132)
+	org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	org.apache.spark.scheduler.Task.run(Task.scala:131)
+	org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	java.base/java.lang.Thread.run(Thread.java:829)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:145)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2253)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2202)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2201)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at sc
+ala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2201)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1078)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1078)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1078)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2440)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2382)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2371)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:868)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2202)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:200)
+	... 33 more
+Caused by: org.apache.spark.util.TaskCompletionListenerException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+
+Previous exception in task: read on s3a://udac-forex-project/3/2021-05-14_21_30_54/from_1621031454_to_1621033254.csv: com.amazonaws.SdkClientException: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0: Data read has a different length than the expected: dataLength=98580; expectedLength=111710; includeSkipped=true; in.getClass()=class com.amazonaws.services.s3.AmazonS3Client$2; markedSupported=false; marked=0; resetSinceLastMarked=false; markCount=0; resetCount=0
+	org.apache.hadoop.fs.s3a.S3AUtils.translateException(S3AUtils.java:189)
+	org.apache.hadoop.fs.s3a.Invoker.once(Invoker.java:111)
+	org.apache.hadoop.fs.s3a.Invoker.lambda$retry$3(Invoker.java:265)
+	org.apache.hadoop.fs.s3a.Invoker.retryUntranslated(Invoker.java:322)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:261)
+	org.apache.hadoop.fs.s3a.Invoker.retry(Invoker.java:236)
+	org.apache.hadoop.fs.s3a.S3AInputStream.read(S3AInputStream.java:446)
+	java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:218)
+	org.apache.hadoop.util.LineReader.readLine(LineReader.java:176)
+	org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:194)
+	org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:37)
+	org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:511)
+	scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:489)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:93)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.agg_doAggregateWithKeys_0$(Unknown Source)
+	org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:755)
+	scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:458)
+	org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:132)
+	org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	org.apache.spark.scheduler.Task.run(Task.scala:131)
+	org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	java.base/java.lang.Thread.run(Thread.java:829)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:145)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:124)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	... 1 more
+21/05/15 04:00:23 INFO SparkContext: Invoking stop() from shutdown hook
+21/05/15 04:00:23 INFO SparkUI: Stopped Spark web UI at http://630404ebd283:4040
+21/05/15 04:00:23 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+21/05/15 04:00:24 INFO MemoryStore: MemoryStore cleared
+21/05/15 04:00:24 INFO BlockManager: BlockManager stopped
+21/05/15 04:00:24 INFO BlockManagerMaster: BlockManagerMaster stopped
+21/05/15 04:00:24 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+21/05/15 04:00:24 INFO SparkContext: Successfully stopped SparkContext
+21/05/15 04:00:24 INFO ShutdownHookManager: Shutdown hook called
+21/05/15 04:00:24 INFO ShutdownHookManager: Deleting directory /tmp/spark-90a69449-c57d-47ea-a67c-af7b810d4036
+21/05/15 04:00:24 INFO ShutdownHookManager: Deleting directory /tmp/spark-90a69449-c57d-47ea-a67c-af7b810d4036/pyspark-826b5ffe-99f1-487f-8132-2d819f30276b
+21/05/15 04:00:24 INFO ShutdownHookManager: Deleting directory /tmp/spark-fbb691b5-bfca-4efd-a15b-2edcfa42f0b8
+21/05/15 04:00:25 INFO MetricsSystemImpl: Stopping s3a-file-system metrics system...
+21/05/15 04:00:25 INFO MetricsSystemImpl: s3a-file-system metrics system stopped.
+21/05/15 04:00:25 INFO MetricsSystemImpl: s3a-file-system metrics system shutdown complete.
+[2021-05-15 01:00:29,174] {taskinstance.py:1532} INFO - Marking task as FAILED. dag_id=etl, task_id=run_spark_job, execution_date=20210514T230000, start_date=20210515T023215, end_date=20210515T040029
+[2021-05-15 01:00:29,329] {local_task_job.py:146} INFO - Task exited with return code 1
