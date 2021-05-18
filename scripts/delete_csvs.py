@@ -2,9 +2,9 @@ import os, shutil
 
 def delete_csvs():
     """
-    This function delete all intermediate local csv files. 
+    This function delete all intermediate local csv files.
     """
-    folder = './csvs'
+    folder = './scripts/csvs'
     for filename in os.listdir(folder):
         file_path = os.path.join(folder, filename)
         try:
@@ -14,3 +14,6 @@ def delete_csvs():
                 shutil.rmtree(file_path)
         except Exception as e:
             print('Failed to delete %s. Reason: %s' % (file_path, e))
+
+if __name__=='__main__':
+    delete_csvs()

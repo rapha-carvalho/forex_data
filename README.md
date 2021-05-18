@@ -1,12 +1,20 @@
 # FOREX data pipeline
 
-This project consists of a data pipeline that extracts FOREX data from iqoption api and stores it into Amazon Redshift for further predictive analysis.
+This project consists of a data pipeline that extracts FOREX data from iqoption api and stores it into Amazon Redshift for further predictive analysis and also extracts financial indexes from each country of the selected currency pairs in order to generate features for model tuning.
 
+The objective is to develop binary predictive models in each currency pair. The financial index data will be used as a possible set of features that can help to build the predictive model.
 
 ## Pipeline overview
 
 
 ![](./forex_data_pipeline.png)
+
+The data pipeline is comprised of 2 data sources:
+
+- FOREX DATA
+- FINANCIAL INDEX DATA
+
+### FOREX DATA
 
 We use parallel computing to extract data from API and we partition this data and store it on S3, as it is a cheap option to store raw data.
 
@@ -16,10 +24,16 @@ So, we load it back to S3 and COPY from there to Redshift.
 
 Once the COPY is completed, we run data quality checks to make certain everything ran smoothly.
 
+### FINANCIAL INDEX DATA
+
+We use the `yfinancial` package in tandem with `pandas_datareader` to download each index data from the selected period. After that, we insert the data directly into redshift.
+
 ## Dimensional model
 
-As we are interested in developing a timeseries prediction over the historical data for each currency pair, there's no need for a complex dimensional model. So, to keep things simple, our model is as follows:
+As we are interested in developing a binary prediction over the historical data for each currency pair, there's no need for a complex dimensional model. So, to keep things simple, our model is as follows:
 ![](./forex_dimensional_model.png)
+
+The financial index table is not linked to any table in this model due to it's daily granularity. The idea is to use this data as a set of auxiliary data to generate features when building the predictive model (e.g: does the relationship of USD/EUR financial index on D-1 affect the EUR/USD currency pair on D-0?)
 
 ### forex.dim_active_id
 - **active_id INTEGER:** currency pair id
@@ -30,6 +44,16 @@ As we are interested in developing a timeseries prediction over the historical d
 - **date_seconds TIMESTAMP:** date in seconds
 - **active_id INTEGER:** currency pair id
 - **value NUMERICAL (10, 6):** currency pair market value
+
+### forex.financial_index
+- **date_index_sk IDENTITY (0,1)**:
+- **date DATE**: date of the operation
+- **high NUMERICAL (20,6)**: max index value at that day
+- **low NUMERICAL (20,6)**: min index value at that day
+- **open NUMERICAL (20,6)**: index value at the time of the market opened
+- **close NUMERICAL (20,6)**: index value at the time of the market closed
+- **volume NUMERICAL (20,6)**: transaction volume for each index at each day   
+- **volume TEXT**: Index's country
 
 ## Requirements
 
@@ -45,19 +69,40 @@ You’ll also need to download the following jar files and place them into /jars
 - [aws-java-sdk-bundle 1.11.1015](https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-bundle/1.11.1015)
 - [redshift-jdbc42 2.0.0.4](https://mvnrepository.com/artifact/com.amazon.redshift/redshift-jdbc42/2.0.0.4)
 
+You'll also need to install Apache Airflow (the project was developed on version 2.0.2) and the following providers:
+
+- apache-airflow-providers-postgres
+- apache-airflow-providers-amazon
+
 
 ## How to run
 
-First things first, you need to insert your AWS credentials where applicable e.g: `connect_postgres.py`, `spark.py`, `remove_s3_files.py`,  `functions.py` and set up your connections info on Airflow's web UI, such as your IAM credentials and Amazon Redshift credentials.
+First things first, you need to insert your AWS credentials where applicable e.g: `connect_postgres.py`, `spark.py`, `remove_s3_files.py`,  `functions.py` and set up your connections info on Airflow's web UI, such as your IAM credentials (name it: aws_credentials) and Amazon Redshift credentials (name it: redshift).
 
-Then, you'll need to start an Airflow's webserver from home directory in terminal:
+
+Then, you should start Airflow's db and create an user with an Admin role.
 
 ```
 export AIRFLOW_HOME="$(pwd)"
+
+airflow db init
+
+
+airflow users create \
+    --username admin \
+    --firstname john \
+    --lastname doe \
+    --role Admin \
+    --email john.doe@gmail.com
+```
+
+After that, you'll need to start an Airflow's webserver from home directory in terminal:
+
+```
 airflow webserver --port 8080 -D
 ```
 
-After that, you have to start Airflow's scheduler. To do that, run the following on your terminal:
+Finally, you have to start Airflow's scheduler. To do that, run the following on your terminal:
 ```
 airflow scheduler
 ```
@@ -67,13 +112,12 @@ Once both server and scheduler are booted, all you need to do is go to Airflow's
 ## Folder structure
 Folder name | Description
 ----------------|--------------------
-**csvs** | Intermediate csv files created throughout each pipeline run.
 **dags** | Airflow's dag scripts
 **jars** | Jar files used to configure spark.
 **logs** | Airflow's logs
 **plugins** | Airflow's custom operators
 **scripts** | ETL python scripts
-
+**scripts/csvs** | Intermediate csv files created throughout each pipeline run.
 
 
 ## Scenarios

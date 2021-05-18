@@ -13,12 +13,26 @@ CREATE_MAIN_TABLE = """
 """
 
 CREATE_ACTIVE_DIM_TABLE = """
-    DROP TABLE IF EXISTS forex.dim_active_id; 
+    DROP TABLE IF EXISTS forex.dim_active_id;
     CREATE TABLE IF NOT EXISTS forex.dim_active_id (
     active_id INT,
     active_name TEXT,
     PRIMARY KEY (active_id)
     );
+"""
+
+CREATE_INDEX_TABLE = """
+    DROP TABLE IF EXISTS forex.financial_index;
+    CREATE TABLE IF NOT EXISTS forex.financial_index (
+    date_index_sk INT IDENTITY (0, 1),
+    date DATE,
+    high NUMERIC (20,6),
+    low NUMERIC (20,6),
+    "open" NUMERIC (20,6),
+    close NUMERIC (20,6),
+    volume NUMERIC (20,6),
+    country TEXT,
+    PRIMARY KEY (date_index_sk)
 """
 
 INSERT_ACTIVE_DIM_TABLE = """

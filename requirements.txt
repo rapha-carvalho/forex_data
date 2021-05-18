@@ -6,8 +6,12 @@ numpy
 requests
 time
 apache-airflow
+apache-airflow-providers-postgres
+apache-airflow-providers-amazon
 boto3
 datetime
 findspark
 pyspark
 logging
+yfinance
+pandas_datareader
