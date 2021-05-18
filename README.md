@@ -53,7 +53,7 @@ The financial index table is not linked to any table in this model due to it's d
 - **open NUMERICAL (20,6)**: index value at the time of the market opened
 - **close NUMERICAL (20,6)**: index value at the time of the market closed
 - **volume NUMERICAL (20,6)**: transaction volume for each index at each day   
-- **volume TEXT**: Index's country
+- **country TEXT**: Index's country
 
 ## Requirements
 
